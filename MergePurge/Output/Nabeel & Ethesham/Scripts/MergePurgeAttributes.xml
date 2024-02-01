@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : MergePurgeAttributes.xml
+    Created on : 2023-17-11
+    Author     : Mohammed Ethesham Khan, Mohammed Nabeel Hussain
+    Description:
+        Attributes Script for MergePurge Demo Run Updated for Version 4.1.0
+-->
+
+<OysterAttributes System="Team Challenge 2">
+    <Attribute Item="FirstName" />
+    <Attribute Item="LastName"  />
+    <Attribute Item="SSN" />
+    <Attribute Item="DOB" />
+    <Attribute Item="PhoneNumber"  />
+    <Attribute Item="Address" />
+        
+    <!-- -->
+    <Indices>
+	<Index Ident="1">
+            <Segment Item="SSN" Hash="SCAN(RL,DIGIT,4,KeepCase,L2HKeepDup)" />            
+        </Index>
+
+	<Index Ident="2">
+            	<Segment Item="FirstName" Hash="SCAN(LR,LETTER,4,ToUpper,SameOrder)" />
+        	<Segment Item="LastName" Hash="SOUNDEX" />
+		<Segment Item="SSN" Hash="SCAN(RL,DIGIT,4,KeepCase,L2HKeepDup)" />
+        </Index>
+	<Index Ident="3">
+		<Segment Item="FirstName" Hash="INITIAL" />
+		<Segment Item="LastName" Hash="SOUNDEX" />
+		<Segment Item="PhoneNumber" Hash="SCAN(LR,DIGIT,5,KeepCase,SameOrder)" />
+        </Index>
+	<Index Ident="4">
+		<Segment Item="FirstName" Hash="SCAN(LR,LETTER,4,ToUpper,SameOrder)" />
+		<Segment Item="Address" Hash="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+		<Segment Item="PhoneNumber" Hash="SCAN(LR,DIGIT,5,KeepCase,SameOrder)" />
+        </Index>
+	<Index Ident="5">
+		<Segment Item="LastName" Hash="SOUNDEX" />
+		<Segment Item="SSN" Hash="SCAN(RL,DIGIT,4,KeepCase,SameOrder)" /> 
+		<Segment Item="Address" Hash="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+        </Index>
+    </Indices>
+    <IdentityRules>
+        <Rule Ident="1">
+		<Term Item="SSN" Similarity="SCAN(LR,DIGIT,0,KeepCase,SameOrder)" />
+	</Rule>
+	<Rule Ident="2">
+    		<Term Item="FirstName" Similarity="SCAN(LR,LETTER,0,ToUpper,SameOrder)" />
+		<Term Item="LastName" Similarity="SOUNDEX" />
+		<Term Item="SSN" Similarity="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+        </Rule>
+        <Rule Ident="3">
+		<Term Item="FirstName" Similarity="SCAN(LR,LETTER,4,ToUpper,SameOrder)" />
+           	<Term Item="LastName" Similarity="SCAN(LR,LETTER,0,ToUpper,SameOrder)" />
+            	<Term Item="PhoneNumber" Similarity="SCAN(LR,DIGIT,5,KeepCase,SameOrder)" />
+        </Rule>
+        <Rule Ident="4">
+            	<Term Item="FirstName" Similarity="INITIAL" />
+            	<Term Item="Address" Similarity="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+		<Segment Item="PhoneNumber" Hash="SCAN(LR,DIGIT,5,KeepCase,SameOrder)" />
+        </Rule>
+	<Rule Ident="5">
+		<Term Item="LastName" Similarity="SOUNDEX" />
+		<Segment Item="SSN" Hash="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" /> 
+    		<Term Item="Address" Similarity="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+        </Rule>
+    </IdentityRules>
+</OysterAttributes>

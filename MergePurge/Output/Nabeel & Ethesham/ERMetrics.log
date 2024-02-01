@@ -1,0 +1,50 @@
+2023-12-04 03:01:32,242 INFO ==================== ER Metrics Report =====================
+2023-12-04 03:01:32,242 INFO ER Metrics version: 2.5.0
+2023-12-04 03:01:32,242 INFO Java version: 1.8.0_391
+2023-12-04 03:01:32,242 INFO Using configuration file ERMetrics.properties
+2023-12-04 03:01:32,242 INFO Creating report ...
+2023-12-04 03:01:32,242 INFO Calculating Entity Resolution ERMetrics . . .
+2023-12-04 03:01:32,250 INFO Reference file: TruthABC.csv
+2023-12-04 03:01:32,258 INFO Reference record.columns:[1] cluster.column:2
+2023-12-04 03:01:32,258 INFO 	Header:[RefID,IdTruth]
+2023-12-04 03:01:32,258 INFO 	Record #1:A904694:16732
+2023-12-04 03:01:32,675 INFO Reference Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Duplicates[0] + Created[271142]
+2023-12-04 03:01:32,675 INFO Link File: MergePurgeIndex.link
+2023-12-04 03:01:32,675 INFO Link record.columns:[1] cluster.column:2 rule.column:3
+2023-12-04 03:01:32,675 INFO 	Header:[RefID	OysterID	Rule]
+2023-12-04 03:01:32,675 INFO 	Record #1:source1.C976555:2HKFV00I4GJOG8WU:[1]
+2023-12-04 03:01:33,159 INFO Link Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Matched[271142] + Created[0]
+2023-12-04 03:01:33,159 INFO Performing INNER join for 271142 references
+2023-12-04 03:01:33,175 INFO Joined Link Set Records Total[271142]  NoLinkId[0]  NoReferenceId[0]  Joined[271142]
+2023-12-04 03:01:33,175 INFO Computing True Pairs and Clusters for 271142 references
+2023-12-04 03:01:33,448 INFO Total Count:271142 Pairs:2250993 Clusters:20067
+2023-12-04 03:01:33,448 INFO Computing Linked Pairs and Clusters for 271142 references
+2023-12-04 03:01:33,859 INFO Total Count:271142 Pairs:1049501 Clusters:100444
+2023-12-04 03:01:33,859 INFO Computing Agreement Pairs and Clusters for 271142 references
+2023-12-04 03:01:34,209 INFO Total Count:271142 Pairs:1033924 Clusters:101002
+2023-12-04 03:01:34,209 INFO 
+2023-12-04 03:01:34,209 INFO Total Distinct Records ID values (N) ............... = 271,142
+2023-12-04 03:01:34,209 INFO ---------------------Clusters ----------------------
+2023-12-04 03:01:34,209 INFO Reference Set Clusters (EC) ........................ = 20,067
+2023-12-04 03:01:34,209 INFO Link Set Clusters (LC) ............................. = 100,444
+2023-12-04 03:01:34,209 INFO Reference+Link Set Agreement Clusters (AC) ......... = 101,002
+2023-12-04 03:01:34,209 INFO 
+2023-12-04 03:01:34,209 INFO ---------------------Pairs -------------------------
+2023-12-04 03:01:34,209 INFO Total Pairs (D) = ((N * N-1) / 2) .................. = 36,758,856,511
+2023-12-04 03:01:34,209 INFO Reference Set Pairs (E) ............................ = 2,250,993
+2023-12-04 03:01:34,209 INFO Link Set Linked Pairs (L) .......................... = 1,049,501
+2023-12-04 03:01:34,209 INFO Reference+Link Set Agreement Pairs (A) ............. = 1,033,924
+2023-12-04 03:01:34,209 INFO True Positive Pairs (TP) ........................... = 1,033,924
+2023-12-04 03:01:34,209 INFO False Positive Pairs (FP) = L - TP ................. = 15,577
+2023-12-04 03:01:34,209 INFO True Negative Pairs (TN) = D - TP - FP - FN ........ = 36,756,589,941
+2023-12-04 03:01:34,209 INFO False Negative Pairs (FN) = E - TP ................. = 1,217,069
+2023-12-04 03:01:34,209 INFO 
+2023-12-04 03:01:34,209 INFO ---------------------Rates - (0.0 - 1.0) -----------
+2023-12-04 03:01:34,209 INFO False Positive Rate = FP / (TN + FP) ............... = 0.00000042
+2023-12-04 03:01:34,209 INFO False Negative Rate = FN / E ....................... = 0.54068094
+2023-12-04 03:01:34,209 INFO Accuracy = (TP + TN) / D ........................... = 0.99996647
+2023-12-04 03:01:34,209 INFO Precision = TP / (TP + FP) ......................... = 0.98515771
+2023-12-04 03:01:34,209 INFO Recall = TP / (TP + FN) ............................ = 0.45931906
+2023-12-04 03:01:34,209 INFO F-Measure .......................................... = 0.62652682
+2023-12-04 03:01:34,209 INFO TWi ................................................ = 0.44450152
+2023-12-04 03:01:34,209 INFO Complete

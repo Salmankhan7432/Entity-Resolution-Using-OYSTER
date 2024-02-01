@@ -1,0 +1,23 @@
+Oyster v.4.3.0
+RunScript: MergePurgeRunScript.xml
+Attribute: ./MergePurge/Scripts/MergePurgeAttributesMain.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./MergePurge/Output/MergePurgeIndex.link
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./MergePurge/Input/merged_data_Final.txt
+

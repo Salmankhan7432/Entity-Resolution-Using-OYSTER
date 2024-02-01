@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityResolutionSourceDescriptor.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: Demonstrate Identity Resolution Configuration of OYSTER
+-->
+
+<OysterSourceDescriptor Name="IR1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="," Qual="" Labels="Y">./IdentityResolution/Input/IdentityResolutionTest.txt</Source>
+    <!-- Items in Source -->
+    <ReferenceItems>
+        <Item Name="RefID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Fname" Attribute="StudentFirstName" Pos="1"/>
+        <Item Name="Lname" Attribute="StudentLastName" Pos="2"/>
+        <Item Name="DOBYMD" Attribute="StudentDateOfBirth" Pos="3"/>
+        <Item Name="Scode" Attribute="StudentSchoolCode" Pos="4"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

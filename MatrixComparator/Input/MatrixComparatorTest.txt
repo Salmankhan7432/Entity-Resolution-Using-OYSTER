@@ -1,0 +1,7 @@
+IdentityID|NameAddress|SchoolCode|DOB
+1|Edgar Jones, 21 Oak St, Little Rock|G34|20001104
+2|Mary B. Smith, 34 Elm Street, Maumelle|G55|19990921
+3|Eddie JONES, 21 Oak, Little Rock|H15|20001104
+4|Mary SMITH, 34 Elm, Apt 1, Maumele|H17|19990921
+5|Eddie Jones, 21 Oak, Apt 5, Little Rock|G34|20001104
+6|Super Man, 84 Pine Ave, Little Rock|G19|20011104 

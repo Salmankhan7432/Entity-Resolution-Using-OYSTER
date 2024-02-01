@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityResolutionAttributes.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: Attributes for Identity Resolution example
+ -->
+
+<OysterAttributes System="IdentityResolution">
+    <Attribute Item="StudentFirstName" />
+    <Attribute Item="StudentLastName"  />
+    <Attribute Item="StudentDateOfBirth" />
+    <Attribute Item="StudentSchoolCode" />
+        <!-- Identity Rules -->
+    <IdentityRules>
+        <Rule Ident="1">
+            <Term Item="StudentFirstName" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="StudentLastName" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="StudentDateOfBirth" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+        </Rule>
+        <Rule Ident="2">
+            <Term Item="StudentLastName" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="StudentDateOfBirth" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="StudentSchoolCode" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+        </Rule>
+     </IdentityRules>
+</OysterAttributes>

@@ -1,0 +1,9 @@
+RecID, First, Last, Suffix
+1, ABC, DEF, SR
+2, ABC, def, sr
+3, UVW, XYZ, JR
+4, UVW, XYZ, JR
+5, UVW, XYZ, SR
+6, UVW, XYZ,
+7, MNO, PQR,
+8, MNO, PQR,

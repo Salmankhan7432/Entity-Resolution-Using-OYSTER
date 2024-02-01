@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : StrToStrAssertionsAttributes.xml
+    Created on : 2019-08-12
+    Author     : John R. Talburt
+    Description: Attributes Script for Structure-to-Structure Assertion Demo Run
+-->
+
+<OysterAttributes System="StudentDemo">
+<!-- No Identity Rules are used when asserting linkage -->
+<IdentityRules ID="Empty"></IdentityRules>
+</OysterAttributes>

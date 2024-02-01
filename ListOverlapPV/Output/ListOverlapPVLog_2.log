@@ -1,0 +1,370 @@
+Oyster v.4.2.1
+RunScript: ListOverlapPVRunScript.xml
+Attribute: ./ListOverlapPV/Scripts/ListOverlapPVAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./ListOverlapPV/Output/ListOverlapPVIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./ListOverlapPV/Output/ListOverlapOutputPV.idty
+
+Validating Source Descriptor:./ListOverlapPV/Scripts/ListOverlapPVSourceDescriptor.xml
+Source File:./ListOverlapPV/Input/ListOverlapPVTest.txt
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./ListOverlapPV/Input/ListOverlapPVTest.txt
+
+
+Input: @RefID=source1.1, StudentFirstName=Edgar, StudentLastName=Jones, LEA=G34, PVList=A:X,B:X,C:X,D:X,E:X, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+
+	New Entity KEUBJZZ3XO8Y2948 @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+	New Index: @RefID=source1.1, StudentFirstName=Edgar, StudentLastName=Jones, LEA=G34, PVList=A:X,B:X,C:X,D:X,E:X, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{source1.1}, @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+
+Input: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, PVList=D:Y,E:Y,G:Y,H:Y,J:Y,K:Y, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+
+	New Entity XWB0XGY8ZYHJECKK @RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, PVList{D:Y,E:Y,G:Y,H:Y,J:Y,K:Y}
+	New Index: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, PVList=D:Y,E:Y,G:Y,H:Y,J:Y,K:Y, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{source1.2}, @RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, PVList{D:Y,E:Y,G:Y,H:Y,J:Y,K:Y}
+
+Input: @RefID=source1.3, StudentFirstName=Eddie, StudentLastName=Jones, LEA=H15, PVList=A:X,C:X,D:X,E:X, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		source1.1=@RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+
+	Compare Input 4 to Identity 1 @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+matrix
+false
+false
+	New Entity 90H7HNEL5A6GXIV5 @RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{H15}, PVList{A:X,C:X,D:X,E:X}
+	New Index: @RefID=source1.3, StudentFirstName=Eddie, StudentLastName=Jones, LEA=H15, PVList=A:X,C:X,D:X,E:X, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{source1.3}, @RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{H15}, PVList{A:X,C:X,D:X,E:X}
+
+Input: @RefID=source1.4, StudentFirstName=Mary, StudentLastName=Smith, LEA=H17, PVList=E:Y,H:Y,J:Y,K:Y,M:Y,N:Y, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		source1.2=@RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, PVList{D:Y,E:Y,G:Y,H:Y,J:Y,K:Y}
+
+	Compare Input 5 to Identity 1 @RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, PVList{D:Y,E:Y,G:Y,H:Y,J:Y,K:Y}
+matrix
+true
+	Matched Rule:1
+
+false
+
+	Satisfies Rule 1
+	Assign Entity source1.2 to Input 5
+	Update Entity: XWB0XGY8ZYHJECKK @RefID{source1.2|source1.4}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55|H17}, PVList{D:Y,E:Y,G:Y,H:Y,J:Y,K:Y|E:Y,H:Y,J:Y,K:Y,M:Y,N:Y}
+	             : OysterID: XWB0XGY8ZYHJECKK
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, PVList=D:Y,E:Y,G:Y,H:Y,J:Y,K:Y, Input record: false, Current Traces: OID: XWB0XGY8ZYHJECKK, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=source1.4, StudentFirstName=Mary, StudentLastName=Smith, LEA=H17, PVList=E:Y,H:Y,J:Y,K:Y,M:Y,N:Y, Input record: false, Current Traces: OID: XWB0XGY8ZYHJECKK, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: source1.2 for ri @RefID=source1.4, StudentFirstName=Mary, StudentLastName=Smith, LEA=H17, PVList=E:Y,H:Y,J:Y,K:Y,M:Y,N:Y, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: XWB0XGY8ZYHJECKK for [source1.2, source1.4]
+
+**** DUMP START ****
+entityMap
+KEUBJZZ3XO8Y2948	OysterID: KEUBJZZ3XO8Y2948
+Creation Date: null
+Size: 1
+Persistant: false
+Record 0: @RefID=source1.1, StudentFirstName=Edgar, StudentLastName=Jones, LEA=G34, PVList=A:X,B:X,C:X,D:X,E:X, Input record: false, Current Traces: OID: KEUBJZZ3XO8Y2948, RunID: 1, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+XWB0XGY8ZYHJECKK	OysterID: XWB0XGY8ZYHJECKK
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, PVList=D:Y,E:Y,G:Y,H:Y,J:Y,K:Y, Input record: false, Current Traces: OID: XWB0XGY8ZYHJECKK, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=source1.4, StudentFirstName=Mary, StudentLastName=Smith, LEA=H17, PVList=E:Y,H:Y,J:Y,K:Y,M:Y,N:Y, Input record: false, Current Traces: OID: XWB0XGY8ZYHJECKK, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+90H7HNEL5A6GXIV5	OysterID: 90H7HNEL5A6GXIV5
+Creation Date: null
+Size: 1
+Persistant: false
+Record 0: @RefID=source1.3, StudentFirstName=Eddie, StudentLastName=Jones, LEA=H15, PVList=A:X,C:X,D:X,E:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+A:X	[source1.1, source1.3]
+B:X	[source1.1]
+C:X	[source1.1, source1.3]
+D:X	[source1.1, source1.3]
+E:X	[source1.1, source1.3]
+D:Y	[source1.2]
+E:Y	[source1.2, source1.4]
+G:Y	[source1.2]
+H:Y	[source1.2, source1.4]
+J:Y	[source1.2, source1.4]
+K:Y	[source1.2, source1.4]
+M:Y	[source1.4]
+N:Y	[source1.4]
+linkMap
+source1.3	90H7HNEL5A6GXIV5
+source1.2	XWB0XGY8ZYHJECKK
+source1.1	KEUBJZZ3XO8Y2948
+source1.4	XWB0XGY8ZYHJECKK
+**** DUMP END ****
+
+
+Input: @RefID=source1.5, StudentFirstName=Eddie, StudentLastName=Jones, LEA=G34, PVList=C:X,D:X,E:X,F:X,G:X, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		source1.3=@RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{H15}, PVList{A:X,C:X,D:X,E:X}
+		source1.1=@RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+
+	Compare Input 6 to Identity 1 @RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{H15}, PVList{A:X,C:X,D:X,E:X}
+matrix
+true
+	Matched Rule:1
+
+false
+	Compare Input 6 to Identity 2 @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+matrix
+false
+true
+
+	Satisfies Rule 1
+
+	Satisfies Rule 2
+	Assign Entity source1.1 to Input 6
+	Update Entity: KEUBJZZ3XO8Y2948 @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, PVList{A:X,B:X,C:X,D:X,E:X}
+	             : OysterID: 90H7HNEL5A6GXIV5
+Creation Date: null
+Size: 3
+Persistant: false
+Record 0: @RefID=source1.3, StudentFirstName=Eddie, StudentLastName=Jones, LEA=H15, PVList=A:X,C:X,D:X,E:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=source1.1, StudentFirstName=Edgar, StudentLastName=Jones, LEA=G34, PVList=A:X,B:X,C:X,D:X,E:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [2], Previous Traces: []
+Record 2: @RefID=source1.5, StudentFirstName=Eddie, StudentLastName=Jones, LEA=G34, PVList=C:X,D:X,E:X,F:X,G:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [1, 2], Previous Traces: []
+Merges: {KEUBJZZ3XO8Y2948=source1.1}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: source1.1 for ri @RefID=source1.5, StudentFirstName=Eddie, StudentLastName=Jones, LEA=G34, PVList=C:X,D:X,E:X,F:X,G:X, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: 90H7HNEL5A6GXIV5 for [source1.3, source1.1, source1.5]
+
+**** DUMP START ****
+entityMap
+XWB0XGY8ZYHJECKK	OysterID: XWB0XGY8ZYHJECKK
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, PVList=D:Y,E:Y,G:Y,H:Y,J:Y,K:Y, Input record: false, Current Traces: OID: XWB0XGY8ZYHJECKK, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=source1.4, StudentFirstName=Mary, StudentLastName=Smith, LEA=H17, PVList=E:Y,H:Y,J:Y,K:Y,M:Y,N:Y, Input record: false, Current Traces: OID: XWB0XGY8ZYHJECKK, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+90H7HNEL5A6GXIV5	OysterID: 90H7HNEL5A6GXIV5
+Creation Date: null
+Size: 3
+Persistant: false
+Record 0: @RefID=source1.3, StudentFirstName=Eddie, StudentLastName=Jones, LEA=H15, PVList=A:X,C:X,D:X,E:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=source1.1, StudentFirstName=Edgar, StudentLastName=Jones, LEA=G34, PVList=A:X,B:X,C:X,D:X,E:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [2], Previous Traces: []
+Record 2: @RefID=source1.5, StudentFirstName=Eddie, StudentLastName=Jones, LEA=G34, PVList=C:X,D:X,E:X,F:X,G:X, Input record: false, Current Traces: OID: 90H7HNEL5A6GXIV5, RunID: 1, Rule: [1, 2], Previous Traces: []
+Merges: {KEUBJZZ3XO8Y2948=source1.1}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+A:X	[source1.1, source1.3]
+B:X	[source1.1]
+C:X	[source1.1, source1.3, source1.5]
+D:X	[source1.1, source1.3, source1.5]
+E:X	[source1.1, source1.3, source1.5]
+D:Y	[source1.2]
+E:Y	[source1.2, source1.4]
+G:Y	[source1.2]
+H:Y	[source1.2, source1.4]
+J:Y	[source1.2, source1.4]
+K:Y	[source1.2, source1.4]
+M:Y	[source1.4]
+N:Y	[source1.4]
+F:X	[source1.5]
+G:X	[source1.5]
+linkMap
+source1.3	90H7HNEL5A6GXIV5
+source1.2	XWB0XGY8ZYHJECKK
+source1.1	90H7HNEL5A6GXIV5
+source1.5	90H7HNEL5A6GXIV5
+source1.4	XWB0XGY8ZYHJECKK
+**** DUMP END ****
+
+
+Input: @RefID=source1.6, StudentFirstName=Super, StudentLastName=Man, LEA=G19, PVList=X:Z,Y:Z,Z:Z, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+
+	New Entity HWJX8JDI6GE23IXJ @RefID{source1.6}, StudentFirstName{Super}, StudentLastName{Man}, LEA{G19}, PVList{X:Z,Y:Z,Z:Z}
+	New Index: @RefID=source1.6, StudentFirstName=Super, StudentLastName=Man, LEA=G19, PVList=X:Z,Y:Z,Z:Z, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{source1.6}, @RefID{source1.6}, StudentFirstName{Super}, StudentLastName{Man}, LEA{G19}, PVList{X:Z,Y:Z,Z:Z}
+Records processed for ./ListOverlapPV/Scripts/ListOverlapPVSourceDescriptor.xml: 6(0)
+
+# of Consolidation Steps: 0
+
+Filtered Candidate List Frequencies
+0	3
+1	2
+2	1
+
+
+UnFiltered Candidate List Frequencies
+0	3
+1	2
+2	1
+
+
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :            6
+Total Clusters                   :            3
+Max Cluster Size                 :            3
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1                 1                   1
+           2                 1                   2
+           3                 1                   3
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            2
+Average Cluster by Count         :            1
+Average Cluster Size             :      2.00000
+Number of Duplicate Recs         :            3
+Duplication Rate                 :      0.50000
+
+
+Total Candidates Size            :            4
+Total DeDup Candidates Size      :            4
+Total # Candidates               :            3
+Avg Candidates per Input         :      1.33333
+Total Matched Count              :            2
+Matches per Candidates Size      :      0.50000
+Matches per DeDup Candidates Size:      0.50000
+Matches per Candidates           :      0.66667
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                                 2
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1]                               2
+[2]                               1
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :           18
+Total tokens            :           29
+Unique tokens           :            6
+Max tokens per key      :            3
+Min tokens per key      :            1
+Min tokens > 1 per key  :            2
+
+Total tokens per key    :      1.61111
+Unique tokens per key   :      0.33333
+Total per Unique tokens :      4.83333
+Unique per Total tokens :      0.20690
+
+Skewness                :      1.00290
+Kurtosis                :      1.00753
+Excess                  :     -1.99247
+
+Max key                 : C:X, D:X, E:X
+
+Top 10 keys             : 
+3                        : C:X, D:X, E:X
+2                        : A:X, E:Y, H:Y, J:Y, K:Y
+1                        : B:X, D:Y, G:Y, M:Y, N:Y, F:X, G:X, X:Z, Y:Z, Z:Z
+
+
+Candidate Size     # of Candidates        # of Records
+             0                   3                   0
+             1                   2                   2
+             2                   1                   2
+
+
+   Index Group          Index Size        # of Records
+             1                  10                  10
+             2                   5                  10
+             3                   3                   9
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                1
+Throughput (records/hour)        :     21,600.00000
+Average Matching Latency (ms)    :         0.333333
+Max Matching Latency (ms)        :                1
+Min Matching Latency (ms)        :                1
+Average Non-Matching Latency (ms):          0.50000
+Max Non-Matching Latency (ms)    :                2
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2019-08-20 10.10.43
+Time process ended at 2019-08-20 10.10.44
+Total elapsed time 0 hour(s) 0 minute(s) 1 second(s)
+

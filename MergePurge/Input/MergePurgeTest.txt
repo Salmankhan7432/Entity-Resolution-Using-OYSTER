@@ -1,0 +1,7 @@
+IdentityID|FirstName|LastName|SchoolCode|DOB
+1|Edgar|Jones|G34|20001104
+2|Mary|Smith|G55|19990921
+3|Eddie|Jones|H15|20001104
+4|Mary|Smith|H17|19990921
+5|Eddie|Jones|G34|20001104
+6|Super|Man|G19|20011104 

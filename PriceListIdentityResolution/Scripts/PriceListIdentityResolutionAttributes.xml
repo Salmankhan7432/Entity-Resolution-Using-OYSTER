@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : PriceListIdentityResolutionAttributes.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Attributes for Identity Resolution of Equipment List against the Price List
+ -->
+
+<OysterAttributes System="PriceList">
+     <Attribute Item="Description" />
+     <Attribute Item="EqNumber" /> 
+<Indices>
+	<Index Ident="X1">
+		<Segment Item="Description" Hash="MatrixTokenizer(,2,'IN|2|PUMPING|UNIT|116|LB|ELECTRIC|MOTOR|HP|RPM|MOTORS|3|X|FT|5000|LUFKIN|4|12|FLANGED|END|10000|7|TYPE')"/>
+	</Index>
+</Indices>
+        <!-- Identity Resolution Rules -->
+    <IdentityRules>
+        <Rule Ident="1">
+            <Term Item="Description" SIMILARITY="MatrixComparator(0.85,',','')"/>
+        </Rule>
+     </IdentityRules>
+</OysterAttributes>

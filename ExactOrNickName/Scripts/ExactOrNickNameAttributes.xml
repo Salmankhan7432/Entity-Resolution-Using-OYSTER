@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ExactOrNickNameAttributes.xml
+    Created on : 2018-07-15
+    Author     : John R. Talburt
+    Description:
+        Example Rule using ExactOrNickName comparator
+-->
+
+<OysterAttributes System="School">
+    <Attribute Item="Fname"  Algo= "none" />
+    <Attribute Item="Lname"  Algo="none" />
+   <!-- -->
+	<IdentityRules>
+     		<Rule Ident="1">
+				<Term Item="Fname" SIMILARITY1="Exact" SIMILARITY2="NickName"/>
+				<Term Item="Lname" DATAPREP="SCAN(LR,LETTER,0,TOUPPER,SAMEORDER)" SIMILARITY="Exact"/>
+			</Rule>
+	</IdentityRules>
+</OysterAttributes>

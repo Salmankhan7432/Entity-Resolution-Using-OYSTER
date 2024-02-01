@@ -1,0 +1,31 @@
+OYSTER Identity Change Report
+Date          : Sep 18, 2022
+RunScript Path: ExactOrMissingRunScript.xml
+RunScript Name: ExactOrMissingRunScript
+
+Identity Change Summary Section
+Count of Output Identities:	5
+Count of Input Identities:	0
+Count of Input Identities Updated and Written to Output:	0
+Count of Input Identities Not Updated and Written to Output:	0
+Count of Input Identities Merged:	0
+Count of New Identities Created:	5
+Count of Error Identities:	0
+
+
+Identity Change Detail Section
+New Identities Created
+Identifier	References
+E7B1QDQPP3ZGXY2S	Source1.1|Source1.2
+42L2RNYUFFLC9BDI	Source1.3|Source1.4
+8CJV0R736R2PE64T	Source1.5
+7L1GEHDMQB103B4O	Source1.6
+R6L8ODRZ2BTQS2GT	Source1.7|Source1.8
+
+
+Input Identities Merged
+Input Identifier	Output Identifier
+
+
+Input Identities Updated
+Identifier	References before update	References after update

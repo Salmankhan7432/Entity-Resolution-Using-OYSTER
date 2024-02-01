@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Metadata>
+		<Modifications>
+			<Modification ID="1" OysterVersion="3.5.8" Date="2018-08-03 12.25.34" RunScript="IdentityCaptureRunScript" />
+			<Modification ID="2" OysterVersion="3.5.8" Date="2018-08-03 13.18.12" RunScript="IdentityUpdateRunScript" />
+		</Modifications>
+		<Attributes>
+			<Attribute Name="@RefID" Tag="A"/>
+			<Attribute Name="StudentFirstName" Tag="B"/>
+			<Attribute Name="StudentLastName" Tag="C"/>
+			<Attribute Name="LEA" Tag="D"/>
+			<Attribute Name="StudentDateOfBirth" Tag="E"/>
+		</Attributes>
+	</Metadata>
+	<Identities>
+	<Identity Identifier="2I3Y0EUXN8TXWM3O" CDate="2018-08-03">
+		<References>
+			<Reference>
+				<Value>A^source2.1|B^Sam|C^Jacobs|D^G34|E^20011104</Value>
+				<Traces>
+					<Trace OID="2I3Y0EUXN8TXWM3O" RunID="2" Rule="[@]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="FYONETPU881DH2L0" CDate="2018-08-03">
+		<References>
+			<Reference>
+				<Value>A^source1.6|B^Super|C^Man|D^G19|E^20011104</Value>
+				<Traces>
+					<Trace OID="FYONETPU881DH2L0" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="MW9AGFLZ2A1ENXZ5" CDate="2018-08-03">
+		<References>
+			<Reference>
+				<Value>A^source1.2|B^Mary|C^Smith|D^G55|E^19990921</Value>
+				<Traces>
+					<Trace OID="MW9AGFLZ2A1ENXZ5" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^source1.4|B^Mary|C^SMITH|D^H17|E^19990921</Value>
+				<Traces>
+					<Trace OID="MW9AGFLZ2A1ENXZ5" RunID="1" Rule="[1]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^source2.2|B^Mary|C^Smith|D^G55|E^19990921</Value>
+				<Traces>
+					<Trace OID="MW9AGFLZ2A1ENXZ5" RunID="2" Rule="[2]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="XVI8NV5E03OWX86Y" CDate="2018-08-03">
+		<References>
+			<Reference>
+				<Value>A^source1.1|B^Edgar|C^Jones|D^G34|E^20001104</Value>
+				<Traces>
+					<Trace OID="XVI8NV5E03OWX86Y" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^source1.3|B^Eddie|C^JONES|D^H15|E^20001104</Value>
+				<Traces>
+					<Trace OID="XVI8NV5E03OWX86Y" RunID="1" Rule="[1]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^source1.5|B^Eddie|C^Jones|D^G34|E^20001104</Value>
+				<Traces>
+					<Trace OID="XVI8NV5E03OWX86Y" RunID="1" Rule="[1,  2]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	</Identities>
+</root>

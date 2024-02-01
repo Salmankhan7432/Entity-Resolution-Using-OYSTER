@@ -1,0 +1,13 @@
+RecID, First, Last, Suffix
+1, James, DEF, SR
+2, James, def, sr
+3, James, XYZ, JR
+4, Jim, XYZ, JR
+5, Phillip, XYZ, SR
+6, Philip, XYZ, Sr
+7, John, PQR,
+8, Jon, PQR,
+9, George, Smith,
+10, Sam, Smith,
+11, Xenon, Jones, Jr
+12, Xinon, Jones, Jr

@@ -1,0 +1,7 @@
+IdentityID|FirstName|LastName|SchoolCode|List
+1|Edgar|Jones|G34|A,B,C,D,E
+2|Mary|Smith|G55|D,E,F
+3|Eddie|Jones|H15|D,E,F,J
+4|Mary|Smith|H17|D,E,F,G
+5|Eddie|Jones|G34|B,C,D,F,J
+6|Super|Man|G19|X,Y,Z

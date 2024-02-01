@@ -1,0 +1,113 @@
+Oyster v.4.3.0
+RunScript: ListARunScript.xml
+Attribute: ./ListA/Scripts/ListAAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./ListA/Output/ListAIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./ListA/Output/ListAOutput.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./ListA/Input/LISTA.txt
+
+##JAVA: Cannot invoke "java.io.BufferedReader.readLine()" because "this.in" is null
+java.lang.NullPointerException: Cannot invoke "java.io.BufferedReader.readLine()" because "this.in" is null
+edu.ualr.oyster.io.OysterDelimitedReader.getNextReference(OysterDelimitedReader.java:203)
+edu.ualr.oyster.OysterMain.process(OysterMain.java:2535)
+edu.ualr.oyster.OysterMain.main(OysterMain.java:2950)
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :            0
+Total Clusters                   :            0
+Max Cluster Size                 :            0
+Min Cluster Size > 1             :            0
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            0
+Average Cluster by Count         :            0
+Average Cluster Size             :          NaN
+Number of Duplicate Recs         :            0
+Duplication Rate                 :          NaN
+
+
+Total Candidates Size            :            0
+Total DeDup Candidates Size      :            0
+Total # Candidates               :            0
+Avg Candidates per Input         :          NaN
+Total Matched Count              :            0
+Matches per Candidates Size      :          NaN
+Matches per DeDup Candidates Size:          NaN
+Matches per Candidates           :          NaN
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+
+
+###################
+##  Index Stats  ##
+###################
+No index created, statistics cannot be produced
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                0
+Throughput (records/hour)        :              NaN
+Average Matching Latency (ms)    :              NaN
+Max Matching Latency (ms)        :                0
+Min Matching Latency (ms)        : 9,223,372,036,854,775,807
+Average Non-Matching Latency (ms):              NaN
+Max Non-Matching Latency (ms)    :                0
+Min Non-Matching Latency (ms)    : 9,223,372,036,854,775,807
+
+
+
+Time process started at 2023-11-06 09.02.40
+Time process ended at 2023-11-06 09.02.40
+Total elapsed time 0 hour(s) 0 minute(s) 0 second(s)
+

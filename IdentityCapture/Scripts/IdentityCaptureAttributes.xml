@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityCaptureAttributes.xml
+    Created on : 2019-08-11
+    Author     : John R. Talburt
+    Description:
+        Attributes Script for the Identity Capture Demo Run
+-->
+
+<OysterAttributes System="School">
+    <Attribute Item="StudentFirstName"  Algo= "none" />
+    <Attribute Item="StudentLastName"  Algo="none" />
+    <Attribute Item="LEA"  Algo="none" />
+    <Attribute Item="StudentDateOfBirth"  Algo="none" />
+          
+    <!-- -->
+    <IdentityRules>
+        <Rule Ident="1">
+            <Term Item="StudentFirstName" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+            <Term Item="StudentLastName" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+            <Term Item="StudentDateOfBirth" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+        </Rule>
+        <Rule Ident="2">
+            <Term Item="StudentLastName" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+            <Term Item="LEA" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+            <Term Item="StudentDateOfBirth" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+        </Rule>
+    </IdentityRules>
+</OysterAttributes>

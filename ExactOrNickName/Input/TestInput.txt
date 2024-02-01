@@ -1,0 +1,15 @@
+RecID|TestValue|AnchorValue
+1|John|Jones
+2|John|Jones
+3|Bob|Sims
+4|Robert|Sims
+5|Bill|Foster
+6|William|Foster
+7|George|Lewis
+8|George|Lewis
+9|Phillip|Smith
+10|Philip|Smith
+11|May|West
+12||West
+13|Gloria|West
+14|Gloria|

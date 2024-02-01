@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Merge-purgeSourceDescriptorMain.xml
+    Created on : 2023-17-11
+    Author     : Salman Khan
+    Description: Source Descriptor for the Merge-Purge Demo Run
+-->
+
+<OysterSourceDescriptor Name="source1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./MergePurge/Input/merged_data.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="RecID" Attribute="@RefID" Pos="0"/>
+        <Item Name="FirstName" Attribute="FirstName" Pos="1"/>
+        <Item Name="LastName" Attribute="LastName" Pos="3"/>
+        <Item Name="SSN" Attribute="SSN" Pos="4"/>
+        <Item Name="DOB" Attribute="DOB" Pos="5"/>
+        <Item Name="Address" Attribute="Address" Pos="7"/>
+        <Item Name="HomePhone" Attribute="HomePhone" Pos="11"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

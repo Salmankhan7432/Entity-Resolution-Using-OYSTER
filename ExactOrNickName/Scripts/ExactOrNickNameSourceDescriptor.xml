@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SingleComparatorDescriptor.xml
+    Created on : 2018-07-15
+    Author     : John Talburt
+    Description: Source Descriptor for ExactOrNickName Example
+-->
+
+<OysterSourceDescriptor Name="S1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./ExactOrNickName/Input/TestInput.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="RecID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Fname" Attribute="Fname" Pos="1"/>
+        <Item Name="Lname" Attribute="Lname" Pos="2"/>
+     </ReferenceItems>
+</OysterSourceDescriptor>

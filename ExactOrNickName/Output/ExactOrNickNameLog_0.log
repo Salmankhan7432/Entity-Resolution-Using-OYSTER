@@ -1,0 +1,871 @@
+Oyster v.4.2.0
+RunScript: ExactOrNickNameRunScript.xml
+Attribute: ./ExactOrNickName/Scripts/ExactOrNickNameAttributes.xml
+Initializing Index...
+Index Type: NullIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./ExactOrNickName/Output/ExactOrNickNameLinkIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./ExactOrNickName/Output/ExactOrNickNameOutput.idty
+
+Validating Source Descriptor:./ExactOrNickName/Scripts/ExactOrNickNameSourceDescriptor.xml
+Source File:./ExactOrNickName/Input/TestInput.txt
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./ExactOrNickName/Input/TestInput.txt
+
+
+Input: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+
+	New Entity ZOD8J1WHBSASW36D @RefID{S1.1}, Fname{John}, Lname{Jones}
+	New Index: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.1}, @RefID{S1.1}, Fname{John}, Lname{Jones}
+
+Input: @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+
+	Compare Input 3 to Identity 1 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+true
+	Matched Rule:1
+
+
+	Satisfies Rule 1
+	Assign Entity S1.1 to Input 3
+	Update Entity: ZOD8J1WHBSASW36D @RefID{S1.1|S1.2}, Fname{John}, Lname{Jones}
+	             : OysterID: ZOD8J1WHBSASW36D
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: S1.1 for ri @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: ZOD8J1WHBSASW36D for [S1.2, S1.1]
+
+**** DUMP START ****
+entityMap
+ZOD8J1WHBSASW36D	OysterID: ZOD8J1WHBSASW36D
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[S1.1, S1.2]
+linkMap
+S1.2	ZOD8J1WHBSASW36D
+S1.1	ZOD8J1WHBSASW36D
+**** DUMP END ****
+
+
+Input: @RefID=S1.3, Fname=Bob, Lname=Sims, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+
+	Compare Input 4 to Identity 1 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 4 to Identity 1 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	New Entity I02EETX09BEWKPSN @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+	New Index: @RefID=S1.3, Fname=Bob, Lname=Sims, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.3}, @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+
+Input: @RefID=S1.4, Fname=Robert, Lname=Sims, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+
+	Compare Input 5 to Identity 1 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 5 to Identity 2 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 5 to Identity 2 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity S1.3 to Input 5
+	Update Entity: I02EETX09BEWKPSN @RefID{S1.3|S1.4}, Fname{Bob|Robert}, Lname{Sims}
+	             : OysterID: I02EETX09BEWKPSN
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.3, Fname=Bob, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.4, Fname=Robert, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: S1.3 for ri @RefID=S1.4, Fname=Robert, Lname=Sims, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: I02EETX09BEWKPSN for [S1.4, S1.3]
+
+**** DUMP START ****
+entityMap
+ZOD8J1WHBSASW36D	OysterID: ZOD8J1WHBSASW36D
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+I02EETX09BEWKPSN	OysterID: I02EETX09BEWKPSN
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.3, Fname=Bob, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.4, Fname=Robert, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[S1.1, S1.2, S1.3, S1.4]
+linkMap
+S1.4	I02EETX09BEWKPSN
+S1.2	ZOD8J1WHBSASW36D
+S1.3	I02EETX09BEWKPSN
+S1.1	ZOD8J1WHBSASW36D
+**** DUMP END ****
+
+
+Input: @RefID=S1.5, Fname=Bill, Lname=Foster, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+
+	Compare Input 6 to Identity 1 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 6 to Identity 1 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 6 to Identity 2 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 6 to Identity 2 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	New Entity GJ3VBKGAXP8VCQHE @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+	New Index: @RefID=S1.5, Fname=Bill, Lname=Foster, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.5}, @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+
+Input: @RefID=S1.6, Fname=William, Lname=Foster, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+
+	Compare Input 7 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 7 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 7 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 7 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 7 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity S1.5 to Input 7
+	Update Entity: GJ3VBKGAXP8VCQHE @RefID{S1.5|S1.6}, Fname{Bill|William}, Lname{Foster}
+	             : OysterID: GJ3VBKGAXP8VCQHE
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.5, Fname=Bill, Lname=Foster, Input record: false, Current Traces: OID: GJ3VBKGAXP8VCQHE, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.6, Fname=William, Lname=Foster, Input record: false, Current Traces: OID: GJ3VBKGAXP8VCQHE, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: S1.5 for ri @RefID=S1.6, Fname=William, Lname=Foster, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: GJ3VBKGAXP8VCQHE for [S1.6, S1.5]
+
+**** DUMP START ****
+entityMap
+ZOD8J1WHBSASW36D	OysterID: ZOD8J1WHBSASW36D
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+I02EETX09BEWKPSN	OysterID: I02EETX09BEWKPSN
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.3, Fname=Bob, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.4, Fname=Robert, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+GJ3VBKGAXP8VCQHE	OysterID: GJ3VBKGAXP8VCQHE
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.5, Fname=Bill, Lname=Foster, Input record: false, Current Traces: OID: GJ3VBKGAXP8VCQHE, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.6, Fname=William, Lname=Foster, Input record: false, Current Traces: OID: GJ3VBKGAXP8VCQHE, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[S1.1, S1.2, S1.3, S1.4, S1.5, S1.6]
+linkMap
+S1.6	GJ3VBKGAXP8VCQHE
+S1.4	I02EETX09BEWKPSN
+S1.5	GJ3VBKGAXP8VCQHE
+S1.2	ZOD8J1WHBSASW36D
+S1.3	I02EETX09BEWKPSN
+S1.1	ZOD8J1WHBSASW36D
+**** DUMP END ****
+
+
+Input: @RefID=S1.7, Fname=George, Lname=Lewis, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+
+	Compare Input 8 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 8 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 8 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 8 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 8 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 8 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	New Entity XIZG3DME8KWWTFO8 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+	New Index: @RefID=S1.7, Fname=George, Lname=Lewis, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.7}, @RefID{S1.7}, Fname{George}, Lname{Lewis}
+
+Input: @RefID=S1.8, Fname=George, Lname=Lewis, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.7=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+
+	Compare Input 9 to Identity 1 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 9 to Identity 2 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 9 to Identity 2 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 9 to Identity 3 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 9 to Identity 3 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 9 to Identity 4 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 9 to Identity 4 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity S1.7 to Input 9
+	Update Entity: XIZG3DME8KWWTFO8 @RefID{S1.7|S1.8}, Fname{George}, Lname{Lewis}
+	             : OysterID: XIZG3DME8KWWTFO8
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.7, Fname=George, Lname=Lewis, Input record: false, Current Traces: OID: XIZG3DME8KWWTFO8, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.8, Fname=George, Lname=Lewis, Input record: false, Current Traces: OID: XIZG3DME8KWWTFO8, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: S1.7 for ri @RefID=S1.8, Fname=George, Lname=Lewis, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: XIZG3DME8KWWTFO8 for [S1.7, S1.8]
+
+**** DUMP START ****
+entityMap
+ZOD8J1WHBSASW36D	OysterID: ZOD8J1WHBSASW36D
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.1, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.2, Fname=John, Lname=Jones, Input record: false, Current Traces: OID: ZOD8J1WHBSASW36D, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+I02EETX09BEWKPSN	OysterID: I02EETX09BEWKPSN
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.3, Fname=Bob, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.4, Fname=Robert, Lname=Sims, Input record: false, Current Traces: OID: I02EETX09BEWKPSN, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+GJ3VBKGAXP8VCQHE	OysterID: GJ3VBKGAXP8VCQHE
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.5, Fname=Bill, Lname=Foster, Input record: false, Current Traces: OID: GJ3VBKGAXP8VCQHE, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.6, Fname=William, Lname=Foster, Input record: false, Current Traces: OID: GJ3VBKGAXP8VCQHE, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+XIZG3DME8KWWTFO8	OysterID: XIZG3DME8KWWTFO8
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=S1.7, Fname=George, Lname=Lewis, Input record: false, Current Traces: OID: XIZG3DME8KWWTFO8, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=S1.8, Fname=George, Lname=Lewis, Input record: false, Current Traces: OID: XIZG3DME8KWWTFO8, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[S1.1, S1.2, S1.3, S1.4, S1.5, S1.6, S1.7, S1.8]
+linkMap
+S1.6	GJ3VBKGAXP8VCQHE
+S1.7	XIZG3DME8KWWTFO8
+S1.4	I02EETX09BEWKPSN
+S1.5	GJ3VBKGAXP8VCQHE
+S1.2	ZOD8J1WHBSASW36D
+S1.3	I02EETX09BEWKPSN
+S1.1	ZOD8J1WHBSASW36D
+S1.8	XIZG3DME8KWWTFO8
+**** DUMP END ****
+
+
+Input: @RefID=S1.9, Fname=Phillip, Lname=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+		S1.8=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.8=@RefID{S1.8}, Fname{George}, Lname{Lewis}
+
+	Compare Input 10 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 10 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 10 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 10 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 10 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 10 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 10 to Identity 4 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 10 to Identity 4 @RefID{S1.8}, Fname{George}, Lname{Lewis}
+matrix
+false
+	New Entity O8N5GMRQCCLH57UF @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+	New Index: @RefID=S1.9, Fname=Phillip, Lname=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.9}, @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+
+Input: @RefID=S1.10, Fname=Philip, Lname=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+		S1.8=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.8=@RefID{S1.8}, Fname{George}, Lname{Lewis}
+		S1.9=@RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+
+	Compare Input 11 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 11 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 11 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 11 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 11 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 11 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 11 to Identity 4 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 11 to Identity 4 @RefID{S1.8}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 11 to Identity 5 @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+matrix
+false
+	New Entity JFWFINGEMHG3P12W @RefID{S1.10}, Fname{Philip}, Lname{Smith}
+	New Index: @RefID=S1.10, Fname=Philip, Lname=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.10}, @RefID{S1.10}, Fname{Philip}, Lname{Smith}
+
+Input: @RefID=S1.11, Fname=May, Lname=West, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+		S1.10=@RefID{S1.10}, Fname{Philip}, Lname{Smith}
+		S1.8=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.8=@RefID{S1.8}, Fname{George}, Lname{Lewis}
+		S1.9=@RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+
+	Compare Input 12 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 12 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 12 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 12 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 12 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 12 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 12 to Identity 4 @RefID{S1.10}, Fname{Philip}, Lname{Smith}
+matrix
+false
+	Compare Input 12 to Identity 5 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 12 to Identity 5 @RefID{S1.8}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 12 to Identity 6 @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+matrix
+false
+	New Entity UGO1RNLH31LOAGQ8 @RefID{S1.11}, Fname{May}, Lname{West}
+	New Index: @RefID=S1.11, Fname=May, Lname=West, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.11}, @RefID{S1.11}, Fname{May}, Lname{West}
+
+Input: @RefID=S1.12, Lname=West, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+		S1.10=@RefID{S1.10}, Fname{Philip}, Lname{Smith}
+		S1.11=@RefID{S1.11}, Fname{May}, Lname{West}
+		S1.8=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.8=@RefID{S1.8}, Fname{George}, Lname{Lewis}
+		S1.9=@RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+
+	Compare Input 13 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 13 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 13 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 13 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 13 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 13 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 13 to Identity 4 @RefID{S1.10}, Fname{Philip}, Lname{Smith}
+matrix
+false
+	Compare Input 13 to Identity 5 @RefID{S1.11}, Fname{May}, Lname{West}
+matrix
+false
+	Compare Input 13 to Identity 6 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 13 to Identity 6 @RefID{S1.8}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 13 to Identity 7 @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+matrix
+false
+	New Entity DGY5BGSD1QHWWGO8 @RefID{S1.12}, Lname{West}
+	New Index: @RefID=S1.12, Lname=West, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.12}, @RefID{S1.12}, Lname{West}
+
+Input: @RefID=S1.13, Fname=Gloria, Lname=West, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+		S1.10=@RefID{S1.10}, Fname{Philip}, Lname{Smith}
+		S1.11=@RefID{S1.11}, Fname{May}, Lname{West}
+		S1.12=@RefID{S1.12}, Lname{West}
+		S1.8=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.8=@RefID{S1.8}, Fname{George}, Lname{Lewis}
+		S1.9=@RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+
+	Compare Input 14 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 14 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 14 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 14 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 14 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 14 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 14 to Identity 4 @RefID{S1.10}, Fname{Philip}, Lname{Smith}
+matrix
+false
+	Compare Input 14 to Identity 5 @RefID{S1.11}, Fname{May}, Lname{West}
+matrix
+false
+	Compare Input 14 to Identity 6 @RefID{S1.12}, Lname{West}
+matrix
+false
+	Compare Input 14 to Identity 7 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 14 to Identity 7 @RefID{S1.8}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 14 to Identity 8 @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+matrix
+false
+	New Entity EE3I4NJNK65WNOV7 @RefID{S1.13}, Fname{Gloria}, Lname{West}
+	New Index: @RefID=S1.13, Fname=Gloria, Lname=West, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.13}, @RefID{S1.13}, Fname{Gloria}, Lname{West}
+
+Input: @RefID=S1.14, Fname=Gloria, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.5=@RefID{S1.5}, Fname{Bill}, Lname{Foster}
+		S1.5=@RefID{S1.6}, Fname{William}, Lname{Foster}
+		S1.3=@RefID{S1.3}, Fname{Bob}, Lname{Sims}
+		S1.3=@RefID{S1.4}, Fname{Robert}, Lname{Sims}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jones}
+		S1.1=@RefID{S1.2}, Fname{John}, Lname{Jones}
+		S1.10=@RefID{S1.10}, Fname{Philip}, Lname{Smith}
+		S1.8=@RefID{S1.7}, Fname{George}, Lname{Lewis}
+		S1.8=@RefID{S1.8}, Fname{George}, Lname{Lewis}
+		S1.9=@RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+		S1.11=@RefID{S1.11}, Fname{May}, Lname{West}
+		S1.12=@RefID{S1.12}, Lname{West}
+		S1.13=@RefID{S1.13}, Fname{Gloria}, Lname{West}
+
+	Compare Input 15 to Identity 1 @RefID{S1.5}, Fname{Bill}, Lname{Foster}
+matrix
+false
+	Compare Input 15 to Identity 1 @RefID{S1.6}, Fname{William}, Lname{Foster}
+matrix
+false
+	Compare Input 15 to Identity 2 @RefID{S1.3}, Fname{Bob}, Lname{Sims}
+matrix
+false
+	Compare Input 15 to Identity 2 @RefID{S1.4}, Fname{Robert}, Lname{Sims}
+matrix
+false
+	Compare Input 15 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 15 to Identity 3 @RefID{S1.2}, Fname{John}, Lname{Jones}
+matrix
+false
+	Compare Input 15 to Identity 4 @RefID{S1.10}, Fname{Philip}, Lname{Smith}
+matrix
+false
+	Compare Input 15 to Identity 5 @RefID{S1.7}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 15 to Identity 5 @RefID{S1.8}, Fname{George}, Lname{Lewis}
+matrix
+false
+	Compare Input 15 to Identity 6 @RefID{S1.9}, Fname{Phillip}, Lname{Smith}
+matrix
+false
+	Compare Input 15 to Identity 7 @RefID{S1.11}, Fname{May}, Lname{West}
+matrix
+false
+	Compare Input 15 to Identity 8 @RefID{S1.12}, Lname{West}
+matrix
+false
+	Compare Input 15 to Identity 9 @RefID{S1.13}, Fname{Gloria}, Lname{West}
+matrix
+false
+	New Entity O77QHJ7V1R7DC51P @RefID{S1.14}, Fname{Gloria}
+	New Index: @RefID=S1.14, Fname=Gloria, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.14}, @RefID{S1.14}, Fname{Gloria}
+Records processed for ./ExactOrNickName/Scripts/ExactOrNickNameSourceDescriptor.xml: 14(0)
+
+# of Consolidation Steps: 0
+
+Filtered Candidate List Frequencies
+0	1
+1	1
+2	1
+3	1
+4	1
+5	1
+6	1
+7	1
+8	1
+9	1
+10	1
+11	1
+12	1
+13	1
+
+
+UnFiltered Candidate List Frequencies
+0	1
+1	1
+2	1
+3	1
+4	1
+5	1
+6	1
+7	1
+8	1
+9	1
+10	1
+11	1
+12	1
+13	1
+
+
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :           14
+Total Clusters                   :           10
+Max Cluster Size                 :            2
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1                 6                   6
+           2                 4                   8
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            1
+Average Cluster by Count         :            5
+Average Cluster Size             :      1.40000
+Number of Duplicate Recs         :            4
+Duplication Rate                 :      0.28571
+
+
+Total Candidates Size            :           91
+Total DeDup Candidates Size      :           55
+Total # Candidates               :           13
+Avg Candidates per Input         :      7.00000
+Total Matched Count              :            4
+Matches per Candidates Size      :      0.04396
+Matches per DeDup Candidates Size:      0.07273
+Matches per Candidates           :      0.30769
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                                 4
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1]                               4
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :            1
+Total tokens            :           14
+Unique tokens           :           14
+Max tokens per key      :           14
+Min tokens per key      :           14
+Min tokens > 1 per key  :           14
+
+Total tokens per key    :     14.00000
+Unique tokens per key   :     14.00000
+Total per Unique tokens :      1.00000
+Unique per Total tokens :      1.00000
+
+Skewness                :          NaN
+Kurtosis                :          NaN
+Excess                  :          NaN
+
+Max key                 : <null>
+
+Top 10 keys             : 
+14                        : <null>
+
+
+Candidate Size     # of Candidates        # of Records
+
+
+   Index Group          Index Size        # of Records
+            14                   1                  14
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                1
+Throughput (records/hour)        :     50,400.00000
+Average Matching Latency (ms)    :         0.285714
+Max Matching Latency (ms)        :                1
+Min Matching Latency (ms)        :                1
+Average Non-Matching Latency (ms):          1.28571
+Max Non-Matching Latency (ms)    :                3
+Min Non-Matching Latency (ms)    :                1
+
+
+
+Time process started at 2019-08-20 09.31.10
+Time process ended at 2019-08-20 09.31.11
+Total elapsed time 0 hour(s) 0 minute(s) 1 second(s)
+

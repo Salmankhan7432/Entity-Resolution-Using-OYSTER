@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : StrToStAssertionSourceDescriptor.xml
+    Created on : 2019-08-12
+    Author     : John R. Talburt
+    Description: Source Descriptor for Structure-to-Structure Assertion Example
+-->
+
+<OysterSourceDescriptor Name="S2S1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="," Qual="" Labels="Y">./StrToStrAssertion/Input/StrToStrAssertionTest.txt</Source>
+    <!-- Items in Source -->
+    <ReferenceItems>
+        <Item Name="ReferenceID" Attribute="@RefID" Pos="0" />
+		<Item Name="OYSTERID" Attribute="@OID" Pos="1" />
+		<Item Name="StructureToStructureAssertion" Attribute="@AssertStrToStr" Pos="2"/>
+		<Item Name="Reviewer" Attribute="@Reviewer" Pos="3" />
+    </ReferenceItems>
+</OysterSourceDescriptor>

@@ -1,0 +1,112 @@
+Oyster v.4.2.0
+RunScript: BlockingBadIndexRunScript.xml
+Attribute: ./BlockingBadIndex/Scripts/BlockingBadIndexAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./BlockingBadIndex/Output/BlockingBadIndexLinkFile.link
+
+Identity Output Type: TextFile
+Identity Output: ./BlockingBadIndex/Output/BlockingBadIndexOutput.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./BlockingBadIndex/Input/TestFile.txt
+
+Records processed for ./BlockingBadIndex/Scripts/BlockingBadIndexSourceDescriptor.xml: 1001(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :        1,001
+Total Clusters                   :        1,001
+Max Cluster Size                 :            1
+Min Cluster Size > 1             :            0
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1             1,001               1,001
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            1
+Average Cluster by Count         :        1,001
+Average Cluster Size             :      1.00000
+Number of Duplicate Recs         :            0
+Duplication Rate                 :      0.00000
+
+
+Total Candidates Size            :            0
+Total DeDup Candidates Size      :            0
+Total # Candidates               :            0
+Avg Candidates per Input         :          NaN
+Total Matched Count              :            0
+Matches per Candidates Size      :          NaN
+Matches per DeDup Candidates Size:          NaN
+Matches per Candidates           :          NaN
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+
+
+###################
+##  Index Stats  ##
+###################
+No index created, statistics cannot be produced
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                0
+Throughput (records/hour)        :         Infinity
+Average Matching Latency (ms)    :         0.000000
+Max Matching Latency (ms)        :                0
+Min Matching Latency (ms)        : 9,223,372,036,854,775,807
+Average Non-Matching Latency (ms):          0.00699
+Max Non-Matching Latency (ms)    :                1
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2019-08-20 08.48.30
+Time process ended at 2019-08-20 08.48.30
+Total elapsed time 0 hour(s) 0 minute(s) 0 second(s)
+

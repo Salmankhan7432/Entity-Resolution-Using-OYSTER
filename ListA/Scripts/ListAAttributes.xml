@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListAAttributes.xml
+    Created on : 2018-07-14
+    Author     : John R. Talburt
+    Description:
+        Attributes Script for the 3 Index Post Resolution Transitive Closure
+-->
+<OysterAttributes System="School">
+    <Attribute Item="Fname"  Algo= "none" />
+    <Attribute Item="Lname"  Algo="none" />
+    <Attribute Item="Nbr"  Algo="none" />
+    <Attribute Item="Address"  Algo="none" />
+    <Attribute Item="City"  Algo= "none" />
+    <Attribute Item="State"  Algo="none" />
+    <Attribute Item="Zip"  Algo="none" />
+    <Attribute Item="PO Box"  Algo="none" />
+    <Attribute Item="POCity"  Algo= "none" />
+    <Attribute Item="POState"  Algo="none" />
+    <Attribute Item="POZip"  Algo="none" />
+    <Attribute Item="SSN"  Algo="none" />
+    <Attribute Item="Year"  Algo= "none" />
+    <Attribute Item="DOB"  Algo="none" />
+    <Attribute Item="HomePhone"  Algo="none" />  
+   <!-- -->
+	<IdentityRules>
+     		<Rule Ident="R1">
+            	<Term Item="Fname" SIMILARITY="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+            	<Term Item="Lname" SIMILARITY="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+            	<Term Item="Nbr" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+     		</Rule>
+     		<Rule Ident="R2">
+            	<Term Item="Lname" SIMILARITY="SCAN(LR,ALPHA,0,ToUpper,SameOrder)"/>
+            	<Term Item="SSN" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+     		</Rule>
+     		<Rule Ident="R3">
+                <Term Item="Fname" SIMILARITY="Soundex"/>
+            	<Term Item="Lname" SIMILARITY="Soundex"/>
+            	<Term Item="DOB" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+     		</Rule>
+	</IdentityRules>
+   <!-- -->
+	<Indices>
+		<Index Ident="X1">					
+            <Segment Item="Fname" Hash="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+            <Segment Item="Lname" Hash="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+            <Segment Item="Nbr" Hash="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Index>
+        <Index Ident="X2">					
+            <Segment Item="Lname" Hash="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+            <Segment Item="SSN" Hash="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Index>
+        <Index Ident="X3">
+			<Segment Item="Fname" Hash="Soundex"/>	
+            <Segment Item="Lname" Hash="Soundex"/>
+            <Segment Item="DOB" Hash="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Index>   
+	</Indices>
+</OysterAttributes>

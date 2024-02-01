@@ -1,0 +1,5 @@
+RefID, FirstName, LastName, DOB, SchCode, @AssertRefToRef
+1,Edgar, Jones, 20001104, G34,1
+2,Mary, Smith, 19990921, G55,2
+3,Eddie, Jones, 20001104, H15,1
+4,Mary, Smith, 19990921, H17,2

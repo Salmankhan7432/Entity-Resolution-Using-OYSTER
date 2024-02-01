@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : MergePurgeAttributes.xml
+    Created on : 2023-17-11
+    Author     : Salman Khan
+    Description:
+        Attributes Script for MergePurge Demo Run Updated for Version 4.1.0
+-->
+
+<OysterAttributes System="Team Challenge 2">
+    <Attribute Item="FirstName" />
+    <Attribute Item="LastName"  />
+    <Attribute Item="Address" />
+    <Attribute Item="SSN" />
+    <Attribute Item="HomePhone"  />
+    <Attribute Item="DOB" />
+        
+    <!-- -->
+    <Indices>
+	<Index Ident="1">
+            <Segment Item="SSN" Hash="SCAN(LR,DIGIT,0,KeepCase,L2HKeepDup)" />            
+        </Index>
+
+	<Index Ident="2">
+            	<Segment Item="FirstName" Hash="SCAN(LR,LETTER,4,ToUpper,SameOrder)" />
+        	<Segment Item="LastName" Hash="SOUNDEX" />
+        </Index>
+	<Index Ident="3">
+	<Segment Item="DOB" Hash="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+        </Index>
+
+
+
+	<!--
+	<Index Ident="2">
+            	<Segment Item="FirstName" Hash="SCAN(LR,LETTER,2,ToUpper,SameOrder)" />
+        	<Segment Item="LastName" Hash="SCAN(RL,LETTER,3,ToUpper,SameOrder)" />
+        </Index>
+	<Index Ident="3">
+            	<Segment Item="FirstName" Hash="TRANSPOSE" Similarity2="NICKNAME" />
+            <Segment Item="LastName" Hash="SCAN(LR,ALPHA,4,ToUpper,SameOrder)" />
+	<Segment Item="Address" Hash="SCAN(LR,DIGIT,5,ToUpper,SameOrder)" />
+        </Index> -->
+
+
+
+    </Indices>
+    <IdentityRules>
+        <Rule Ident="1">
+            	<Term Item="FirstName" Similarity="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" />
+            	<Term Item="LastName" Similarity="SOUNDEX" />
+		<Term Item="DOB" Similarity="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+	</Rule>
+	<Rule Ident="2">
+    		<Term Item="SSN" Similarity="SCAN(LR,DIGIT,0,KeepCase,SameOrder)" />
+        </Rule>
+        <Rule Ident="3">
+           	<Term Item="LastName" Similarity="SOUNDEX" />
+            	<Term Item="HomePhone" Similarity="SCAN(LR,DIGIT,0,KeepCase,SameOrder)" />
+		<Term Item="Address" Similarity="SCAN(LR,ALPHA,7,ToUpper,SameOrder)" />
+        </Rule>
+        <Rule Ident="4">
+            	<Term Item="LastName" Similarity="SOUNDEX" />
+            	<Term Item="Address" Similarity="SCAN(LR,ALPHA,7,ToUpper,SameOrder)" />
+	    	<Term Item="DOB" Similarity="SCAN(LR,DIGIT,4,KeepCase,SameOrder)" />
+        </Rule>
+    </IdentityRules>
+</OysterAttributes>

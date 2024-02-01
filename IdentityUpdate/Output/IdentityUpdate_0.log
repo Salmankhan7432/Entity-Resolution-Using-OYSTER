@@ -1,0 +1,308 @@
+Oyster v.4.2.0
+RunScript: IdentityUpdateRunScript.xml
+Attribute: ./IdentityUpdate/Scripts/IdentityUpdateAttributes.xml
+Initializing Index...
+Index Type: NullIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Identity Input Type: TextFile
+Identity Input: ./IdentityUpdate/Input/IdentityUpdateInputIdentities.idty
+
+Loading Previous IdentityRepository: ./IdentityUpdate/Input/IdentityUpdateInputIdentities.idty
+Number of clusters read: 3
+Number of references   : 6
+Link Output Type: TextFile
+Link Output: ./IdentityUpdate/Output/IdentityUpdateIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./IdentityUpdate/Output/IdentityUpdateOutput.idty
+
+Validating Source Descriptor:./IdentityUpdate/Scripts/IdentityUpdateSourceDescriptor.xml
+Source File:./IdentityUpdate/Input/IdentityUpdateTest.txt
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./IdentityUpdate/Input/IdentityUpdateTest.txt
+
+
+Input: @RefID=source2.1, StudentFirstName=Sam, StudentLastName=Jacobs, LEA=G34, StudentDateOfBirth=20011104, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		source1.6=@RefID{source1.6}, StudentFirstName{Super}, StudentLastName{Man}, LEA{G19}, StudentDateOfBirth{20011104}
+		source1.5=@RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+		source1.5=@RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{JONES}, LEA{H15}, StudentDateOfBirth{20001104}
+		source1.5=@RefID{source1.5}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+		source1.4=@RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, StudentDateOfBirth{19990921}
+		source1.4=@RefID{source1.4}, StudentFirstName{Mary}, StudentLastName{SMITH}, LEA{H17}, StudentDateOfBirth{19990921}
+
+	Compare Input 2 to Identity 1 @RefID{source1.6}, StudentFirstName{Super}, StudentLastName{Man}, LEA{G19}, StudentDateOfBirth{20011104}
+matrix
+false
+false
+	Compare Input 2 to Identity 2 @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+matrix
+false
+false
+	Compare Input 2 to Identity 2 @RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{JONES}, LEA{H15}, StudentDateOfBirth{20001104}
+matrix
+false
+false
+	Compare Input 2 to Identity 2 @RefID{source1.5}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+matrix
+false
+false
+	Compare Input 2 to Identity 3 @RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, StudentDateOfBirth{19990921}
+matrix
+false
+false
+	Compare Input 2 to Identity 3 @RefID{source1.4}, StudentFirstName{Mary}, StudentLastName{SMITH}, LEA{H17}, StudentDateOfBirth{19990921}
+matrix
+false
+false
+	New Entity 2I3Y0EUXN8TXWM3O @RefID{source2.1}, StudentFirstName{Sam}, StudentLastName{Jacobs}, LEA{G34}, StudentDateOfBirth{20011104}
+	New Index: @RefID=source2.1, StudentFirstName=Sam, StudentLastName=Jacobs, LEA=G34, StudentDateOfBirth=20011104, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{source2.1}, @RefID{source2.1}, StudentFirstName{Sam}, StudentLastName{Jacobs}, LEA{G34}, StudentDateOfBirth{20011104}
+
+Input: @RefID=source2.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, StudentDateOfBirth=19990921, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		source2.1=@RefID{source2.1}, StudentFirstName{Sam}, StudentLastName{Jacobs}, LEA{G34}, StudentDateOfBirth{20011104}
+		source1.6=@RefID{source1.6}, StudentFirstName{Super}, StudentLastName{Man}, LEA{G19}, StudentDateOfBirth{20011104}
+		source1.5=@RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+		source1.5=@RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{JONES}, LEA{H15}, StudentDateOfBirth{20001104}
+		source1.5=@RefID{source1.5}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+		source1.4=@RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, StudentDateOfBirth{19990921}
+		source1.4=@RefID{source1.4}, StudentFirstName{Mary}, StudentLastName{SMITH}, LEA{H17}, StudentDateOfBirth{19990921}
+
+	Compare Input 3 to Identity 1 @RefID{source2.1}, StudentFirstName{Sam}, StudentLastName{Jacobs}, LEA{G34}, StudentDateOfBirth{20011104}
+matrix
+false
+false
+	Compare Input 3 to Identity 2 @RefID{source1.6}, StudentFirstName{Super}, StudentLastName{Man}, LEA{G19}, StudentDateOfBirth{20011104}
+matrix
+false
+false
+	Compare Input 3 to Identity 3 @RefID{source1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+matrix
+false
+false
+	Compare Input 3 to Identity 3 @RefID{source1.3}, StudentFirstName{Eddie}, StudentLastName{JONES}, LEA{H15}, StudentDateOfBirth{20001104}
+matrix
+false
+false
+	Compare Input 3 to Identity 3 @RefID{source1.5}, StudentFirstName{Eddie}, StudentLastName{Jones}, LEA{G34}, StudentDateOfBirth{20001104}
+matrix
+false
+false
+	Compare Input 3 to Identity 4 @RefID{source1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, LEA{G55}, StudentDateOfBirth{19990921}
+matrix
+true
+	Matched Rule:1
+
+true
+
+	Satisfies Rule 2
+	Assign Entity source1.4 to Input 3
+	Update Entity: MW9AGFLZ2A1ENXZ5 @RefID{source1.2|source1.4|source2.2}, StudentFirstName{Mary}, StudentLastName{Smith|SMITH|Smith}, LEA{G55|H17|G55}, StudentDateOfBirth{19990921}
+	             : OysterID: MW9AGFLZ2A1ENXZ5
+Creation Date: Fri Aug 03 00:00:00 CDT 2018
+Size: 3
+Persistant: true
+Record 0: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, StudentDateOfBirth=19990921, Input record: true, Current Traces: null, Previous Traces: [OID: MW9AGFLZ2A1ENXZ5, RunID: 1, Rule: [@]]
+Record 1: @RefID=source1.4, StudentFirstName=Mary, StudentLastName=SMITH, LEA=H17, StudentDateOfBirth=19990921, Input record: true, Current Traces: null, Previous Traces: [OID: MW9AGFLZ2A1ENXZ5, RunID: 1, Rule: [1]]
+Record 2: @RefID=source2.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, StudentDateOfBirth=19990921, Input record: false, Current Traces: OID: MW9AGFLZ2A1ENXZ5, RunID: 2, Rule: [2], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: source1.4 for ri @RefID=source2.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, StudentDateOfBirth=19990921, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: MW9AGFLZ2A1ENXZ5 for [source2.2, source1.2, source1.4]
+
+**** DUMP START ****
+entityMap
+FYONETPU881DH2L0	OysterID: FYONETPU881DH2L0
+Creation Date: Fri Aug 03 00:00:00 CDT 2018
+Size: 1
+Persistant: true
+Record 0: @RefID=source1.6, StudentFirstName=Super, StudentLastName=Man, LEA=G19, StudentDateOfBirth=20011104, Input record: true, Current Traces: null, Previous Traces: [OID: FYONETPU881DH2L0, RunID: 1, Rule: [@]]
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+MW9AGFLZ2A1ENXZ5	OysterID: MW9AGFLZ2A1ENXZ5
+Creation Date: Fri Aug 03 00:00:00 CDT 2018
+Size: 3
+Persistant: true
+Record 0: @RefID=source1.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, StudentDateOfBirth=19990921, Input record: true, Current Traces: null, Previous Traces: [OID: MW9AGFLZ2A1ENXZ5, RunID: 1, Rule: [@]]
+Record 1: @RefID=source1.4, StudentFirstName=Mary, StudentLastName=SMITH, LEA=H17, StudentDateOfBirth=19990921, Input record: true, Current Traces: null, Previous Traces: [OID: MW9AGFLZ2A1ENXZ5, RunID: 1, Rule: [1]]
+Record 2: @RefID=source2.2, StudentFirstName=Mary, StudentLastName=Smith, LEA=G55, StudentDateOfBirth=19990921, Input record: false, Current Traces: OID: MW9AGFLZ2A1ENXZ5, RunID: 2, Rule: [2], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+XVI8NV5E03OWX86Y	OysterID: XVI8NV5E03OWX86Y
+Creation Date: Fri Aug 03 00:00:00 CDT 2018
+Size: 3
+Persistant: true
+Record 0: @RefID=source1.1, StudentFirstName=Edgar, StudentLastName=Jones, LEA=G34, StudentDateOfBirth=20001104, Input record: true, Current Traces: null, Previous Traces: [OID: XVI8NV5E03OWX86Y, RunID: 1, Rule: [@]]
+Record 1: @RefID=source1.3, StudentFirstName=Eddie, StudentLastName=JONES, LEA=H15, StudentDateOfBirth=20001104, Input record: true, Current Traces: null, Previous Traces: [OID: XVI8NV5E03OWX86Y, RunID: 1, Rule: [1]]
+Record 2: @RefID=source1.5, StudentFirstName=Eddie, StudentLastName=Jones, LEA=G34, StudentDateOfBirth=20001104, Input record: true, Current Traces: null, Previous Traces: [OID: XVI8NV5E03OWX86Y, RunID: 1, Rule: [1,  2]]
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+2I3Y0EUXN8TXWM3O	OysterID: 2I3Y0EUXN8TXWM3O
+Creation Date: null
+Size: 1
+Persistant: false
+Record 0: @RefID=source2.1, StudentFirstName=Sam, StudentLastName=Jacobs, LEA=G34, StudentDateOfBirth=20011104, Input record: false, Current Traces: OID: 2I3Y0EUXN8TXWM3O, RunID: 2, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[source1.6, source1.2, source1.4, source1.1, source1.3, source1.5, source2.1, source2.2]
+linkMap
+source2.2	MW9AGFLZ2A1ENXZ5
+source2.1	2I3Y0EUXN8TXWM3O
+**** DUMP END ****
+
+Records processed for ./IdentityUpdate/Scripts/IdentityUpdateSourceDescriptor.xml: 2(0)
+
+# of Consolidation Steps: 0
+
+Filtered Candidate List Frequencies
+6	1
+7	1
+
+
+UnFiltered Candidate List Frequencies
+6	1
+7	1
+
+
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :            2
+Total Clusters                   :            4
+Max Cluster Size                 :            1
+Min Cluster Size > 1             :            0
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1                 2                   2
+
+Clusters loaded                  :            3
+References loaded                :            6
+Avg # of Refs/Cluster            :      2.00000
+
+
+Average Cluster Grouping         :            1
+Average Cluster by Count         :            2
+Average Cluster Size             :      1.00000
+Number of Duplicate Recs         :            0
+Duplication Rate                 :     -1.00000
+
+
+Total Candidates Size            :           13
+Total DeDup Candidates Size      :            7
+Total # Candidates               :            2
+Avg Candidates per Input         :      6.50000
+Total Matched Count              :            1
+Matches per Candidates Size      :      0.07692
+Matches per DeDup Candidates Size:      0.14286
+Matches per Candidates           :      0.50000
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                                 1
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1, 2]                            1
+[1]                               1
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :            1
+Total tokens            :            8
+Unique tokens           :            8
+Max tokens per key      :            8
+Min tokens per key      :            8
+Min tokens > 1 per key  :            8
+
+Total tokens per key    :      8.00000
+Unique tokens per key   :      8.00000
+Total per Unique tokens :      1.00000
+Unique per Total tokens :      1.00000
+
+Skewness                :          NaN
+Kurtosis                :          NaN
+Excess                  :          NaN
+
+Max key                 : <null>
+
+Top 10 keys             : 
+8                        : <null>
+
+
+Candidate Size     # of Candidates        # of Records
+
+
+   Index Group          Index Size        # of Records
+             8                   1                   8
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                0
+Throughput (records/hour)        :         Infinity
+Average Matching Latency (ms)    :         1.000000
+Max Matching Latency (ms)        :                2
+Min Matching Latency (ms)        :                2
+Average Non-Matching Latency (ms):          2.00000
+Max Non-Matching Latency (ms)    :                4
+Min Non-Matching Latency (ms)    :                4
+
+
+
+Time process started at 2019-08-20 09.31.56
+Time process ended at 2019-08-20 09.31.56
+Total elapsed time 0 hour(s) 0 minute(s) 0 second(s)
+

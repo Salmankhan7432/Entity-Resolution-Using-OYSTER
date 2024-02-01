@@ -1,0 +1,3 @@
+IdentityID|FirstName|LastName|SchoolCode|DOB
+1|Sam|Jacobs|G34|20011104
+2|Mary|Smith|G55|19990921

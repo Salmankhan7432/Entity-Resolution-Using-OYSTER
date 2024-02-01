@@ -1,0 +1,5 @@
+RecID|TestValue|AnchorValue
+1|John|Jr
+2|Jon|Jr
+3|Jon|Sr
+4|John|SR

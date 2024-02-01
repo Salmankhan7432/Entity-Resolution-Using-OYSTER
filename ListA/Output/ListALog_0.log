@@ -1,0 +1,122 @@
+Oyster v.4.3.0
+RunScript: ListARunScript.xml
+Attribute: ./ListA/Scripts/ListAAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./ListA/Output/ListAIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./ListA/Output/ListAOutput.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./ListA/Input/LISTA.txt
+
+Records processed for ./ListA/Scripts/ListASourceDescriptor.xml: 94306(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :       94,306
+Total Clusters                   :       94,306
+Max Cluster Size                 :           11
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1             9,220               9,220
+           2            30,209              60,418
+           3            31,222              93,666
+           4            15,958              63,832
+           5             5,405              27,025
+           6             1,637               9,822
+           7               510               3,570
+           8               128               1,024
+           9                13                 117
+          10                 3                  30
+          11                 1                  11
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            6
+Average Cluster by Count         :        8,573
+Average Cluster Size             :      2.84961
+Number of Duplicate Recs         :      174,429
+Duplication Rate                 :      0.00000
+
+
+Total Candidates Size            :            0
+Total DeDup Candidates Size      :            0
+Total # Candidates               :            0
+Avg Candidates per Input         :          NaN
+Total Matched Count              :            0
+Matches per Candidates Size      :          NaN
+Matches per DeDup Candidates Size:          NaN
+Matches per Candidates           :          NaN
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+
+
+###################
+##  Index Stats  ##
+###################
+No index created, statistics cannot be produced
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                2
+Throughput (records/hour)        : 169,750,800.00000
+Average Matching Latency (ms)    :         0.000000
+Max Matching Latency (ms)        :                0
+Min Matching Latency (ms)        : 9,223,372,036,854,775,807
+Average Non-Matching Latency (ms):          0.00166
+Max Non-Matching Latency (ms)    :               18
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2023-11-06 09.04.21
+Time process ended at 2023-11-06 09.04.23
+Total elapsed time 0 hour(s) 0 minute(s) 2 second(s)
+

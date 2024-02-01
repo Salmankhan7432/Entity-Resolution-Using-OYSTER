@@ -1,0 +1,27 @@
+Oyster v.4.2.0
+RunScript: ScoringTestRunScript.xml
+Attribute: ./ScoringTest/Scripts/ScoringTestAttributes.xml
+##JAVA: Error loading Weight Table from: C:/Oyster/ScoringTest/Input/FnameWeights.txt
+java.lang.IllegalStateException: Error loading Weight Table from: C:/Oyster/ScoringTest/Input/FnameWeights.txt
+edu.ualr.oyster.reference.WeightTableReference.<init>(WeightTableReference.java:164)
+edu.ualr.oyster.reference.WeightTableReference.getInstance(WeightTableReference.java:83)
+edu.ualr.oyster.core.ScoringRuleTerm.setWgttable(ScoringRuleTerm.java:135)
+edu.ualr.oyster.io.AttributesParser.endElement(AttributesParser.java:431)
+com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:609)
+com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:183)
+com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:351)
+com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+javax.xml.parsers.SAXParser.parse(SAXParser.java:328)
+edu.ualr.oyster.io.AttributesParser.parse(AttributesParser.java:578)
+edu.ualr.oyster.OysterMain.process(OysterMain.java:2210)
+edu.ualr.oyster.OysterMain.main(OysterMain.java:2936)
+

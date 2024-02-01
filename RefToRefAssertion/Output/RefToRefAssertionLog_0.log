@@ -1,0 +1,150 @@
+Oyster v.4.2.0
+RunScript: RefToRefAssertionRunScript.xml
+Attribute: ./RefToRefAssertion/Scripts/RefToRefAssertionAttributes.xml
+Initializing Index...
+Index Type: NullIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./RefToRefAssertion/Output/RefToRefAssertionLinks.link
+
+Identity Output Type: TextFile
+Identity Output: ./RefToRefAssertion/Output/RefToRefAssertionOutputIdentities.idty
+
+Engine Type: OysterAssertionEngine
+
+Source: ./RefToRefAssertion/Input/RefToRefAssertionTest.txt
+
+
+Input: @RefID=AS1.1, StudentFirstName=Edgar, StudentLastName=Jones, StudentDateOfBirth=20001104, StudentSchoolCode=G34, @AssertRefToRef=1, Input record: false, Current Traces: null, Previous Traces: []
+	Assertion List:
+	New Entity @RefID{AS1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, StudentDateOfBirth{20001104}, StudentSchoolCode{G34}, @AssertRefToRef{1}
+	New Index: @RefID=AS1.1, StudentFirstName=Edgar, StudentLastName=Jones, StudentDateOfBirth=20001104, StudentSchoolCode=G34, @AssertRefToRef=1, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{AS1.1}, @RefID{AS1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, StudentDateOfBirth{20001104}, StudentSchoolCode{G34}, @AssertRefToRef{1}
+
+
+Input: @RefID=AS1.2, StudentFirstName=Mary, StudentLastName=Smith, StudentDateOfBirth=19990921, StudentSchoolCode=G55, @AssertRefToRef=2, Input record: false, Current Traces: null, Previous Traces: []
+	Assertion List:
+	New Entity @RefID{AS1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, StudentDateOfBirth{19990921}, StudentSchoolCode{G55}, @AssertRefToRef{2}
+	New Index: @RefID=AS1.2, StudentFirstName=Mary, StudentLastName=Smith, StudentDateOfBirth=19990921, StudentSchoolCode=G55, @AssertRefToRef=2, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{AS1.2}, @RefID{AS1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, StudentDateOfBirth{19990921}, StudentSchoolCode{G55}, @AssertRefToRef{2}
+
+
+Input: @RefID=AS1.3, StudentFirstName=Eddie, StudentLastName=Jones, StudentDateOfBirth=20001104, StudentSchoolCode=H15, @AssertRefToRef=1, Input record: false, Current Traces: null, Previous Traces: []
+	Assertion List:
+		AS1.1=@RefID{AS1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, StudentDateOfBirth{20001104}, StudentSchoolCode{G34}, @AssertRefToRef{1}
+	Compare Input 4 to Identity 1 @RefID{AS1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, StudentDateOfBirth{20001104}, StudentSchoolCode{G34}, @AssertRefToRef{1}
+	Matched Assertion Type:@AssertRefToRef
+
+
+	Satisfies Assertion Type: @AssertRefToRef
+	Assign Entity AS1.1 to Input 4
+	Update Entity: @RefID{AS1.1}, StudentFirstName{Edgar}, StudentLastName{Jones}, StudentDateOfBirth{20001104}, StudentSchoolCode{G34}, @AssertRefToRef{1}
+
+	Update Index: AS1.1 for ri @RefID=AS1.3, StudentFirstName=Eddie, StudentLastName=Jones, StudentDateOfBirth=20001104, StudentSchoolCode=H15, @AssertRefToRef=1, Input record: false, Current Traces: null, Previous Traces: []
+
+Input: @RefID=AS1.4, StudentFirstName=Mary, StudentLastName=Smith, StudentDateOfBirth=19990921, StudentSchoolCode=H17, @AssertRefToRef=2, Input record: false, Current Traces: null, Previous Traces: []
+	Assertion List:
+		AS1.2=@RefID{AS1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, StudentDateOfBirth{19990921}, StudentSchoolCode{G55}, @AssertRefToRef{2}
+	Compare Input 5 to Identity 1 @RefID{AS1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, StudentDateOfBirth{19990921}, StudentSchoolCode{G55}, @AssertRefToRef{2}
+	Matched Assertion Type:@AssertRefToRef
+
+
+	Satisfies Assertion Type: @AssertRefToRef
+	Assign Entity AS1.2 to Input 5
+	Update Entity: @RefID{AS1.2}, StudentFirstName{Mary}, StudentLastName{Smith}, StudentDateOfBirth{19990921}, StudentSchoolCode{G55}, @AssertRefToRef{2}
+
+	Update Index: AS1.2 for ri @RefID=AS1.4, StudentFirstName=Mary, StudentLastName=Smith, StudentDateOfBirth=19990921, StudentSchoolCode=H17, @AssertRefToRef=2, Input record: false, Current Traces: null, Previous Traces: []
+Filtered Candidate List Frequencies
+
+
+UnFiltered Candidate List Frequencies
+
+
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :            0
+Total Clusters                   :            2
+Max Cluster Size                 :            2
+Min Cluster Size > 1             :            0
+Min Cluster Size                 :            2
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           2                 2                   4
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            2
+Average Cluster by Count         :            2
+Average Cluster Size             :      2.00000
+Number of Duplicate Recs         :            2
+Duplication Rate                 :    -Infinity
+
+
+Total Candidates Size            :            0
+Total DeDup Candidates Size      :            0
+Total # Candidates               :            0
+Avg Candidates per Input         :          NaN
+Total Matched Count              :            0
+Matches per Candidates Size      :          NaN
+Matches per DeDup Candidates Size:          NaN
+Matches per Candidates           :          NaN
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+
+
+###################
+##  Index Stats  ##
+###################
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                0
+Throughput (records/hour)        :              NaN
+Average Matching Latency (ms)    :              NaN
+Max Matching Latency (ms)        :                0
+Min Matching Latency (ms)        : 9,223,372,036,854,775,807
+Average Non-Matching Latency (ms):              NaN
+Max Non-Matching Latency (ms)    :                0
+Min Non-Matching Latency (ms)    : 9,223,372,036,854,775,807
+
+
+
+Time process started at 2019-08-20 09.36.36
+Time process ended at 2019-08-20 09.36.36
+Total elapsed time 0 hour(s) 0 minute(s) 0 second(s)
+

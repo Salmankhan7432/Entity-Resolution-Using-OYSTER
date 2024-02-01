@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListOverlapPVAttributes.xml
+    Created on : 2018-02-26
+    Author     : J Talburt
+    Description:
+        Attribute xml file for the ListOverlap test run
+-->
+
+<OysterAttributes System="School">
+    <Attribute Item="StudentNameAddress"  Algo= "none" />
+    <Attribute Item="LEA"  Algo="none" />
+    <Attribute Item="StudentDOB"  Algo="none" />
+          
+    <!-- -->
+<Indices>
+	<Index Ident="X1">
+		<Segment Item="StudentNameAddress" Hash="MatrixTokenizer(2, 'ST|AVE|BLVD')"/>
+	</Index>
+</Indices>
+
+    <IdentityRules>
+        <Rule Ident="1">
+            <Term Item="StudentNameAddress" SIMILARITY="MatrixComparator(0.90,'ST|AVE|BLVD')"/> 
+            <Term Item="StudentDOB" SIMILARITY="Exact"/>
+        </Rule>
+        <Rule Ident="2">
+            <Term Item="StudentNameAddress" SIMILARITY="MatrixComparator(0.90,'ST|AVE|BLVD')"/> 
+            <Term Item="LEA" SIMILARITY="Exact"/>
+        </Rule>
+    </IdentityRules>
+</OysterAttributes>

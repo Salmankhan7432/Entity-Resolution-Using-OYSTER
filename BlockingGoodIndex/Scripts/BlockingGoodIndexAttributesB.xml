@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : BlockingGoodIndexAttributesB.xml
+    Created on : 2023-06-11
+    Author     : Salman Khan
+    Description:
+        Attribute Script for Capture Run using an aligned index
+-->
+
+<OysterAttributes System = "IndexDemo">
+	<Attribute Algo="none" Item="FirstName"/>
+	<Attribute Algo="none" Item="LastName"/>
+	<Attribute Algo="none" Item="Address"/>
+	<Attribute Algo="none" Item="City"/>
+	<Attribute Algo="none" Item="State"/>
+	<Attribute Algo="none" Item="Zip"/>
+	<Attribute Algo="none" Item="Phone"/>
+	
+	<!-- -->
+	<Indices>
+		<Index Ident="X1">
+			<Segment Item="FirstName" Hash="SOUNDEX"/>
+			<Segment Item="LastName" Hash="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+			<Segment Item="Address" Hash="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Index>
+		<Index Ident="X2">
+			<Segment Item="LastName" Hash="SOUNDEX"/>
+			<Segment Item="Address" Hash="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Index>
+	</Indices>
+		
+	<IdentityRules>
+		<Rule Ident="1">
+			<Term Item="FirstName" SIMILARITY="SOUNDEX"/>
+			<Term Item="LastName" SIMILARITY="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+			<Term Item="Address" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Rule>
+		<Rule Ident="2">
+			<Term Item="FirstName" SIMILARITY="NICKNAME"/>
+			<Term Item="LastName" SIMILARITY="SOUNDEX"/>
+			<Term Item="Address" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+		</Rule>
+	</IdentityRules>
+</OysterAttributes>

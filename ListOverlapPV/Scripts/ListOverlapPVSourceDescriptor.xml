@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListOverlapSourcePVDescriptor.xml
+    Created on : 2018-02-26
+    Author     : J Talburt
+    Description: Source Descriptor for the ListOverlap test run
+-->
+
+<OysterSourceDescriptor Name="source1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./ListOverlapPV/Input/ListOverlapPVTest.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="IdentityID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Fname" Attribute="StudentFirstName" Pos="1"/>
+        <Item Name="Lname" Attribute="StudentLastName" Pos="2"/>
+        <Item Name="Scode" Attribute="LEA" Pos="3"/>
+        <Item Name="List" Attribute="PVList" Pos="4"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

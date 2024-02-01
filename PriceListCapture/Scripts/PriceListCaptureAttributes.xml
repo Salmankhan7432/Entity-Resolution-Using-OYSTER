@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : PriceListCaptureAttributes.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description:
+        Attribute Script for Price List Identity Resolution Example
+-->
+
+<OysterAttributes System="PriceList">
+	<Attribute Item="PriceCode" />
+	<Attribute Item="Description" />
+    <Attribute Item="Price" />   
+
+<Indices>
+	<Index Ident="X1">
+		<Segment Item="PriceCode" Hash="SCAN(LR,ALL,0,KeepCase,SameOrder)" />
+	</Index>
+</Indices>
+
+<IdentityRules>
+        <Rule Ident="1">
+            <Term Item="PriceCode" SIMILARITY="Exact"/> 
+        </Rule>
+        
+</IdentityRules>
+
+</OysterAttributes>

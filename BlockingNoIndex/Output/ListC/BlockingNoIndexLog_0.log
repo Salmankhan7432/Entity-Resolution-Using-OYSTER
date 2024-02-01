@@ -1,0 +1,179 @@
+Oyster v.4.3.0
+RunScript: BlockingNoIndexRunScript.xml
+Attribute: ./BlockingNoIndex/Scripts/BlockingNoIndexAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./BlockingNoIndex/Output/BlockingNoIndexLinksFileC.link
+
+Identity Output Type: TextFile
+Identity Output: ./BlockingNoIndex/Output/BlockingNoIndexOutputIdentitiesC.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./BlockingNoIndex/Input/ListC.txt
+
+Records processed for ./BlockingNoIndex/Scripts/BlockingNoIndexSourceDescriptor.xml: 76059(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :       76,059
+Total Clusters                   :       75,746
+Max Cluster Size                 :            3
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1            75,438              75,438
+           2               303                 606
+           3                 5                  15
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            2
+Average Cluster by Count         :       25,248
+Average Cluster Size             :      1.00413
+Number of Duplicate Recs         :          313
+Duplication Rate                 :      0.00412
+
+
+Total Candidates Size            :       70,856
+Total DeDup Candidates Size      :       70,572
+Total # Candidates               :       37,113
+Avg Candidates per Input         :      1.90920
+Total Matched Count              :          311
+Matches per Candidates Size      :      0.00439
+Matches per DeDup Candidates Size:      0.00441
+Matches per Candidates           :      0.00838
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                               211
+2                               100
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1, 2]                           14
+[1]                             211
+[2]                             102
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :      138,682
+Total tokens            :      204,244
+Unique tokens           :       74,757
+Max tokens per key      :           12
+Min tokens per key      :            1
+Min tokens > 1 per key  :            2
+
+Total tokens per key    :      1.47275
+Unique tokens per key   :      0.53905
+Total per Unique tokens :      2.73211
+Unique per Total tokens :      0.36602
+
+Skewness                :      1.10313
+Kurtosis                :      1.24116
+Excess                  :     -1.75884
+
+Max key                 : 121454839
+
+Top 10 keys             : 
+12                        : 121454839
+11                        : 16016546, SH41616016546
+10                        : 8304056, 149679215, 89227433, 84049911, MS460121454839, 22477845, 183787497
+9                        : 185640007, 186984953, 4380745, 129410210, 2457922, 16687077, 142822256, SG524142822256, 134987551, 56507294, 12440229, [13 More]...
+8                        : 129641736, 109370753, 148780419, 149280648, 119310174, 22431637, 187962499, 66795268, 5476916, 199107715, 180619641, [45 More]...
+7                        : 100583133, 192415349, 160344833, 159236640, CMAGL1900, 87115476, 8793199, 25726977, 109806360, 73514232, CH6538304056, [179 More]...
+6                        : 75414813, MRODR1388, 130738206, 154734863, 126710953, PM615126710953, 113892726, 9704996, 150446972, 185620324, LROSE1913, [551 More]...
+5                        : MM26075414813, 26623839, WD12026623839, 182802472, 92866797, HRAMO1928, 19604546, 188473981, 130991994, MD236130991994, 54826321, [1347 More]...
+4                        : 107533441, CB550107533441, 51891726, YD42692866797, 150917248, HR520150917248, 187604173, MF655187604173, 23666872, AMACH1951, 79835369, [3265 More]...
+3                        : CBOWM1975, WARCH1956, 194285030, TM426182802472, 152652665, KH000152652665, HRAMO4599, 51059347, MFERN0567, CMORH4789, 183101940, [10282 More]...
+
+
+Candidate Size     # of Candidates        # of Records
+             0              38,946                   0
+             1              18,570              18,570
+             2               9,941              19,882
+             3               4,720              14,160
+             4               2,234               8,936
+             5                 974               4,870
+             6                 418               2,508
+             7                 170               1,190
+             8                  52                 416
+             9                  22                 198
+            10                   7                  70
+            11                   4                  44
+            12                   1                  12
+
+
+   Index Group          Index Size        # of Records
+             1              97,797              97,797
+             2              25,123              50,246
+             3              10,292              30,876
+             4               3,275              13,100
+             5               1,357               6,785
+             6                 561               3,366
+             7                 189               1,323
+             8                  55                 440
+             9                  23                 207
+            10                   7                  70
+            11                   2                  22
+            12                   1                  12
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                3
+Throughput (records/hour)        : 91,270,800.00000
+Average Matching Latency (ms)    :         0.000145
+Max Matching Latency (ms)        :                1
+Min Matching Latency (ms)        :                0
+Average Non-Matching Latency (ms):          0.01254
+Max Non-Matching Latency (ms)    :               29
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2023-11-06 02.46.40
+Time process ended at 2023-11-06 02.46.43
+Total elapsed time 0 hour(s) 0 minute(s) 3 second(s)
+

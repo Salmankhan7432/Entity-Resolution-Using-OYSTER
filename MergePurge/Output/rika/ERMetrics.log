@@ -1,0 +1,50 @@
+2023-11-23 19:51:26,424 INFO ==================== ER Metrics Report =====================
+2023-11-23 19:51:26,440 INFO ER Metrics version: 2.5.0
+2023-11-23 19:51:26,440 INFO Java version: 1.8.0_391
+2023-11-23 19:51:26,440 INFO Using configuration file ERMetrics.properties
+2023-11-23 19:51:26,440 INFO Creating report ...
+2023-11-23 19:51:26,440 INFO Calculating Entity Resolution ERMetrics . . .
+2023-11-23 19:51:26,440 INFO Reference file: TruthABC.csv
+2023-11-23 19:51:26,440 INFO Reference record.columns:[1] cluster.column:2
+2023-11-23 19:51:26,440 INFO 	Header:[RefID,IdTruth]
+2023-11-23 19:51:26,440 INFO 	Record #1:A904694:16732
+2023-11-23 19:51:26,841 INFO Reference Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Duplicates[0] + Created[271142]
+2023-11-23 19:51:26,841 INFO Link File: MergePurgeIndex.link
+2023-11-23 19:51:26,856 INFO Link record.columns:[1] cluster.column:2 rule.column:3
+2023-11-23 19:51:26,856 INFO 	Header:[RefID	OysterID	Rule]
+2023-11-23 19:51:26,856 INFO 	Record #1:PeopleMergePurge.C973086:N9X19COJJBFB8HX6:[@]
+2023-11-23 19:51:27,342 INFO Link Set Records Read[270403] - Filtered[0] - Errors[0] : Links[270403] = Matched[270403] + Created[0]
+2023-11-23 19:51:27,342 INFO Performing INNER join for 271142 references
+2023-11-23 19:51:27,358 INFO Joined Link Set Records Total[271142]  NoLinkId[739]  NoReferenceId[0]  Joined[270403]
+2023-11-23 19:51:27,358 INFO Computing True Pairs and Clusters for 270403 references
+2023-11-23 19:51:27,619 INFO Total Count:270403 Pairs:2241259 Clusters:20067
+2023-11-23 19:51:27,619 INFO Computing Linked Pairs and Clusters for 270403 references
+2023-11-23 19:51:28,012 INFO Total Count:270403 Pairs:504205 Clusters:133486
+2023-11-23 19:51:28,012 INFO Computing Agreement Pairs and Clusters for 270403 references
+2023-11-23 19:51:28,340 INFO Total Count:270403 Pairs:458071 Clusters:140430
+2023-11-23 19:51:28,340 INFO 
+2023-11-23 19:51:28,340 INFO Total Distinct Records ID values (N) ............... = 270,403
+2023-11-23 19:51:28,340 INFO ---------------------Clusters ----------------------
+2023-11-23 19:51:28,340 INFO Reference Set Clusters (EC) ........................ = 20,067
+2023-11-23 19:51:28,340 INFO Link Set Clusters (LC) ............................. = 133,486
+2023-11-23 19:51:28,340 INFO Reference+Link Set Agreement Clusters (AC) ......... = 140,430
+2023-11-23 19:51:28,340 INFO 
+2023-11-23 19:51:28,340 INFO ---------------------Pairs -------------------------
+2023-11-23 19:51:28,340 INFO Total Pairs (D) = ((N * N-1) / 2) .................. = 36,558,756,003
+2023-11-23 19:51:28,340 INFO Reference Set Pairs (E) ............................ = 2,241,259
+2023-11-23 19:51:28,340 INFO Link Set Linked Pairs (L) .......................... = 504,205
+2023-11-23 19:51:28,340 INFO Reference+Link Set Agreement Pairs (A) ............. = 458,071
+2023-11-23 19:51:28,340 INFO True Positive Pairs (TP) ........................... = 458,071
+2023-11-23 19:51:28,340 INFO False Positive Pairs (FP) = L - TP ................. = 46,134
+2023-11-23 19:51:28,340 INFO True Negative Pairs (TN) = D - TP - FP - FN ........ = 36,556,468,610
+2023-11-23 19:51:28,340 INFO False Negative Pairs (FN) = E - TP ................. = 1,783,188
+2023-11-23 19:51:28,340 INFO 
+2023-11-23 19:51:28,340 INFO ---------------------Rates - (0.0 - 1.0) -----------
+2023-11-23 19:51:28,340 INFO False Positive Rate = FP / (TN + FP) ............... = 0.00000126
+2023-11-23 19:51:28,340 INFO False Negative Rate = FN / E ....................... = 0.79561889
+2023-11-23 19:51:28,340 INFO Accuracy = (TP + TN) / D ........................... = 0.99994996
+2023-11-23 19:51:28,340 INFO Precision = TP / (TP + FP) ......................... = 0.90850150
+2023-11-23 19:51:28,340 INFO Recall = TP / (TP + FN) ............................ = 0.20438111
+2023-11-23 19:51:28,340 INFO F-Measure .......................................... = 0.33369296
+2023-11-23 19:51:28,340 INFO TWi ................................................ = 0.36855235
+2023-11-23 19:51:28,340 INFO Complete

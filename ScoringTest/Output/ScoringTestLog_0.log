@@ -1,0 +1,208 @@
+Oyster v.4.2.0
+RunScript: ScoringTestRunScript.xml
+Attribute: ./ScoringTest/Scripts/ScoringTestAttributes.xml
+Initializing Index...
+Index Type: NullIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./ScoringTest/Output/ScoringTestIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./ScoringTest/Output/ScoringTestOutput.idty
+
+Validating Source Descriptor:./ScoringTest/Scripts/ScoringTestDescriptor.xml
+Source File:./ScoringTest/Input/TestInput.txt
+Engine Type: OysterClusterEngineForScoring
+
+Bypassing Least Common Rule filter
+
+
+Source: ./ScoringTest/Input/TestInput.txt
+
+
+Input: @RefID=S1.1, Fname=John, Lname=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+
+	New Entity 7DU8AS1KO5L13JEZ @RefID{S1.1}, Fname{John}, Lname{Jr}
+	New Index: @RefID=S1.1, Fname=John, Lname=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.1}, @RefID{S1.1}, Fname{John}, Lname{Jr}
+
+Input: @RefID=S1.2, Fname=Jon, Lname=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jr}
+
+	Compare Input 3 to Identity 1 @RefID{S1.1}, Fname{John}, Lname{Jr}
+Scoring
+Score: 21.0
+	New Entity 09U6ZGR2QRXGRM2J @RefID{S1.2}, Fname{Jon}, Lname{Jr}
+	New Index: @RefID=S1.2, Fname=Jon, Lname=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.2}, @RefID{S1.2}, Fname{Jon}, Lname{Jr}
+
+Input: @RefID=S1.3, Fname=Jon, Lname=Sr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.2=@RefID{S1.2}, Fname{Jon}, Lname{Jr}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jr}
+
+	Compare Input 4 to Identity 1 @RefID{S1.2}, Fname{Jon}, Lname{Jr}
+Scoring
+Score: 5.0
+	Compare Input 4 to Identity 2 @RefID{S1.1}, Fname{John}, Lname{Jr}
+Scoring
+Score: 5.0
+	New Entity OYF1EMRBGZQAYYYN @RefID{S1.3}, Fname{Jon}, Lname{Sr}
+	New Index: @RefID=S1.3, Fname=Jon, Lname=Sr, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.3}, @RefID{S1.3}, Fname{Jon}, Lname{Sr}
+
+Input: @RefID=S1.4, Fname=John, Lname=SR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		S1.2=@RefID{S1.2}, Fname{Jon}, Lname{Jr}
+		S1.3=@RefID{S1.3}, Fname{Jon}, Lname{Sr}
+		S1.1=@RefID{S1.1}, Fname{John}, Lname{Jr}
+
+	Compare Input 5 to Identity 1 @RefID{S1.2}, Fname{Jon}, Lname{Jr}
+Scoring
+Score: 5.0
+	Compare Input 5 to Identity 2 @RefID{S1.3}, Fname{Jon}, Lname{Sr}
+Scoring
+Score: 21.0
+	Compare Input 5 to Identity 3 @RefID{S1.1}, Fname{John}, Lname{Jr}
+Scoring
+Score: 5.0
+	New Entity E0M0Q4UHRTUZ2V2R @RefID{S1.4}, Fname{John}, Lname{SR}
+	New Index: @RefID=S1.4, Fname=John, Lname=SR, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{S1.4}, @RefID{S1.4}, Fname{John}, Lname{SR}
+Records processed for ./ScoringTest/Scripts/ScoringTestDescriptor.xml: 4(0)
+
+# of Consolidation Steps: 0
+
+Filtered Candidate List Frequencies
+0	1
+1	1
+2	1
+3	1
+
+
+UnFiltered Candidate List Frequencies
+0	1
+1	1
+2	1
+3	1
+
+
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :            4
+Total Clusters                   :            4
+Max Cluster Size                 :            1
+Min Cluster Size > 1             :            0
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1                 4                   4
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            1
+Average Cluster by Count         :            4
+Average Cluster Size             :      1.00000
+Number of Duplicate Recs         :            0
+Duplication Rate                 :      0.00000
+
+
+Total Candidates Size            :            6
+Total DeDup Candidates Size      :            6
+Total # Candidates               :            3
+Avg Candidates per Input         :      2.00000
+Total Matched Count              :            6
+Matches per Candidates Size      :      1.00000
+Matches per DeDup Candidates Size:      1.00000
+Matches per Candidates           :      2.00000
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :            1
+Total tokens            :            4
+Unique tokens           :            4
+Max tokens per key      :            4
+Min tokens per key      :            4
+Min tokens > 1 per key  :            4
+
+Total tokens per key    :      4.00000
+Unique tokens per key   :      4.00000
+Total per Unique tokens :      1.00000
+Unique per Total tokens :      1.00000
+
+Skewness                :          NaN
+Kurtosis                :          NaN
+Excess                  :          NaN
+
+Max key                 : <null>
+
+Top 10 keys             : 
+4                        : <null>
+
+
+Candidate Size     # of Candidates        # of Records
+
+
+   Index Group          Index Size        # of Records
+             4                   1                   4
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                0
+Throughput (records/hour)        :         Infinity
+Average Matching Latency (ms)    :         0.000000
+Max Matching Latency (ms)        :                0
+Min Matching Latency (ms)        : 9,223,372,036,854,775,807
+Average Non-Matching Latency (ms):          1.00000
+Max Non-Matching Latency (ms)    :                2
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2019-08-20 09.47.38
+Time process ended at 2019-08-20 09.47.38
+Total elapsed time 0 hour(s) 0 minute(s) 0 second(s)
+

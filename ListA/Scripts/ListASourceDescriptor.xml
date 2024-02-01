@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityCaptureSourceDescriptor.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: Source Descriptor for the Identity Capture for List A
+-->
+
+<OysterSourceDescriptor Name="source1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="," Qual="" Labels="Y">./ListA/Input/LISTA.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="RecID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Fname" Attribute="Fname" Pos="1"/>
+        <Item Name="Lname" Attribute="Lname" Pos="2"/>
+        <Item Name="Nbr" Attribute="Nbr" Pos="3"/>
+        <Item Name="Address" Attribute="Address" Pos="4"/>
+
+        <Item Name="City" Attribute="City" Pos="5"/>
+        <Item Name="State" Attribute="State" Pos="6"/>
+        <Item Name="Zip" Attribute="Zip" Pos="7"/>
+        <Item Name="PO Box" Attribute="PO Box" Pos="8"/>
+        <Item Name="POCity" Attribute="POCity" Pos="9"/>
+
+        <Item Name="POState" Attribute="POState" Pos="10"/>
+        <Item Name="POZip" Attribute="POZip" Pos="11"/>
+        <Item Name="SSN" Attribute="SSN" Pos="12"/>
+        <Item Name="Year" Attribute="Year" Pos="13"/>
+        <Item Name="DOB" Attribute="DOB" Pos="14"/>
+        <Item Name="HomePhone" Attribute="HomePhone" Pos="15"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

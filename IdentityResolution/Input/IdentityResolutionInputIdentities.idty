@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Metadata>
+		<Modifications>
+			<Modification ID="1" OysterVersion="3.5.8" Date="2018-08-03 12.51.08" RunScript="RefToRefAssertionRunScript" />
+		</Modifications>
+		<Attributes>
+			<Attribute Name="@RefID" Tag="A"/>
+			<Attribute Name="StudentFirstName" Tag="B"/>
+			<Attribute Name="StudentLastName" Tag="C"/>
+			<Attribute Name="StudentDateOfBirth" Tag="D"/>
+			<Attribute Name="StudentSchoolCode" Tag="E"/>
+		</Attributes>
+	</Metadata>
+	<Identities>
+	<Identity Identifier="BMN73PME2SJBOHK9" CDate="2018-08-03">
+		<References>
+			<Reference>
+				<Value>A^AS1.1|B^Edgar|C^Jones|D^20001104|E^G34</Value>
+				<Traces>
+					<Trace OID="BMN73PME2SJBOHK9" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^AS1.3|B^Eddie|C^Jones|D^20001104|E^H15</Value>
+				<Traces>
+					<Trace OID="BMN73PME2SJBOHK9" RunID="1" Rule="[@AssertRefToRef]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="R9AY3WK1JAHUTWKK" CDate="2018-08-03">
+		<References>
+			<Reference>
+				<Value>A^AS1.2|B^Mary|C^Smith|D^19990921|E^G55</Value>
+				<Traces>
+					<Trace OID="R9AY3WK1JAHUTWKK" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^AS1.4|B^Mary|C^Smith|D^19990921|E^H17</Value>
+				<Traces>
+					<Trace OID="R9AY3WK1JAHUTWKK" RunID="1" Rule="[@AssertRefToRef]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	</Identities>
+</root>

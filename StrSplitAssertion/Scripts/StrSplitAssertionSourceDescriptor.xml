@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : StrSplitAssertionSourceDescriptor.xml
+	Created on : 2019-08-12
+    Author     : John R. Talburt
+    Description: Source Descriptor for SplitAssertion Demo Run
+-->
+
+<OysterSourceDescriptor Name="AS4">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="," Qual="" Labels="Y">./StrSplitAssertion/Input/StrSplitAssertionTest.txt</Source>
+    <ReferenceItems>
+    <!-- Items in Source -->
+	<Item Name="RefID" Attribute="@RefID" Pos="0" />
+	<Item Name="ReferenceID" Attribute="@RID" Pos="1" />
+	<Item Name="OYSTERID" Attribute="@OID" Pos="2" />
+	<Item Name="StructureSplitAssertion" Attribute="@AssertSplitStr" Pos="3"/>
+	<Item Name="ReviewerIdentifier" Attribute="@Reviewer" Pos="4" />
+    </ReferenceItems>
+</OysterSourceDescriptor>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Metadata>
+		<Modifications>
+			<Modification ID="1" OysterVersion="4.3.0" Date="2022-09-18 16.40.41" RunScript="ExactOrMissingRunScript" />
+		</Modifications>
+		<Attributes>
+			<Attribute Name="@RefID" Tag="A"/>
+			<Attribute Name="First" Tag="B"/>
+			<Attribute Name="Last" Tag="C"/>
+			<Attribute Name="Suffix" Tag="D"/>
+		</Attributes>
+	</Metadata>
+	<Identities>
+	<Identity Identifier="42L2RNYUFFLC9BDI" CDate="2022-09-18">
+		<References>
+			<Reference>
+				<Value>A^Source1.3|B^UVW|C^XYZ|D^JR</Value>
+				<Traces>
+					<Trace OID="42L2RNYUFFLC9BDI" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^Source1.4|B^UVW|C^XYZ|D^JR</Value>
+				<Traces>
+					<Trace OID="42L2RNYUFFLC9BDI" RunID="1" Rule="[1]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="7L1GEHDMQB103B4O" CDate="2022-09-18">
+		<References>
+			<Reference>
+				<Value>A^Source1.6|B^UVW|C^XYZ</Value>
+				<Traces>
+					<Trace OID="7L1GEHDMQB103B4O" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="8CJV0R736R2PE64T" CDate="2022-09-18">
+		<References>
+			<Reference>
+				<Value>A^Source1.5|B^UVW|C^XYZ|D^SR</Value>
+				<Traces>
+					<Trace OID="8CJV0R736R2PE64T" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="E7B1QDQPP3ZGXY2S" CDate="2022-09-18">
+		<References>
+			<Reference>
+				<Value>A^Source1.1|B^ABC|C^DEF|D^SR</Value>
+				<Traces>
+					<Trace OID="E7B1QDQPP3ZGXY2S" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^Source1.2|B^ABC|C^def|D^sr</Value>
+				<Traces>
+					<Trace OID="E7B1QDQPP3ZGXY2S" RunID="1" Rule="[1]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	<Identity Identifier="R6L8ODRZ2BTQS2GT" CDate="2022-09-18">
+		<References>
+			<Reference>
+				<Value>A^Source1.7|B^MNO|C^PQR</Value>
+				<Traces>
+					<Trace OID="R6L8ODRZ2BTQS2GT" RunID="1" Rule="[@]"/>
+				</Traces>
+			</Reference>
+			<Reference>
+				<Value>A^Source1.8|B^MNO|C^PQR</Value>
+				<Traces>
+					<Trace OID="R6L8ODRZ2BTQS2GT" RunID="1" Rule="[1]"/>
+				</Traces>
+			</Reference>
+		</References>
+	</Identity>
+	</Identities>
+</root>

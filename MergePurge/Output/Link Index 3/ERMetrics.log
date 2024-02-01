@@ -1,0 +1,50 @@
+2023-11-17 11:46:17,436 INFO ==================== ER Metrics Report =====================
+2023-11-17 11:46:17,436 INFO ER Metrics version: 2.5.0
+2023-11-17 11:46:17,436 INFO Java version: 1.8.0_391
+2023-11-17 11:46:17,436 INFO Using configuration file ERMetrics.properties
+2023-11-17 11:46:17,436 INFO Creating report ...
+2023-11-17 11:46:17,436 INFO Calculating Entity Resolution ERMetrics . . .
+2023-11-17 11:46:17,436 INFO Reference file: TruthABC.csv
+2023-11-17 11:46:17,467 INFO Reference record.columns:[1] cluster.column:2
+2023-11-17 11:46:17,467 INFO 	Header:[RefID,IdTruth]
+2023-11-17 11:46:17,467 INFO 	Record #1:A904694:16732
+2023-11-17 11:46:17,838 INFO Reference Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Duplicates[0] + Created[271142]
+2023-11-17 11:46:17,838 INFO Link File: MergePurgeIndex.link
+2023-11-17 11:46:17,838 INFO Link record.columns:[1] cluster.column:2 rule.column:3
+2023-11-17 11:46:17,838 INFO 	Header:[RefID	OysterID	Rule]
+2023-11-17 11:46:17,838 INFO 	Record #1:source1.C976555:7ZAFHW55OW17CATY:[1]
+2023-11-17 11:46:18,278 INFO Link Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Matched[271142] + Created[0]
+2023-11-17 11:46:18,278 INFO Performing INNER join for 271142 references
+2023-11-17 11:46:18,294 INFO Joined Link Set Records Total[271142]  NoLinkId[0]  NoReferenceId[0]  Joined[271142]
+2023-11-17 11:46:18,294 INFO Computing True Pairs and Clusters for 271142 references
+2023-11-17 11:46:18,544 INFO Total Count:271142 Pairs:2250993 Clusters:20067
+2023-11-17 11:46:18,544 INFO Computing Linked Pairs and Clusters for 271142 references
+2023-11-17 11:46:18,940 INFO Total Count:271142 Pairs:216646 Clusters:198576
+2023-11-17 11:46:18,940 INFO Computing Agreement Pairs and Clusters for 271142 references
+2023-11-17 11:46:19,239 INFO Total Count:271142 Pairs:163519 Clusters:202561
+2023-11-17 11:46:19,239 INFO 
+2023-11-17 11:46:19,239 INFO Total Distinct Records ID values (N) ............... = 271,142
+2023-11-17 11:46:19,239 INFO ---------------------Clusters ----------------------
+2023-11-17 11:46:19,239 INFO Reference Set Clusters (EC) ........................ = 20,067
+2023-11-17 11:46:19,239 INFO Link Set Clusters (LC) ............................. = 198,576
+2023-11-17 11:46:19,239 INFO Reference+Link Set Agreement Clusters (AC) ......... = 202,561
+2023-11-17 11:46:19,239 INFO 
+2023-11-17 11:46:19,239 INFO ---------------------Pairs -------------------------
+2023-11-17 11:46:19,239 INFO Total Pairs (D) = ((N * N-1) / 2) .................. = 36,758,856,511
+2023-11-17 11:46:19,239 INFO Reference Set Pairs (E) ............................ = 2,250,993
+2023-11-17 11:46:19,239 INFO Link Set Linked Pairs (L) .......................... = 216,646
+2023-11-17 11:46:19,239 INFO Reference+Link Set Agreement Pairs (A) ............. = 163,519
+2023-11-17 11:46:19,239 INFO True Positive Pairs (TP) ........................... = 163,519
+2023-11-17 11:46:19,239 INFO False Positive Pairs (FP) = L - TP ................. = 53,127
+2023-11-17 11:46:19,239 INFO True Negative Pairs (TN) = D - TP - FP - FN ........ = 36,756,552,391
+2023-11-17 11:46:19,239 INFO False Negative Pairs (FN) = E - TP ................. = 2,087,474
+2023-11-17 11:46:19,239 INFO 
+2023-11-17 11:46:19,239 INFO ---------------------Rates - (0.0 - 1.0) -----------
+2023-11-17 11:46:19,239 INFO False Positive Rate = FP / (TN + FP) ............... = 0.00000145
+2023-11-17 11:46:19,239 INFO False Negative Rate = FN / E ....................... = 0.92735695
+2023-11-17 11:46:19,239 INFO Accuracy = (TP + TN) / D ........................... = 0.99994177
+2023-11-17 11:46:19,239 INFO Precision = TP / (TP + FP) ......................... = 0.75477507
+2023-11-17 11:46:19,239 INFO Recall = TP / (TP + FN) ............................ = 0.07264305
+2023-11-17 11:46:19,239 INFO F-Measure .......................................... = 0.13253073
+2023-11-17 11:46:19,239 INFO TWi ................................................ = 0.31163683
+2023-11-17 11:46:19,239 INFO Complete

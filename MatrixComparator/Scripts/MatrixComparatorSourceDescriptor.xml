@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : MatrixComparatorSourceDescriptor.xml
+    Created on : 2018-03-07
+    Author     : J Talburt
+    Description: Source Descriptor for the ListOverlap test run
+-->
+
+<OysterSourceDescriptor Name="source1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./MatrixComparator/Input/MatrixComparatorTest.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="IdentityID" Attribute="@RefID" Pos="0"/>
+        <Item Name="NameAddr" Attribute="StudentNameAddress" Pos="1"/>
+        <Item Name="Scode" Attribute="LEA" Pos="2"/>
+        <Item Name="DOB" Attribute="StudentDOB" Pos="3"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

@@ -1,0 +1,7 @@
+RefID, FirstName, LastName, DOB, SchCode
+1, Edgar, Jones, 20001104, G34
+2, Mary, Smith, 19990921, G55
+3, Eddie, Jones, 20001104, H15
+4, Mary, Smith, 19990921, H17
+5, Eddie, Jones, 20001104, G34
+6, Super, Man, 20011104, G19

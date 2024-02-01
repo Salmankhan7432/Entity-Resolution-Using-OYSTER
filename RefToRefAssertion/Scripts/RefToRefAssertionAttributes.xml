@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : AssertionsAttributes.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: Attributes for Assertion example
+-->
+
+<OysterAttributes System="StudentDemo">
+    <Attribute Item="StudentFirstName" algo="none" />
+    <Attribute Item="StudentLastName"   algo="none" />
+    <Attribute Item="StudentDateOfBirth"  algo="none" />
+    <Attribute Item="StudentSchoolCode"  algo="none" />
+
+<!-- Identity Rules -->
+    <IdentityRules>
+     </IdentityRules>
+</OysterAttributes>

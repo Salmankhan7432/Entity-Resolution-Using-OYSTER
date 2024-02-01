@@ -1,0 +1,186 @@
+Oyster v.4.3.0
+RunScript: BlockingGoodIndexRunScript.xml
+Attribute: ./BlockingGoodIndex/Scripts/BlockingGoodIndexAttributesC.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./BlockingGoodIndex/Output/BlockingGoodIndexLinkFileC.link
+
+Identity Output Type: TextFile
+Identity Output: ./BlockingGoodIndex/Output/BlockingGoodIndexOutputC.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./BlockingGoodIndex/Input/ListC.txt
+
+Records processed for ./BlockingGoodIndex/Scripts/BlockingGoodIndexSourceDescriptorC.xml: 76059(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :       76,059
+Total Clusters                   :       70,940
+Max Cluster Size                 :            7
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1            67,165              67,165
+           2             2,734               5,468
+           3               800               2,400
+           4               192                 768
+           5                38                 190
+           6                 9                  54
+           7                 2                  14
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            4
+Average Cluster by Count         :       10,134
+Average Cluster Size             :      1.07216
+Number of Duplicate Recs         :        5,119
+Duplication Rate                 :      0.06730
+
+
+Total Candidates Size            :       20,376
+Total DeDup Candidates Size      :       16,869
+Total # Candidates               :       11,310
+Avg Candidates per Input         :      1.80159
+Total Matched Count              :        5,085
+Matches per Candidates Size      :      0.24956
+Matches per DeDup Candidates Size:      0.30144
+Matches per Candidates           :      0.44960
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                             4,167
+2                               918
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1, 2]                          159
+[1]                           4,176
+[2]                             943
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :       32,183
+Total tokens            :       48,933
+Unique tokens           :       25,316
+Max tokens per key      :           14
+Min tokens per key      :            1
+Min tokens > 1 per key  :            2
+
+Total tokens per key    :      1.52046
+Unique tokens per key   :      0.78663
+Total per Unique tokens :      1.93289
+Unique per Total tokens :      0.51736
+
+Skewness                :      1.10063
+Kurtosis                :      1.23737
+Excess                  :     -1.76263
+
+Max key                 : G5241935
+
+Top 10 keys             : 
+14                        : G5241935
+13                        : G6201900
+12                        : P6201900, W4201955
+11                        : H6551972, R3621923, J5201965, W4521900
+10                        : S5301927, G6201912, G6201920, G6201928
+9                        : S0001900, G5201906, P6201948, M5321904, G5201900, C4521951, K5201975, M2401921, G5241929, P4121966, J5231982, [5 More]...
+8                        : M2401900, R0001983, A6201945, R3621944, R2001933, S620GONZ1935, R2001949, R2001935, R3621954, E1521900, S5301900, [13 More]...
+7                        : H6551924, C642MAGL1900, L0001913, G5241937, G5201920, Z5601943, C6201961, R1601909, S5301939, M2001900, K5001976, [44 More]...
+6                        : M0001967, M3251951, R1521988, S5201958, M3201901, B6501935, M6001954, P6201918, W3001906, S5001919, B4001912, [117 More]...
+5                        : H236RAMO1928, R5201928, M6351928, L6521931, L2001933, S1341916, D1201945, S536MANC1964, M5221964, J4101947, A4161964, [327 More]...
+
+
+Candidate Size     # of Candidates        # of Records
+             0              64,749                   0
+             1               6,234               6,234
+             2               2,888               5,776
+             3               1,239               3,717
+             4                 516               2,064
+             5                 225               1,125
+             6                 103                 618
+             7                  51                 357
+             8                  27                 216
+             9                  12                 108
+            10                   8                  80
+            11                   4                  44
+            12                   2                  24
+            13                   1                  13
+
+
+   Index Group          Index Size        # of Records
+             1              21,972              21,972
+             2               6,189              12,378
+             3               2,512               7,536
+             4                 942               3,768
+             5                 337               1,685
+             6                 127                 762
+             7                  54                 378
+             8                  23                 184
+             9                  15                 135
+            10                   4                  40
+            11                   4                  44
+            12                   2                  24
+            13                   1                  13
+            14                   1                  14
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                3
+Throughput (records/hour)        : 91,270,800.00000
+Average Matching Latency (ms)    :         0.001683
+Max Matching Latency (ms)        :               27
+Min Matching Latency (ms)        :                0
+Average Non-Matching Latency (ms):          0.00518
+Max Non-Matching Latency (ms)    :               16
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2023-11-06 05.16.19
+Time process ended at 2023-11-06 05.16.22
+Total elapsed time 0 hour(s) 0 minute(s) 3 second(s)
+

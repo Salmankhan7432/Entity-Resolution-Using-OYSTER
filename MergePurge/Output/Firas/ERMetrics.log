@@ -1,0 +1,50 @@
+2023-12-04 01:12:24,751 INFO ==================== ER Metrics Report =====================
+2023-12-04 01:12:24,752 INFO ER Metrics version: 2.5.0
+2023-12-04 01:12:24,753 INFO Java version: 1.8.0_391
+2023-12-04 01:12:24,753 INFO Using configuration file ERMetrics.properties
+2023-12-04 01:12:24,753 INFO Creating report ...
+2023-12-04 01:12:24,753 INFO Calculating Entity Resolution ERMetrics . . .
+2023-12-04 01:12:24,756 INFO Reference file: TruthABC.csv
+2023-12-04 01:12:24,757 INFO Reference record.columns:[1] cluster.column:2
+2023-12-04 01:12:24,758 INFO 	Header:[RefID,IdTruth]
+2023-12-04 01:12:24,760 INFO 	Record #1:A904694:16732
+2023-12-04 01:12:25,148 INFO Reference Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Duplicates[0] + Created[271142]
+2023-12-04 01:12:25,148 INFO Link File: MergePurgeIndex.link
+2023-12-04 01:12:25,148 INFO Link record.columns:[1] cluster.column:2 rule.column:3
+2023-12-04 01:12:25,148 INFO 	Header:[RefID	OysterID	Rule]
+2023-12-04 01:12:25,148 INFO 	Record #1:source1.C976555:2HKFV00I4GJOG8WU:[1]
+2023-12-04 01:12:25,594 INFO Link Set Records Read[271142] - Filtered[0] - Errors[0] : Links[271142] = Matched[271142] + Created[0]
+2023-12-04 01:12:25,594 INFO Performing INNER join for 271142 references
+2023-12-04 01:12:25,614 INFO Joined Link Set Records Total[271142]  NoLinkId[0]  NoReferenceId[0]  Joined[271142]
+2023-12-04 01:12:25,614 INFO Computing True Pairs and Clusters for 271142 references
+2023-12-04 01:12:25,860 INFO Total Count:271142 Pairs:2250993 Clusters:20067
+2023-12-04 01:12:25,860 INFO Computing Linked Pairs and Clusters for 271142 references
+2023-12-04 01:12:26,243 INFO Total Count:271142 Pairs:1497461 Clusters:89662
+2023-12-04 01:12:26,243 INFO Computing Agreement Pairs and Clusters for 271142 references
+2023-12-04 01:12:26,556 INFO Total Count:271142 Pairs:1161955 Clusters:93674
+2023-12-04 01:12:26,556 INFO 
+2023-12-04 01:12:26,557 INFO Total Distinct Records ID values (N) ............... = 271,142
+2023-12-04 01:12:26,557 INFO ---------------------Clusters ----------------------
+2023-12-04 01:12:26,557 INFO Reference Set Clusters (EC) ........................ = 20,067
+2023-12-04 01:12:26,557 INFO Link Set Clusters (LC) ............................. = 89,662
+2023-12-04 01:12:26,557 INFO Reference+Link Set Agreement Clusters (AC) ......... = 93,674
+2023-12-04 01:12:26,557 INFO 
+2023-12-04 01:12:26,557 INFO ---------------------Pairs -------------------------
+2023-12-04 01:12:26,557 INFO Total Pairs (D) = ((N * N-1) / 2) .................. = 36,758,856,511
+2023-12-04 01:12:26,558 INFO Reference Set Pairs (E) ............................ = 2,250,993
+2023-12-04 01:12:26,558 INFO Link Set Linked Pairs (L) .......................... = 1,497,461
+2023-12-04 01:12:26,558 INFO Reference+Link Set Agreement Pairs (A) ............. = 1,161,955
+2023-12-04 01:12:26,558 INFO True Positive Pairs (TP) ........................... = 1,161,955
+2023-12-04 01:12:26,558 INFO False Positive Pairs (FP) = L - TP ................. = 335,506
+2023-12-04 01:12:26,558 INFO True Negative Pairs (TN) = D - TP - FP - FN ........ = 36,756,270,012
+2023-12-04 01:12:26,558 INFO False Negative Pairs (FN) = E - TP ................. = 1,089,038
+2023-12-04 01:12:26,558 INFO 
+2023-12-04 01:12:26,558 INFO ---------------------Rates - (0.0 - 1.0) -----------
+2023-12-04 01:12:26,559 INFO False Positive Rate = FP / (TN + FP) ............... = 0.00000913
+2023-12-04 01:12:26,559 INFO False Negative Rate = FN / E ....................... = 0.48380337
+2023-12-04 01:12:26,559 INFO Accuracy = (TP + TN) / D ........................... = 0.99996125
+2023-12-04 01:12:26,559 INFO Precision = TP / (TP + FP) ......................... = 0.77595009
+2023-12-04 01:12:26,559 INFO Recall = TP / (TP + FN) ............................ = 0.51619663
+2023-12-04 01:12:26,559 INFO F-Measure .......................................... = 0.61996492
+2023-12-04 01:12:26,559 INFO TWi ................................................ = 0.45282080
+2023-12-04 01:12:26,559 INFO Complete

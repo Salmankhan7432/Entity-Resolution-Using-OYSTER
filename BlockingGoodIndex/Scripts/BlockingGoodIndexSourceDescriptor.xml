@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : BlockingGoodIndexSourceDescriptor.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Source Descriptor Capture Run using an Aligned Index
+-->
+
+<OysterSourceDescriptor Name="source1">
+	<!-- Delimited -->
+	<Source Labels="Y" Qual="" Char="/t" Type="FileDelim">./BlockingGoodIndex/Input/TestFile.txt</Source>
+	
+	<!-- Items in Source (One for each item in the source including reference identifier -->
+	<ReferenceItems>
+		<!-- For Delimited -->
+		<Item Name="RecID" Attribute="@RefID" Pos="0"/>
+		<Item Name="Fname" Attribute="FirstName" Pos="1"/>
+		<Item Name="Lname" Attribute="LastName" Pos="2"/>
+		<Item Name="Nbr" Attribute="StreetNbr" Pos="3"/>
+	</ReferenceItems>
+</OysterSourceDescriptor>

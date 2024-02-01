@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : BlockingNoIndexAttributes.xml
+    Created on : 2023-11-06
+    Author     : Salman Khan
+    Description:
+        Attribute Script for Example of Capture Run without an Index
+-->
+
+<OysterAttributes System = "IndexTestWith">
+	<Attribute Algo="none" Item="FirstName"/>
+	<Attribute Algo="none" Item="LastName"/>
+	<Attribute Algo="none" Item="SSN"/>
+	<Attribute Algo="none" Item="BirthYear"/>
+	<Attribute Algo="none" Item="PhoneNumber"/>
+	
+	<!-- -->	
+	<IdentityRules>
+		<Rule Ident="1">
+			<Term Item="FirstName" SIMILARITY="SOUNDEX"/>
+			<Term Item="LastName" SIMILARITY="SCAN(LR,LETTER,0,ToUpper,SameOrder)"/>
+			<Term Item="SSN" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+			<Term Item="BirthYear" SIMILARITY="SCAN(LR,DIGIT,4,ToUpper,SameOrder)"/>
+			<Term Item="PhoneNumber" SIMILARITY="SCAN(LR,DIGIT,4,ToUpper,SameOrder)"/>
+		</Rule>
+		<Rule Ident="2">
+			<Term Item="FirstName" SIMILARITY="NICKNAME"/>
+			<Term Item="LastName" SIMILARITY="SOUNDEX"/>
+			<Term Item="SSN" SIMILARITY="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+			<Term Item="BirthYear" SIMILARITY="SCAN(LR,DIGIT,4,ToUpper,SameOrder)"/>
+			<Term Item="PhoneNumber" SIMILARITY="SCAN(LR,DIGIT,4,ToUpper,SameOrder)"/>
+		</Rule>
+	</IdentityRules>
+	
+	<Indices>
+		<Index Ident="1">
+            <Segment Item="SSN" Hash="SCAN(LR,DIGIT,0,KeepCase,SameOrder)" />            
+        </Index>
+		
+		<Index Ident="2">
+            <Segment Item="FirstName" Hash="INITIAL" />
+            <Segment Item="LastName" Hash="SOUNDEX" />
+			<Segment Item="SSN" Hash="SCAN(LR,DIGIT,0,ToUpper,SameOrder)"/>
+        </Index>
+ 
+		<Index Ident="3">
+            <Segment Item="FirstName" Hash="INITIAL" Similarity2="NICKNAME" />
+            <Segment Item="LastName" Hash="SCAN(LR,ALPHA,4,ToUpper,SameOrder)" />
+			<Segment Item="BirthYear" Hash="SCAN(LR,DIGIT,4,ToUpper,SameOrder)" />
+        </Index>
+	
+		<Index Ident="4">
+            <Segment Item="FirstName" Hash="INITIAL" Similarity2="NICKNAME" />
+            <Segment Item="LastName" Hash="SCAN(LR,ALPHA,4,ToUpper,SameOrder)" />
+			<Segment Item="PhoneNumber" Hash="SCAN(LR,DIGIT,4,ToUpper,L2HKeepDup)" />
+        </Index>
+	
+    </Indices>
+	
+</OysterAttributes>

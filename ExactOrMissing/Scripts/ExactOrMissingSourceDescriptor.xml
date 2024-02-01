@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ExactOrMissingSourceDescriptor.xml
+    Created on : 2018-07-09
+    Author     : John Talburt
+    Description: Source Descriptor for test of Exact_or_Missing comparator
+-->
+
+<OysterSourceDescriptor Name="Source1">
+     <Source Type="FileDelim" Char="," Qual="" Labels="Y">./ExactOrMissing/Input/TestData.txt</Source>
+     <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="RecID" Attribute="@RefID" Pos="0"/>
+        <Item Name="First" Attribute="First" Pos="1"/>
+        <Item Name="Last" Attribute="Last" Pos="2"/>
+        <Item Name="Suffix" Attribute="Suffix" Pos="3"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

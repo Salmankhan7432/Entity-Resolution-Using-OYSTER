@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : StrSplitAssertionAttributes.xml
+    Created on : 2019-08-12
+    Author     : John R. Talburt
+    Description: Attributes Script for Structure Split Demo Run
+-->
+
+<OysterAttributes System="StudentDemo">
+
+<!-- Identity Rules are not used in Assertion operations -->
+<IdentityRules ID="Empty"></IdentityRules>
+</OysterAttributes>

@@ -1,0 +1,189 @@
+Oyster v.4.2.0
+RunScript: ListARunScript.xml
+Attribute: ./ListA/Scripts/ListAAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./ListA/Output/ListAIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./ListA/Output/ListAOutput.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./ListA/Input/ListA.txt
+
+Records processed for ./ListA/Scripts/ListASourceDescriptor.xml: 94306(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :       94,306
+Total Clusters                   :       62,270
+Max Cluster Size                 :           13
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1            47,395              47,395
+           2             6,957              13,914
+           3             3,455              10,365
+           4             2,065               8,260
+           5             1,146               5,730
+           6               639               3,834
+           7               317               2,219
+           8               164               1,312
+           9                70                 630
+          10                41                 410
+          11                16                 176
+          12                 4                  48
+          13                 1                  13
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            7
+Average Cluster by Count         :        4,790
+Average Cluster Size             :      1.51447
+Number of Duplicate Recs         :       32,036
+Duplication Rate                 :      0.33970
+
+
+Total Candidates Size            :       47,979
+Total DeDup Candidates Size      :       32,036
+Total # Candidates               :       29,276
+Avg Candidates per Input         :      1.63885
+Total Matched Count              :       29,276
+Matches per Candidates Size      :      0.61018
+Matches per DeDup Candidates Size:      0.91385
+Matches per Candidates           :      1.00000
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+R1                            8,477
+R2                           18,069
+R3                            2,730
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[R1, R2, R3]                     45
+[R1, R2]                        757
+[R1, R3]                        417
+[R1]                          9,367
+[R2, R3]                        546
+[R2]                         19,538
+[R3]                          3,131
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :      156,034
+Total tokens            :      191,235
+Unique tokens           :       92,607
+Max tokens per key      :           10
+Min tokens per key      :            1
+Min tokens > 1 per key  :            2
+
+Total tokens per key    :      1.22560
+Unique tokens per key   :      0.59351
+Total per Unique tokens :      2.06502
+Unique per Total tokens :      0.48426
+
+Skewness                :      1.07629
+Kurtosis                :      1.16502
+Excess                  :     -1.83498
+
+Max key                 : TOLLIVER193691126, INGWALDSON84049911
+
+Top 10 keys             : 
+10                        : TOLLIVER193691126, INGWALDSON84049911
+9                        : HOLBROOK16016546, SOLAR121454839, DANIELS103477803, AMEREAN22477845
+8                        : SHERMAN71794756, LOCKWOOD49151445, BAKER178916448, KINSEYPAIGE99667852, TALLMAN102298819, SMITH180277053, LEONARD183587219, CENTENO192001742, VERGES156849472, SILVA137214046, ROBLES183787497, [3 More]...
+7                        : BASTARDO136731370, MENDOZA137872210, GUIZAR143464602, BLACKWELL19014900, WILLIAMS107084493, WISHART89227433, KOJABABIAN17423158, TRAN175482798, GARZA187102385, BOSSARD166299483, MILLER153067862, [49 More]...
+6                        : HUNT12551841, STARR174272500, WOODLEY57726504, SAM126712578, NOWLIN171166423, PONCE7726621, EASTWOOD49265729, SUAREZ115967689, NGUYEN180619641, FOSTER124888027, SCHULMAN131134790, [193 More]...
+5                        : SALINAS170999476, PEREZ84742640, KHALIL112632845, ALVARADO137524957, WILSON109207366, VARGAS7000579, MILLER189246560, DAMIAN38790329, ELMASRY12632244, ADEGORIOLA92643981, PAZ104784430, [548 More]...
+4                        : NGUYEN117865240, L640E1521900, GONZALEZ181169940, VASQUEZ195208742, GODFREY194533841, SHELTON120913893, MADDOX167542517, PIRTLE27501098, BARAHONA50743121, RIVERA136557253, MCCURRY67125036, [1478 More]...
+3                        : STEWART102275293, A223S4621986416, FERNANDEZ178723054, RYLANDER101298290, JAYBELTRAN1059, J000B4361922, SATTARI88473224, B653T2511984, ZAIDLE194084294, SCHNEPPERSHOFF88442298, WALLACE18443052, [4491 More]...
+2                        : HA193251838, MARGARETMEJIA25685, MEJIA86958232, CYNTHIANGUYEN14690, N242D5421901, ARGOTI151896553, SMITH28200301, PAREDES42219955, EVANGELISTA26465644, KISHAGONZALEZ703, MICHELLEHUNT412, [17983 More]...
+1                        : RICHARDARIAS519, ARIAS124271512, TESSSTEWART914, LEANENFINSITER4646, FINSITER70433509, NANCYROBERTS3473, AMADORVILLABROZA3500, VILLABROZA139846105, AARONZUNIGA20414, ZUNIGA403457780, ANASTASIASALINAS2941, [131203 More]...
+
+
+Candidate Size     # of Candidates        # of Records
+             0              65,030                   0
+             1              17,726              17,726
+             2               6,991              13,982
+             3               2,817               8,451
+             4               1,153               4,612
+             5                 399               1,995
+             6                 136                 816
+             7                  39                 273
+             8                  11                  88
+             9                   4                  36
+
+
+   Index Group          Index Size        # of Records
+             1             131,213             131,213
+             2              17,993              35,986
+             3               4,501              13,503
+             4               1,488               5,952
+             5                 558               2,790
+             6                 203               1,218
+             7                  59                 413
+             8                  13                 104
+             9                   4                  36
+            10                   2                  20
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                6
+Throughput (records/hour)        : 56,583,600.00000
+Average Matching Latency (ms)    :         0.006076
+Max Matching Latency (ms)        :                1
+Min Matching Latency (ms)        :                0
+Average Non-Matching Latency (ms):          0.00552
+Max Non-Matching Latency (ms)    :               23
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2019-08-20 09.32.15
+Time process ended at 2019-08-20 09.32.21
+Total elapsed time 0 hour(s) 0 minute(s) 6 second(s)
+

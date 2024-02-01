@@ -1,0 +1,51 @@
+Metadata={A=@RefID, B=First, C=Last, D=Suffix}
+
+Initial RefID	CoDoSA Identity
+E7B1QDQPP3ZGXY2S	OysterID: E7B1QDQPP3ZGXY2S
+Creation Date: null
+Size: 2
+Persistent: false
+Record 0: @RefID=Source1.1, First=ABC, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: E7B1QDQPP3ZGXY2S, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=ABC, Last=def, Suffix=sr, Input record: false, Current Traces: OID: E7B1QDQPP3ZGXY2S, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+NegStrToStr: []
+
+42L2RNYUFFLC9BDI	OysterID: 42L2RNYUFFLC9BDI
+Creation Date: null
+Size: 2
+Persistent: false
+Record 0: @RefID=Source1.3, First=UVW, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 42L2RNYUFFLC9BDI, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.4, First=UVW, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 42L2RNYUFFLC9BDI, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+NegStrToStr: []
+
+8CJV0R736R2PE64T	OysterID: 8CJV0R736R2PE64T
+Creation Date: null
+Size: 1
+Persistent: false
+Record 0: @RefID=Source1.5, First=UVW, Last=XYZ, Suffix=SR, Input record: false, Current Traces: OID: 8CJV0R736R2PE64T, RunID: 1, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+NegStrToStr: []
+
+7L1GEHDMQB103B4O	OysterID: 7L1GEHDMQB103B4O
+Creation Date: null
+Size: 1
+Persistent: false
+Record 0: @RefID=Source1.6, First=UVW, Last=XYZ, Input record: false, Current Traces: OID: 7L1GEHDMQB103B4O, RunID: 1, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+NegStrToStr: []
+
+R6L8ODRZ2BTQS2GT	OysterID: R6L8ODRZ2BTQS2GT
+Creation Date: null
+Size: 2
+Persistent: false
+Record 0: @RefID=Source1.7, First=MNO, Last=PQR, Input record: false, Current Traces: OID: R6L8ODRZ2BTQS2GT, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.8, First=MNO, Last=PQR, Input record: false, Current Traces: OID: R6L8ODRZ2BTQS2GT, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+NegStrToStr: []
+

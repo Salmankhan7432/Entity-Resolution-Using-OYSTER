@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : BlockingNoIndex.xml
+    Created on : 2023-11-06
+    Author     : Salman Khan
+    Description: Source Descriptor for Blocking without a defined Index
+-->
+
+<OysterSourceDescriptor Name="source1">
+	<!-- Delimited -->
+	<Source Labels="Y" Qual="" Char="|" Type="FileDelim">./BlockingNoIndex/Input/ListC.txt</Source>
+	
+	<!-- Items in Source (One for each item in the source including reference identifier -->
+	<ReferenceItems>
+		<!-- For Delimited -->
+		<Item Name="RecID" Attribute="@RefID" Pos="0"/>
+		<Item Name="FirstName" Attribute="FirstName" Pos="1"/>
+		<Item Name="LastName" Attribute="LastName" Pos="3"/>
+		<Item Name="SSN" Attribute="SSN" Pos="4"/>
+		<Item Name="BirthYear" Attribute="BirthYear" Pos="5"/>
+		<Item Name="PhoneNumber" Attribute="PhoneNumber" Pos="8"/>
+	</ReferenceItems>
+</OysterSourceDescriptor>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ExactOrNickNameAttributes.xml
+    Created on : 2018-07-28
+    Author     : John Talburt
+    Description:
+        Attribute rules to test Soundex or NickName Comparator
+-->
+
+<OysterAttributes System="School">
+    <Attribute Item="First"  Algo= "none" />
+    <Attribute Item="Last"  Algo="none" />
+    <Attribute Item="Suffix"  Algo="none" />
+          
+    <!-- -->
+    <IdentityRules>
+        <Rule Ident="1">
+            <Term Item="First" DATAPREP="SCAN(LR,LETTER,0,TOUPPER,SAMEORDER)"  SIMILARITY1="Soundex" SIMILARITY2="NickName"/>
+            <Term Item="Last" DATAPREP="SCAN(LR,LETTER,0,TOUPPER,SAMEORDER)"  SIMILARITY="Exact"/>
+            <Term Item="Suffix" DATAPREP="SCAN(LR,LETTER,0,TOUPPER,SAMEORDER)" SIMILARITY1="Exact" SIMILARITY2="Missing(Both)"/>
+        </Rule>
+    </IdentityRules>
+</OysterAttributes>

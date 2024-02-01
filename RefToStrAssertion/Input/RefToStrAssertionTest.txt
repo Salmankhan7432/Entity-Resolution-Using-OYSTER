@@ -1,0 +1,2 @@
+RefID, FirstName, LastName, DOB, SchCode, @AssertRefToStr
+1,Ed, Jones, 20001104, G34,XVI8NV5E03OWX86Y

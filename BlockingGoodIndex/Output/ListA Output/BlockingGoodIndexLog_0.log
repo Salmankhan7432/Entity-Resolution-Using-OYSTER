@@ -1,0 +1,169 @@
+Oyster v.4.3.0
+RunScript: BlockingGoodIndexRunScript.xml
+Attribute: ./BlockingGoodIndex/Scripts/BlockingGoodIndexAttributesA.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./BlockingGoodIndex/Output/BlockingGoodIndexLinkFileA.link
+
+Identity Output Type: TextFile
+Identity Output: ./BlockingGoodIndex/Output/BlockingGoodIndexOutputA.idty
+
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./BlockingGoodIndex/Input/LISTA.txt
+
+Records processed for ./BlockingGoodIndex/Scripts/BlockingGoodIndexSourceDescriptorA.xml: 94306(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :       94,306
+Total Clusters                   :       84,597
+Max Cluster Size                 :            8
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1            75,929              75,929
+           2             7,642              15,284
+           3             1,019               3,057
+           4                 4                  16
+           6                 2                  12
+           8                 1                   8
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            4
+Average Cluster by Count         :       14,099
+Average Cluster Size             :      1.11477
+Number of Duplicate Recs         :        9,709
+Duplication Rate                 :      0.10295
+
+
+Total Candidates Size            :       12,925
+Total DeDup Candidates Size      :       11,749
+Total # Candidates               :       11,429
+Avg Candidates per Input         :      1.13090
+Total Matched Count              :        9,709
+Matches per Candidates Size      :      0.75118
+Matches per DeDup Candidates Size:      0.82637
+Matches per Candidates           :      0.84951
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                             9,649
+2                                60
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1, 2]                            2
+[1]                           9,649
+[2]                              60
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :       63,988
+Total tokens            :       75,445
+Unique tokens           :       68,838
+Max tokens per key      :           10
+Min tokens per key      :            1
+Min tokens > 1 per key  :            2
+
+Total tokens per key    :      1.17905
+Unique tokens per key   :      1.07580
+Total per Unique tokens :      1.09598
+Unique per Total tokens :      0.91243
+
+Skewness                :      1.06815
+Kurtosis                :      1.14962
+Excess                  :     -1.85038
+
+Max key                 : M240GONZ****
+
+Top 10 keys             : 
+10                        : M240GONZ****
+6                        : M635RESU****, A350WARN****
+4                        : B650HART****, R2001900, J215LIND****, P6201937, H6551935, W4251917, R5621900, J500BORG8052, S500MUNO8856, J520BELL****, T652MART****, [2 More]...
+3                        : B650CHER7026, J000BELT1059, K400HOLL6304, S650CAYA1711, J530VOND1951, N520MALC5713, J160GONZ1418, M200RAMI119*, B650TOOM9250, B620OCAM2411, S200COLB9120, [1380 More]...
+2                        : M626MEJI2568, C530NGUY1469, E1521900, K200GONZ703*, M240HUNT412*, D100ABRE5544, J516VASQ641*, P400KENN1055, J500TURN1005, T620BETH302*, S500RAMI1914, [8612 More]...
+1                        : R263ARIA519*, T200STEW914*, L550FINS4646, N520ROBE3473, A536VILL3500, A650ZUNI2041, A523SALI2941, N500HA**5322, E620MURI2121, N242DANI3562, D5421901, [53951 More]...
+
+
+Candidate Size     # of Candidates        # of Records
+             0              82,877                   0
+             1               9,990               9,990
+             2               1,409               2,818
+             3                  20                  60
+             4                   3                  12
+             5                   3                  15
+             6                   1                   6
+             7                   1                   7
+             8                   1                   8
+             9                   1                   9
+
+
+   Index Group          Index Size        # of Records
+             1              53,961              53,961
+             2               8,622              17,244
+             3               1,390               4,170
+             4                  12                  48
+             6                   2                  12
+            10                   1                  10
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                4
+Throughput (records/hour)        : 84,875,400.00000
+Average Matching Latency (ms)    :         0.001728
+Max Matching Latency (ms)        :                2
+Min Matching Latency (ms)        :                0
+Average Non-Matching Latency (ms):          0.00658
+Max Non-Matching Latency (ms)    :               22
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2023-11-06 11.42.11
+Time process ended at 2023-11-06 11.42.15
+Total elapsed time 0 hour(s) 0 minute(s) 4 second(s)
+

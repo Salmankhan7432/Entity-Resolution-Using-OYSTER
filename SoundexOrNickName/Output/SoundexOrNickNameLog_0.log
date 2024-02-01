@@ -1,0 +1,865 @@
+Oyster v.4.2.0
+RunScript: SoundexOrNicknameRunScript.xml
+Attribute: ./SoundexOrNickName/Scripts/SoundexOrNickNameAttributes.xml
+Initializing Index...
+Index Type: NullIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Link Output Type: TextFile
+Link Output: ./SoundexOrNickName/Output/SoundexOrNickNameIndex.link
+
+Identity Output Type: TextFile
+Identity Output: ./SoundexOrNickName/Output/SoundexOrNickNameOutput.idty
+
+Validating Source Descriptor:./SoundexOrNickName/Scripts/SoundexOrNickNameSourceDescriptor.xml
+Source File:./SoundexOrNickName/Input/TestData.txt
+Engine Type: OysterClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./SoundexOrNickName/Input/TestData.txt
+
+
+Input: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+
+	New Entity V4XDSXAIRPT8Y7X2 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+	New Index: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.1}, @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+
+Input: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.1=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+
+	Compare Input 3 to Identity 1 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+true
+	Matched Rule:1
+
+
+	Satisfies Rule 1
+	Assign Entity Source1.1 to Input 3
+	Update Entity: V4XDSXAIRPT8Y7X2 @RefID{Source1.1|Source1.2}, First{James}, Last{DEF|def}, Suffix{SR|sr}
+	             : OysterID: V4XDSXAIRPT8Y7X2
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: Source1.1 for ri @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: V4XDSXAIRPT8Y7X2 for [Source1.1, Source1.2]
+
+**** DUMP START ****
+entityMap
+V4XDSXAIRPT8Y7X2	OysterID: V4XDSXAIRPT8Y7X2
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[Source1.1, Source1.2]
+linkMap
+Source1.1	V4XDSXAIRPT8Y7X2
+Source1.2	V4XDSXAIRPT8Y7X2
+**** DUMP END ****
+
+
+Input: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 4 to Identity 1 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 4 to Identity 1 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+	New Entity 2DBWGQ8B2Q2PZAYD @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+	New Index: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.3}, @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+
+Input: @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 5 to Identity 1 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 5 to Identity 2 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 5 to Identity 2 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity Source1.3 to Input 5
+	Update Entity: 2DBWGQ8B2Q2PZAYD @RefID{Source1.3|Source1.4}, First{James|Jim}, Last{XYZ}, Suffix{JR}
+	             : OysterID: 2DBWGQ8B2Q2PZAYD
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: Source1.3 for ri @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: 2DBWGQ8B2Q2PZAYD for [Source1.4, Source1.3]
+
+**** DUMP START ****
+entityMap
+V4XDSXAIRPT8Y7X2	OysterID: V4XDSXAIRPT8Y7X2
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+2DBWGQ8B2Q2PZAYD	OysterID: 2DBWGQ8B2Q2PZAYD
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[Source1.1, Source1.2, Source1.3, Source1.4]
+linkMap
+Source1.4	2DBWGQ8B2Q2PZAYD
+Source1.1	V4XDSXAIRPT8Y7X2
+Source1.3	2DBWGQ8B2Q2PZAYD
+Source1.2	V4XDSXAIRPT8Y7X2
+**** DUMP END ****
+
+
+Input: @RefID=Source1.5, First=Phillip, Last=XYZ, Suffix=SR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 6 to Identity 1 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 6 to Identity 1 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 6 to Identity 2 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 6 to Identity 2 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+	New Entity 4XP06N59HWP1YYP1 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+	New Index: @RefID=Source1.5, First=Phillip, Last=XYZ, Suffix=SR, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.5}, @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+
+Input: @RefID=Source1.6, First=Philip, Last=XYZ, Suffix=Sr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.5=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 7 to Identity 1 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 7 to Identity 2 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 7 to Identity 2 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 7 to Identity 3 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 7 to Identity 3 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity Source1.5 to Input 7
+	Update Entity: 4XP06N59HWP1YYP1 @RefID{Source1.5|Source1.6}, First{Phillip|Philip}, Last{XYZ}, Suffix{SR|Sr}
+	             : OysterID: 4XP06N59HWP1YYP1
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.5, First=Phillip, Last=XYZ, Suffix=SR, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.6, First=Philip, Last=XYZ, Suffix=Sr, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: Source1.5 for ri @RefID=Source1.6, First=Philip, Last=XYZ, Suffix=Sr, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: 4XP06N59HWP1YYP1 for [Source1.5, Source1.6]
+
+**** DUMP START ****
+entityMap
+V4XDSXAIRPT8Y7X2	OysterID: V4XDSXAIRPT8Y7X2
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+2DBWGQ8B2Q2PZAYD	OysterID: 2DBWGQ8B2Q2PZAYD
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+4XP06N59HWP1YYP1	OysterID: 4XP06N59HWP1YYP1
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.5, First=Phillip, Last=XYZ, Suffix=SR, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.6, First=Philip, Last=XYZ, Suffix=Sr, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[Source1.1, Source1.2, Source1.3, Source1.4, Source1.5, Source1.6]
+linkMap
+Source1.5	4XP06N59HWP1YYP1
+Source1.4	2DBWGQ8B2Q2PZAYD
+Source1.6	4XP06N59HWP1YYP1
+Source1.1	V4XDSXAIRPT8Y7X2
+Source1.3	2DBWGQ8B2Q2PZAYD
+Source1.2	V4XDSXAIRPT8Y7X2
+**** DUMP END ****
+
+
+Input: @RefID=Source1.7, First=John, Last=PQR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.6=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.6=@RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 8 to Identity 1 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+false
+	Compare Input 8 to Identity 1 @RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+matrix
+false
+	Compare Input 8 to Identity 2 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 8 to Identity 2 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 8 to Identity 3 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 8 to Identity 3 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+	New Entity 5CM3CBL9I44JGW0Q @RefID{Source1.7}, First{John}, Last{PQR}
+	New Index: @RefID=Source1.7, First=John, Last=PQR, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.7}, @RefID{Source1.7}, First{John}, Last{PQR}
+
+Input: @RefID=Source1.8, First=Jon, Last=PQR, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.7=@RefID{Source1.7}, First{John}, Last{PQR}
+		Source1.6=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.6=@RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 9 to Identity 1 @RefID{Source1.7}, First{John}, Last{PQR}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 9 to Identity 2 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+false
+	Compare Input 9 to Identity 2 @RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+matrix
+false
+	Compare Input 9 to Identity 3 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 9 to Identity 3 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 9 to Identity 4 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 9 to Identity 4 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity Source1.7 to Input 9
+	Update Entity: 5CM3CBL9I44JGW0Q @RefID{Source1.7|Source1.8}, First{John|Jon}, Last{PQR}
+	             : OysterID: 5CM3CBL9I44JGW0Q
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.7, First=John, Last=PQR, Input record: false, Current Traces: OID: 5CM3CBL9I44JGW0Q, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.8, First=Jon, Last=PQR, Input record: false, Current Traces: OID: 5CM3CBL9I44JGW0Q, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: Source1.7 for ri @RefID=Source1.8, First=Jon, Last=PQR, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: 5CM3CBL9I44JGW0Q for [Source1.8, Source1.7]
+
+**** DUMP START ****
+entityMap
+V4XDSXAIRPT8Y7X2	OysterID: V4XDSXAIRPT8Y7X2
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+2DBWGQ8B2Q2PZAYD	OysterID: 2DBWGQ8B2Q2PZAYD
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+4XP06N59HWP1YYP1	OysterID: 4XP06N59HWP1YYP1
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.5, First=Phillip, Last=XYZ, Suffix=SR, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.6, First=Philip, Last=XYZ, Suffix=Sr, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+5CM3CBL9I44JGW0Q	OysterID: 5CM3CBL9I44JGW0Q
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.7, First=John, Last=PQR, Input record: false, Current Traces: OID: 5CM3CBL9I44JGW0Q, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.8, First=Jon, Last=PQR, Input record: false, Current Traces: OID: 5CM3CBL9I44JGW0Q, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[Source1.1, Source1.2, Source1.3, Source1.4, Source1.5, Source1.6, Source1.7, Source1.8]
+linkMap
+Source1.8	5CM3CBL9I44JGW0Q
+Source1.5	4XP06N59HWP1YYP1
+Source1.4	2DBWGQ8B2Q2PZAYD
+Source1.7	5CM3CBL9I44JGW0Q
+Source1.6	4XP06N59HWP1YYP1
+Source1.1	V4XDSXAIRPT8Y7X2
+Source1.3	2DBWGQ8B2Q2PZAYD
+Source1.2	V4XDSXAIRPT8Y7X2
+**** DUMP END ****
+
+
+Input: @RefID=Source1.9, First=George, Last=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.7=@RefID{Source1.7}, First{John}, Last{PQR}
+		Source1.7=@RefID{Source1.8}, First{Jon}, Last{PQR}
+		Source1.6=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.6=@RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 10 to Identity 1 @RefID{Source1.7}, First{John}, Last{PQR}
+matrix
+false
+	Compare Input 10 to Identity 1 @RefID{Source1.8}, First{Jon}, Last{PQR}
+matrix
+false
+	Compare Input 10 to Identity 2 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+false
+	Compare Input 10 to Identity 2 @RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+matrix
+false
+	Compare Input 10 to Identity 3 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 10 to Identity 3 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 10 to Identity 4 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 10 to Identity 4 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+	New Entity YU0GBNQIAOD510E2 @RefID{Source1.9}, First{George}, Last{Smith}
+	New Index: @RefID=Source1.9, First=George, Last=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.9}, @RefID{Source1.9}, First{George}, Last{Smith}
+
+Input: @RefID=Source1.10, First=Sam, Last=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.9=@RefID{Source1.9}, First{George}, Last{Smith}
+		Source1.7=@RefID{Source1.7}, First{John}, Last{PQR}
+		Source1.7=@RefID{Source1.8}, First{Jon}, Last{PQR}
+		Source1.6=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.6=@RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 11 to Identity 1 @RefID{Source1.9}, First{George}, Last{Smith}
+matrix
+false
+	Compare Input 11 to Identity 2 @RefID{Source1.7}, First{John}, Last{PQR}
+matrix
+false
+	Compare Input 11 to Identity 2 @RefID{Source1.8}, First{Jon}, Last{PQR}
+matrix
+false
+	Compare Input 11 to Identity 3 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+false
+	Compare Input 11 to Identity 3 @RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+matrix
+false
+	Compare Input 11 to Identity 4 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 11 to Identity 4 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 11 to Identity 5 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 11 to Identity 5 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+	New Entity 10980VFVFPFU7WDB @RefID{Source1.10}, First{Sam}, Last{Smith}
+	New Index: @RefID=Source1.10, First=Sam, Last=Smith, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.10}, @RefID{Source1.10}, First{Sam}, Last{Smith}
+
+Input: @RefID=Source1.11, First=Xenon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.9=@RefID{Source1.9}, First{George}, Last{Smith}
+		Source1.10=@RefID{Source1.10}, First{Sam}, Last{Smith}
+		Source1.7=@RefID{Source1.7}, First{John}, Last{PQR}
+		Source1.7=@RefID{Source1.8}, First{Jon}, Last{PQR}
+		Source1.6=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.6=@RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 12 to Identity 1 @RefID{Source1.9}, First{George}, Last{Smith}
+matrix
+false
+	Compare Input 12 to Identity 2 @RefID{Source1.10}, First{Sam}, Last{Smith}
+matrix
+false
+	Compare Input 12 to Identity 3 @RefID{Source1.7}, First{John}, Last{PQR}
+matrix
+false
+	Compare Input 12 to Identity 3 @RefID{Source1.8}, First{Jon}, Last{PQR}
+matrix
+false
+	Compare Input 12 to Identity 4 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+false
+	Compare Input 12 to Identity 4 @RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+matrix
+false
+	Compare Input 12 to Identity 5 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 12 to Identity 5 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 12 to Identity 6 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 12 to Identity 6 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+	New Entity R2Q0LCVWCRS2YA80 @RefID{Source1.11}, First{Xenon}, Last{Jones}, Suffix{Jr}
+	New Index: @RefID=Source1.11, First=Xenon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	New LinkMap{Source1.11}, @RefID{Source1.11}, First{Xenon}, Last{Jones}, Suffix{Jr}
+
+Input: @RefID=Source1.12, First=Xinon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	Candidate List:
+		Source1.9=@RefID{Source1.9}, First{George}, Last{Smith}
+		Source1.10=@RefID{Source1.10}, First{Sam}, Last{Smith}
+		Source1.11=@RefID{Source1.11}, First{Xenon}, Last{Jones}, Suffix{Jr}
+		Source1.7=@RefID{Source1.7}, First{John}, Last{PQR}
+		Source1.7=@RefID{Source1.8}, First{Jon}, Last{PQR}
+		Source1.6=@RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+		Source1.6=@RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+		Source1.3=@RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+		Source1.3=@RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+		Source1.2=@RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+		Source1.2=@RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+
+	Compare Input 13 to Identity 1 @RefID{Source1.9}, First{George}, Last{Smith}
+matrix
+false
+	Compare Input 13 to Identity 2 @RefID{Source1.10}, First{Sam}, Last{Smith}
+matrix
+false
+	Compare Input 13 to Identity 3 @RefID{Source1.11}, First{Xenon}, Last{Jones}, Suffix{Jr}
+matrix
+true
+	Matched Rule:1
+
+	Compare Input 13 to Identity 4 @RefID{Source1.7}, First{John}, Last{PQR}
+matrix
+false
+	Compare Input 13 to Identity 4 @RefID{Source1.8}, First{Jon}, Last{PQR}
+matrix
+false
+	Compare Input 13 to Identity 5 @RefID{Source1.5}, First{Phillip}, Last{XYZ}, Suffix{SR}
+matrix
+false
+	Compare Input 13 to Identity 5 @RefID{Source1.6}, First{Philip}, Last{XYZ}, Suffix{Sr}
+matrix
+false
+	Compare Input 13 to Identity 6 @RefID{Source1.3}, First{James}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 13 to Identity 6 @RefID{Source1.4}, First{Jim}, Last{XYZ}, Suffix{JR}
+matrix
+false
+	Compare Input 13 to Identity 7 @RefID{Source1.1}, First{James}, Last{DEF}, Suffix{SR}
+matrix
+false
+	Compare Input 13 to Identity 7 @RefID{Source1.2}, First{James}, Last{def}, Suffix{sr}
+matrix
+false
+
+	Satisfies Rule 1
+	Assign Entity Source1.11 to Input 13
+	Update Entity: R2Q0LCVWCRS2YA80 @RefID{Source1.11|Source1.12}, First{Xenon|Xinon}, Last{Jones}, Suffix{Jr}
+	             : OysterID: R2Q0LCVWCRS2YA80
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.11, First=Xenon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: OID: R2Q0LCVWCRS2YA80, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.12, First=Xinon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: OID: R2Q0LCVWCRS2YA80, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+	Update Index: Source1.11 for ri @RefID=Source1.12, First=Xinon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: null, Previous Traces: []
+	Update LinkMap: R2Q0LCVWCRS2YA80 for [Source1.12, Source1.11]
+
+**** DUMP START ****
+entityMap
+V4XDSXAIRPT8Y7X2	OysterID: V4XDSXAIRPT8Y7X2
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.1, First=James, Last=DEF, Suffix=SR, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.2, First=James, Last=def, Suffix=sr, Input record: false, Current Traces: OID: V4XDSXAIRPT8Y7X2, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+2DBWGQ8B2Q2PZAYD	OysterID: 2DBWGQ8B2Q2PZAYD
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.3, First=James, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.4, First=Jim, Last=XYZ, Suffix=JR, Input record: false, Current Traces: OID: 2DBWGQ8B2Q2PZAYD, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+4XP06N59HWP1YYP1	OysterID: 4XP06N59HWP1YYP1
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.5, First=Phillip, Last=XYZ, Suffix=SR, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.6, First=Philip, Last=XYZ, Suffix=Sr, Input record: false, Current Traces: OID: 4XP06N59HWP1YYP1, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+5CM3CBL9I44JGW0Q	OysterID: 5CM3CBL9I44JGW0Q
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.7, First=John, Last=PQR, Input record: false, Current Traces: OID: 5CM3CBL9I44JGW0Q, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.8, First=Jon, Last=PQR, Input record: false, Current Traces: OID: 5CM3CBL9I44JGW0Q, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+YU0GBNQIAOD510E2	OysterID: YU0GBNQIAOD510E2
+Creation Date: null
+Size: 1
+Persistant: false
+Record 0: @RefID=Source1.9, First=George, Last=Smith, Input record: false, Current Traces: OID: YU0GBNQIAOD510E2, RunID: 1, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+10980VFVFPFU7WDB	OysterID: 10980VFVFPFU7WDB
+Creation Date: null
+Size: 1
+Persistant: false
+Record 0: @RefID=Source1.10, First=Sam, Last=Smith, Input record: false, Current Traces: OID: 10980VFVFPFU7WDB, RunID: 1, Rule: [@], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+R2Q0LCVWCRS2YA80	OysterID: R2Q0LCVWCRS2YA80
+Creation Date: null
+Size: 2
+Persistant: false
+Record 0: @RefID=Source1.11, First=Xenon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: OID: R2Q0LCVWCRS2YA80, RunID: 1, Rule: [@], Previous Traces: []
+Record 1: @RefID=Source1.12, First=Xinon, Last=Jones, Suffix=Jr, Input record: false, Current Traces: OID: R2Q0LCVWCRS2YA80, RunID: 1, Rule: [1], Previous Traces: []
+Merges: {}
+StrToStr: []
+TruePositiveAttributes: RunID="null" Reviewer="" Transaction="null"
+NegStrToStr: []
+
+entitySet
+valueIndex
+<null>	[Source1.1, Source1.2, Source1.3, Source1.4, Source1.5, Source1.6, Source1.7, Source1.8, Source1.9, Source1.10, Source1.11, Source1.12]
+linkMap
+Source1.9	YU0GBNQIAOD510E2
+Source1.8	5CM3CBL9I44JGW0Q
+Source1.10	10980VFVFPFU7WDB
+Source1.5	4XP06N59HWP1YYP1
+Source1.12	R2Q0LCVWCRS2YA80
+Source1.4	2DBWGQ8B2Q2PZAYD
+Source1.11	R2Q0LCVWCRS2YA80
+Source1.7	5CM3CBL9I44JGW0Q
+Source1.6	4XP06N59HWP1YYP1
+Source1.1	V4XDSXAIRPT8Y7X2
+Source1.3	2DBWGQ8B2Q2PZAYD
+Source1.2	V4XDSXAIRPT8Y7X2
+**** DUMP END ****
+
+Records processed for ./SoundexOrNickName/Scripts/SoundexOrNickNameSourceDescriptor.xml: 12(0)
+
+# of Consolidation Steps: 0
+
+Filtered Candidate List Frequencies
+0	1
+1	1
+2	1
+3	1
+4	1
+5	1
+6	1
+7	1
+8	1
+9	1
+10	1
+11	1
+
+
+UnFiltered Candidate List Frequencies
+0	1
+1	1
+2	1
+3	1
+4	1
+5	1
+6	1
+7	1
+8	1
+9	1
+10	1
+11	1
+
+
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :           12
+Total Clusters                   :            7
+Max Cluster Size                 :            2
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1                 2                   2
+           2                 5                  10
+
+Clusters loaded                  :            0
+References loaded                :            0
+Avg # of Refs/Cluster            :          NaN
+
+
+Average Cluster Grouping         :            1
+Average Cluster by Count         :            3
+Average Cluster Size             :      1.71429
+Number of Duplicate Recs         :            5
+Duplication Rate                 :      0.41667
+
+
+Total Candidates Size            :           66
+Total DeDup Candidates Size      :           38
+Total # Candidates               :           11
+Avg Candidates per Input         :      6.00000
+Total Matched Count              :            5
+Matches per Candidates Size      :      0.07576
+Matches per DeDup Candidates Size:      0.13158
+Matches per Candidates           :      0.45455
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                                 5
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1]                               5
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :            1
+Total tokens            :           12
+Unique tokens           :           12
+Max tokens per key      :           12
+Min tokens per key      :           12
+Min tokens > 1 per key  :           12
+
+Total tokens per key    :     12.00000
+Unique tokens per key   :     12.00000
+Total per Unique tokens :      1.00000
+Unique per Total tokens :      1.00000
+
+Skewness                :          NaN
+Kurtosis                :          NaN
+Excess                  :          NaN
+
+Max key                 : <null>
+
+Top 10 keys             : 
+12                        : <null>
+
+
+Candidate Size     # of Candidates        # of Records
+
+
+   Index Group          Index Size        # of Records
+            12                   1                  12
+
+
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                0
+Throughput (records/hour)        :         Infinity
+Average Matching Latency (ms)    :         0.750000
+Max Matching Latency (ms)        :                2
+Min Matching Latency (ms)        :                1
+Average Non-Matching Latency (ms):          0.83333
+Max Non-Matching Latency (ms)    :                2
+Min Non-Matching Latency (ms)    :                1
+
+
+
+Time process started at 2019-08-20 09.39.05
+Time process ended at 2019-08-20 09.39.05
+Total elapsed time 0 hour(s) 0 minute(s) 0 second(s)
+

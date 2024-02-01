@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ScoringTestAttributes.xml
+    Created on : 2018-07-16
+    Author     : John R. Talburt
+    Description:
+        Test of Scoring Rule functionality
+-->
+
+<OysterAttributes System="School">
+    <Attribute Item="Fname"  Algo= "none" />
+    <Attribute Item="Lname"  Algo="none" />
+   <!-- -->
+<ScoringRule Ident="Example1" MatchScore="25.5" ReviewScore="-10.5">
+		<Term Item="Fname" WgtTable="./ScoringTest/Input/FnameWeights.txt" SIMILARITY="SOUNDEX" AgreeWgt="10.5" DisagreeWgt="-5.5" Missing="0.0"/>
+		<Term Item="Lname" SIMILARITY="SCAN(LR,LETTER,0,ToUpper,SameOrder)" AgreeWgt="10.5" DisagreeWgt="-5.5" Missing="0.0"/>
+	</ScoringRule>
+</OysterAttributes>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ScoringTestDescriptor.xml
+    Created on : 2018-07-16
+    Author     : John Talburt
+    Description: Test of Scoring Rule Functionality
+-->
+
+<OysterSourceDescriptor Name="S1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./ScoringTest/Input/TestInput.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="RecID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Fname" Attribute="Fname" Pos="1"/>
+        <Item Name="Lname" Attribute="Lname" Pos="2"/>
+     </ReferenceItems>
+</OysterSourceDescriptor>

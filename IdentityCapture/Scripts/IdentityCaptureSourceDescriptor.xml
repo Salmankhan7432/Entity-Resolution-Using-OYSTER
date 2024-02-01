@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityCaptureSourceDescriptor.xml
+    Created on : 2019-08-11
+    Author     : John R. Talburt
+    Description: Source Descriptor for the Identity Capture Demo Run Updated for Version 4.1.0
+-->
+
+<OysterSourceDescriptor Name="source1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./IdentityCapture/Input/IdentityCaptureTest.txt</Source>
+    
+    <!-- Items in Source (One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="IdentityID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Fname" Attribute="StudentFirstName" Pos="1"/>
+        <Item Name="Lname" Attribute="StudentLastName" Pos="2"/>
+        <Item Name="Scode" Attribute="LEA" Pos="3"/>
+        <Item Name="DOBYMD" Attribute="StudentDateOfBirth" Pos="4"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

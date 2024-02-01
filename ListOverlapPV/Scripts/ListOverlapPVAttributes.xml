@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListOverlapPVAttributes.xml
+    Created on : 2018-02-26
+    Author     : J Talburt
+    Description:
+        Attribute xml file for the ListOverlap test run
+-->
+
+<OysterAttributes System="School">
+    <Attribute Item="StudentFirstName"  Algo= "none" />
+    <Attribute Item="StudentLastName"  Algo="none" />
+    <Attribute Item="LEA"  Algo="none" />
+    <Attribute Item="PVList"  Algo="none" />
+          
+    <!-- -->
+<Indices>
+<!--
+	<Index Ident="X1">
+		<Segment Item="StudentFirstName" Hash="SOUNDEX"/>
+		<Segment Item="StudentLastName" Hash="SOUNDEX"/>
+	</Index>	
+-->
+	<Index Ident="X2">
+		<Segment Item="PVList" Hash="ListTokenizerPV(',',':')"/>
+	</Index>
+</Indices>
+    <IdentityRules>
+        <Rule Ident="1">
+            <Term Item="StudentFirstName" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="StudentLastName" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="PVList" SIMILARITY="LISTOVERLAPPV(0.60,',',':','UNK')"/>
+        </Rule>
+        <Rule Ident="2">
+            <Term Item="StudentLastName" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="LEA" DATAPREP="SCAN(LR,ALPHA,0,ToUpper,SameOrder)" SIMILARITY="Exact"/>
+            <Term Item="PVList" SIMILARITY="LISTOVERLAPPV(0.60,',',':','UNK')"/>
+        </Rule>
+    </IdentityRules>
+</OysterAttributes>

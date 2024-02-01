@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : PriceListCaptureSourceDescriptor.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Price List Data
+-->
+
+<OysterSourceDescriptor Name="PriceList">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./PriceListCapture/Input/PriceListTest.txt</Source>
+    <!-- Items in Source -->
+    <ReferenceItems>
+        <Item Name="Record ID" Attribute="@RefID" Pos="0"/>
+	<Item Name="Price Code" Attribute="PriceCode" Pos="1"/>
+        <Item Name="Descr" Attribute="Description" Pos="2"/>
+        <Item Name="Price" Attribute="Price" Pos="3"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

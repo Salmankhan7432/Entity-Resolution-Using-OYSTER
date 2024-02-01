@@ -1,0 +1,370 @@
+Oyster v.4.2.0
+RunScript: PriceListIdentityResolutionRunScript.xml
+Attribute: ./PriceListIdentityResolution/Scripts/PriceListIdentityResolutionAttributes.xml
+Initializing Index...
+Index Type: TalburtZhouInvertedIndex
+
+OysterIdentityRecord Type: Map
+
+ClusterRecord Type: UNKNOWN
+
+Initializing EntityMap...
+EntityMap Type: EntityMap
+
+Identity Input Type: TextFile
+Identity Input: ./PriceListIdentityResolution/Input/PriceListIdentityResolutionInputIdentities.idty
+
+Loading Previous IdentityRepository: ./PriceListIdentityResolution/Input/PriceListIdentityResolutionInputIdentities.idty
+Number of clusters read: 2101
+Number of references   : 2101
+Link Output Type: TextFile
+Link Output: ./PriceListIdentityResolution/Output/PriceListIdentityResolutionResults.link
+
+Engine Type: OysterKobayashiClusterEngine
+
+Bypassing Least Common Rule filter
+
+
+Source: ./PriceListIdentityResolution/Input/EquipmentList.txt
+
+Records processed for ./PriceListIdentityResolution/Scripts/PriceListIdentityResolutionSourceDescriptor.xml: 1945(0)
+
+# of Consolidation Steps: 0
+
+
+###################
+## Summary Stats ##
+###################
+Total Records Processed          :        1,945
+Total Clusters                   :        2,101
+Max Cluster Size                 :        1,908
+Min Cluster Size > 1             :            2
+Min Cluster Size                 :            1
+
+
+###################
+## Cluster Stats ##
+###################
+Cluster Size Distribution
+Cluster Size     # of Clusters        # of Records
+           1                20                  20
+           2                 7                  14
+           3                 1                   3
+       1,908                 1               1,908
+
+Clusters loaded                  :        2,101
+References loaded                :        2,101
+Avg # of Refs/Cluster            :      1.00000
+
+
+Average Cluster Grouping         :          478
+Average Cluster by Count         :            7
+Average Cluster Size             :     67.06897
+Number of Duplicate Recs         :        1,916
+Duplication Rate                 :     -0.08021
+
+
+Total Candidates Size            :       73,745
+Total DeDup Candidates Size      :       73,745
+Total # Candidates               :        1,682
+Avg Candidates per Input         :     43.84364
+Total Matched Count              :           37
+Matches per Candidates Size      :      0.00050
+Matches per DeDup Candidates Size:      0.00050
+Matches per Candidates           :      0.02200
+
+
+#########################
+##   First Rule Stats  ##
+#########################
+Number of Rules: 0
+Rule Firing Distribution
+Rule                          Counts
+1                                37
+
+
+############################
+##   Complete Rule Stats  ##
+############################
+Rule Firing Distribution
+Rule                          Counts
+[1]                              53
+
+
+###################
+##  Index Stats  ##
+###################
+Keys                    :          326
+Total tokens            :        9,957
+Unique tokens           :        2,101
+Max tokens per key      :          950
+Min tokens per key      :            1
+Min tokens > 1 per key  :            2
+
+Total tokens per key    :     30.54294
+Unique tokens per key   :      6.44479
+Total per Unique tokens :      4.73917
+Unique per Total tokens :      0.21101
+
+Skewness                :      2.78084
+Kurtosis                :     12.39159
+Excess                  :      9.39159
+
+Max key                 : 16
+
+Top 10 keys             : 
+950                        : 16
+216                        : AND, 13
+185                        : 3000
+165                        : FLANGE
+155                        : SINGLE, DIAPHRAGM
+151                        : HANDWHEEL, OPERATED, 2000
+146                        : ALLOY
+145                        : 11
+138                        : SIZE
+118                        : PSI
+
+
+Candidate Size     # of Candidates        # of Records
+             0                 263                   0
+             1                   8                   8
+             3                  19                  57
+             4                  15                  60
+             5                  27                 135
+             6                  20                 120
+             7                  22                 154
+             8                  66                 528
+             9                  25                 225
+            10                  55                 550
+            11                   6                  66
+            12                  43                 516
+            13                  15                 195
+            14                  41                 574
+            15                   9                 135
+            16                   5                  80
+            17                  69               1,173
+            18                  26                 468
+            19                  22                 418
+            20                  36                 720
+            21                  33                 693
+            22                  23                 506
+            23                  31                 713
+            24                  16                 384
+            25                  32                 800
+            26                  37                 962
+            27                  18                 486
+            28                  16                 448
+            29                  31                 899
+            30                   8                 240
+            31                  29                 899
+            32                  38               1,216
+            33                   9                 297
+            35                  49               1,715
+            36                  38               1,368
+            37                  33               1,221
+            38                  29               1,102
+            39                  25                 975
+            40                  37               1,480
+            41                  49               2,009
+            42                   6                 252
+            43                  13                 559
+            44                  64               2,816
+            45                  27               1,215
+            46                  20                 920
+            47                   2                  94
+            48                  20                 960
+            49                  20                 980
+            50                  45               2,250
+            51                  33               1,683
+            52                  27               1,404
+            53                   2                 106
+            54                  14                 756
+            55                   2                 110
+            56                   3                 168
+            58                   8                 464
+            59                  26               1,534
+            60                  34               2,040
+            62                   1                  62
+            63                  11                 693
+            67                   1                  67
+            69                  28               1,932
+            70                   4                 280
+            71                   5                 355
+            72                   2                 144
+            74                   5                 370
+            79                   2                 158
+            82                   5                 410
+            83                   1                  83
+            84                   1                  84
+            85                   6                 510
+            87                   2                 174
+            88                   5                 440
+            94                   3                 282
+            95                   4                 380
+            96                   2                 192
+            97                   1                  97
+            99                   5                 495
+           100                   5                 500
+           102                   1                 102
+           104                   2                 208
+           105                   1                 105
+           108                   1                 108
+           109                   1                 109
+           110                  10               1,100
+           111                   2                 222
+           117                   2                 234
+           118                   1                 118
+           120                   1                 120
+           124                   1                 124
+           125                   2                 250
+           132                   1                 132
+           138                   4                 552
+           141                   1                 141
+           145                   3                 435
+           146                   2                 292
+           147                   2                 294
+           151                   1                 151
+           158                  20               3,160
+           160                   1                 160
+           162                   2                 324
+           163                   1                 163
+           164                   1                 164
+           170                   1                 170
+           171                   1                 171
+           173                   1                 173
+           174                   2                 348
+           176                   2                 352
+           177                   3                 531
+           183                   1                 183
+           186                   2                 372
+           188                   3                 564
+           189                   1                 189
+           190                   1                 190
+           198                   1                 198
+           199                   2                 398
+           200                   1                 200
+           207                   1                 207
+           210                   1                 210
+           216                   4                 864
+           240                   2                 480
+           253                   1                 253
+           303                   1                 303
+           309                   2                 618
+           342                   2                 684
+           950                   5               4,750
+           975                   1                 975
+           980                   1                 980
+
+
+   Index Group          Index Size        # of Records
+             1                  26                  26
+             2                  16                  32
+             3                  19                  57
+             4                  19                  76
+             5                  10                  50
+             6                  17                 102
+             7                  10                  70
+             8                  12                  96
+            10                   6                  60
+            11                  10                 110
+            12                   9                 108
+            13                   9                 117
+            14                   6                  84
+            15                   1                  15
+            16                  14                 224
+            17                  15                 255
+            18                   1                  18
+            19                   3                  57
+            20                   4                  80
+            21                   3                  63
+            22                   6                 132
+            23                   2                  46
+            24                   3                  72
+            25                   1                  25
+            26                   6                 156
+            27                   7                 189
+            28                   3                  84
+            29                   2                  58
+            31                   1                  31
+            32                   3                  96
+            33                   2                  66
+            34                   2                  68
+            35                   2                  70
+            36                   2                  72
+            38                   4                 152
+            42                   2                  84
+            43                   3                 129
+            44                   3                 132
+            46                   1                  46
+            49                   1                  49
+            50                   1                  50
+            51                   4                 204
+            52                   2                 104
+            54                   2                 108
+            55                   2                 110
+            56                   1                  56
+            58                   1                  58
+            59                   2                 118
+            60                   1                  60
+            61                   1                  61
+            62                   1                  62
+            63                   1                  63
+            66                   1                  66
+            69                   1                  69
+            71                   1                  71
+            72                   1                  72
+            77                   2                 154
+            80                   1                  80
+            81                   1                  81
+            82                   1                  82
+            83                   3                 249
+            85                   1                  85
+            87                   1                  87
+            88                   1                  88
+            95                   2                 190
+           100                   4                 400
+           101                   1                 101
+           103                   1                 103
+           104                   2                 208
+           108                   1                 108
+           110                   1                 110
+           118                   1                 118
+           138                   1                 138
+           145                   1                 145
+           146                   1                 146
+           151                   3                 453
+           155                   2                 310
+           165                   1                 165
+           185                   1                 185
+           216                   2                 432
+           950                   1                 950
+
+
+
+
+########################
+##  Resolution Stats  ##
+########################
+Records resolved                 :           37
+
+
+
+
+####################
+##  Timing Stats  ##
+####################
+Elapsed Seconds                  :                2
+Throughput (records/hour)        :  3,501,000.00000
+Average Matching Latency (ms)    :         0.011311
+Max Matching Latency (ms)        :                2
+Min Matching Latency (ms)        :                0
+Average Non-Matching Latency (ms):          0.55887
+Max Non-Matching Latency (ms)    :               20
+Min Non-Matching Latency (ms)    :                0
+
+
+
+Time process started at 2019-08-20 09.45.47
+Time process ended at 2019-08-20 09.45.49
+Total elapsed time 0 hour(s) 0 minute(s) 2 second(s)
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : AssertionsSourceDescriptor.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: Source Descriptor for Reference to Structure AssertionsSource.txt
+-->
+
+<OysterSourceDescriptor Name="R2S1">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="," Qual="" Labels="Y">./RefToStrAssertion/Input/RefToStrAssertionTest.txt</Source>
+    <!-- Items in Source -->
+    <ReferenceItems>
+        <Item Name="RefID" Attribute="@RefID" Pos="0"/>
+        <Item Name="F1" Attribute="StudentFirstName" Pos="1"/>
+        <Item Name="L1" Attribute="StudentLastName" Pos="2"/>
+        <Item Name="DOB" Attribute="StudentDateOfBirth" Pos="3"/>
+        <Item Name="LEA" Attribute="LEA" Pos="4"/>
+        <Item Name="Assert" Attribute="@AssertRefToStr" Pos="5"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : EquipmentListSourceDescriptor.xml
+    Created on : 2018-03-07
+    Author     : J Talburt
+    Description: Source Descriptor for the ListOverlap test run
+-->
+
+<OysterSourceDescriptor Name="Equip">
+    <!-- Delimited -->
+    <Source Type="FileDelim" Char="|" Qual="" Labels="Y">./PriceListIdentityResolution/Input/EquipmentList.txt</Source>
+    
+    <!-- Items in Source One for each item in the source including reference identifier -->
+    <ReferenceItems>
+        <!-- For Delimited -->
+        <Item Name="RecID" Attribute="@RefID" Pos="0"/>
+        <Item Name="Record" Attribute="Description" Pos="1"/>
+        <Item Name="EqNumber" Attribute="EqNumber" Pos="2"/>
+    </ReferenceItems>
+</OysterSourceDescriptor>
