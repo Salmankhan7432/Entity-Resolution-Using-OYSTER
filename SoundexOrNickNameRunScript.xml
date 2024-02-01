@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : SoundexOrNickNameRunScript.xml
+    Created on : 2018-07-28
+    Author     : John Talburt
+    Description: Test of new Soundex or NickName Comparator
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="SoundexOrNickNameRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./SoundexOrNickName/Output/SoundexOrNickNameLog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./SoundexOrNickName/Scripts/SoundexOrNickNameAttributes.xml</AttributePath>
+
+    <IdentityInput Type="None"/>
+    
+    <IdentityOutput Type="TextFile">./SoundexOrNickName/Output/SoundexOrNickNameOutput.idty</IdentityOutput>
+
+    <!-- IdentityCapture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./SoundexOrNickName/Output/SoundexOrNickNameIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./SoundexOrNickName/Scripts/SoundexOrNickNameSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

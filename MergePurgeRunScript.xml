@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : MergePurgeRunScript.xml
+    Created on : 2023-17-11
+    Author     : Salman Khan
+    Description: Merge-Purge Demo Run Script Updated for Version 4.1.0
+    The Merge Purge Configuration of OYSTER only determines whether references in the input are
+    equivalent (referencing the same entity) or not. References are deemed equivalent if they
+    match by the rules given in the Attributes Script. The clusters are equivalent references are
+    indicated by the Link Output file. Equivalent references are given the same OYSTER identifier.
+    The Merge Purge configuration does not maintain identity information, i.e. it does not create
+    an Identity Knowledgebase (IKB). It only provides the user with the Link Output which shows 
+    which references it determined to be equivalent by the match rules. The link identifiers (OYSTER
+    IDs) assigned to the cluster are not persistent.
+-->
+
+<OysterRunScript>
+	<!-- Explanation and Debug should be set to "OFF" when running inputs larger than 50 references -->
+     <Settings RunScriptName="MergePurgeRunScript" Explanation="Off" Debug="Off" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+
+     <LogFile Num="5" Size="100000000">./MergePurge/Output/MergePurgeLog_%g.log</LogFile>
+
+     <RunMode>MergePurge</RunMode>
+
+     <EREngine Type="FSCluster" />
+
+     <!-- Attributes read from file only -->
+     <AttributePath>./MergePurge/Scripts/MergePurgeAttributesMain.xml</AttributePath> 
+    
+     <!-- Merge-purge does not start with any managed identities -->
+     <IdentityInput Type="None" />
+    
+     <!-- Merge-purge does not produce any managed identities -->
+     <IdentityOutput Type="None" />
+
+     <!-- Merge-purge only output is the Link Index  -->
+     <LinkOutput Type="TextFile">./MergePurge/Output/MergePurgeIndex.link</LinkOutput>
+    
+ 
+     <ReferenceSources>
+         <Source>./MergePurge/Scripts/MergePurgeSourceDescriptor.xml</Source>
+     </ReferenceSources>
+</OysterRunScript>

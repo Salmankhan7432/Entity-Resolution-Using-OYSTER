@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : PriceListIdentityResolutionRunScript.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Identity Resolution of Part Descriptions against the Price List using the Kobayashi IR engine -->
+
+<OysterRunScript>
+    <Settings RunScriptName="PriceListIdentityResolutionRunScript" Explanation="Off" Debug="Off" ChangeReportDetail="No"  Trace="Off" SS="Off" />
+
+    <LogFile Num="1" Size="100000000">./PriceListIdentityResolution/Output/PriceListIdentityResolution_%g.log</LogFile>    
+
+    <RunMode>IdentityResolution</RunMode>
+
+    <EREngine Type="Kobayashi" />
+
+    <AttributePath>./PriceListIdentityResolution/Scripts/PriceListIdentityResolutionAttributes.xml</AttributePath>
+
+    <!-- Input identites are output from Identity Build from Assertions example-->
+    <IdentityInput Type="TextFile">./PriceListIdentityResolution/Input/PriceListIdentityResolutionInputIdentities.idty</IdentityInput>
+    
+    <!-- No identity output in identity resolution -->
+    <IdentityOutput Type="None" />
+
+    <!-- Link Index  -->
+    <LinkOutput Type="TextFile">./PriceListIdentityResolution/Output/PriceListIdentityResolutionResults.link</LinkOutput>
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./PriceListIdentityResolution/Scripts/PriceListIdentityResolutionSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

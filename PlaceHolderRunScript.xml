@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListOverlapRunScript.xml
+    Created on : 2018-02-22
+    Author     : J Talburt
+    Description: Test of Placeholder Filter Function
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="PlaceHolderRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./PlaceHolder/Output/PlaceHolderLog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./PlaceHolder/Scripts/PlaceHolderAttributes.xml</AttributePath>
+
+    <!-- Identity-Capture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- Identity-Capture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./PlaceHolder/Output/PlaceHolderOutput.idty</IdentityOutput>
+
+    <!-- Identity-Capture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./PlaceHolder/Output/PlaceHolderIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./PlaceHolder/Scripts/PlaceHolderSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

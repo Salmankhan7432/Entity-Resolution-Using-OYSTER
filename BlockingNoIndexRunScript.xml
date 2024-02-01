@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : BlockingNoIndexRunScript.xml
+    Created on : 2023-11-06
+    Author     : Salman Khan
+    Description: Example of Capture Run where no Blocking Index is defined
+-->
+
+<OysterRunScript>
+	<Settings RunScriptName="BlockingNoIndexRunScript" Explanation="Off" Debug="Off" ChangeReportDetail="Off"  Trace="On" SS="Off" />
+	
+	<LogFile Num="5" Size="100000000">./BlockingNoIndex/Output/BlockingNoIndexLog_%g.log</LogFile>
+	
+	<RunMode>IdentityCapture</RunMode>
+	
+	<EREngine Type="FSCluster" />
+	
+	<!-- Attributes read from file only -->
+	<AttributePath>./BlockingNoIndex/Scripts/BlockingNoIndexAttributes.xml</AttributePath>
+	
+	<!-- IdentityCapture does not start with any managed identities -->
+	<IdentityInput Type="None"/>
+	
+	<!-- IdentityCapture produces a new identity file as output -->
+	<IdentityOutput Type="TextFile">./BlockingNoIndex/Output/BlockingNoIndexOutputIdentitiesC.idty</IdentityOutput>
+	
+	<!-- IdentityCapture creates the Link Index as output -->
+	<LinkOutput Type="TextFile">./BlockingNoIndex/Output/BlockingNoIndexLinksFileC.link</LinkOutput>
+	
+	<!-- Sources to Run -->
+	<ReferenceSources>
+        <Source>./BlockingNoIndex/Scripts/BlockingNoIndexSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

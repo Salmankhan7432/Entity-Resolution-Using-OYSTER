@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityUpdateRunScript.xml
+    Created on : 2019-08-11
+    Author     : John R. Talburt
+    Description: Run Script for the Identity Update Demo Run Updated for Version 4.1.0
+    The Identity Update Configuration takes new information from input references and uses the new
+    information to update existing identities the IKB or create new identities. The Identity Update configuration
+    compares the input references to an existing Identity Knowledgebase (IKB). The match rules in the 
+    Attributes Script determine whether an input reference is referencing an existing identity in the
+    IKB or whether it is a reference to a new identity in which case it creates a new identity in the IKB.
+    If an input reference is found to match two or more identities in the IKB, then these identities will be
+    merged into a single identity.
+-->
+
+<OysterRunScript>
+	<!-- Explanation and Debug should be set to "OFF" when running inputs larger than 50 references -->
+    <Settings RunScriptName="IdentityUpdateRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./IdentityUpdate/Output/IdentityUpdate_%g.log</LogFile>  
+
+    <RunMode>IdentityUpdate</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./IdentityUpdate/Scripts/IdentityUpdateAttributes.xml</AttributePath>
+
+    <!-- IdentityUpdate must have input identities to update -->
+    <IdentityInput Type="TextFile">./IdentityUpdate/Input/IdentityUpdateInputIdentities.idty</IdentityInput>
+    
+    <!-- IdentityUpdate produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./IdentityUpdate/Output/IdentityUpdateOutput.idty</IdentityOutput>
+
+    <!-- IdentityUpdate creates the Link Index only for input references  -->
+    <LinkOutput Type="TextFile">./IdentityUpdate/Output/IdentityUpdateIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./IdentityUpdate/Scripts/IdentityUpdateSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

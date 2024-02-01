@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : BlockingBadIndexRunScript.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Example of Capture using misaligned blocking index, misses some rule links
+-->
+
+<OysterRunScript>
+	<Settings RunScriptName="BlockingBadIndexRunScript" Explanation="Off" Debug="Off" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+	
+	<LogFile Num="5" Size="100000000">./BlockingBadIndex/Output/BlockingBadIndexLog_%g.log</LogFile>
+	
+	<RunMode>IdentityCapture</RunMode>
+	
+	<EREngine Type="FSCluster" />
+	
+	<!-- Attributes read from file only -->
+	<AttributePath>./BlockingBadIndex/Scripts/BlockingBadIndexAttributes.xml</AttributePath>
+	
+	<!-- IdentityCapture does not start with any managed identities -->
+	<IdentityInput Type="None"/>
+	
+	<!-- IdentityCapture produces a new identity file as output -->
+	<IdentityOutput Type="TextFile">./BlockingBadIndex/Output/BlockingBadIndexOutput.idty</IdentityOutput>
+	
+	<!-- Identity-Capture creates the Link Index as output -->
+	<LinkOutput Type="TextFile">./BlockingBadIndex/Output/BlockingBadIndexLinkFile.link</LinkOutput>
+	
+	<!-- Sources to Run -->
+	<ReferenceSources>
+        <Source>./BlockingBadIndex/Scripts/BlockingBadIndexSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

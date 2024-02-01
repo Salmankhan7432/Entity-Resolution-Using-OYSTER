@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : IdentityResolutionRunScript.xml
+    Created on : 2019-08-11
+    Author     : John R. Talburt
+    Description: Run Script for Identity Resolution Demo Run 
+    Identity Resolution configuration reads input references and uses the matching rules in the Attributes Script to
+    determine whether it is a reference to one of the identities in a given OYSTER Identity Knowledgebase (IKB)
+    If an input reference matches one of the identities, the OYSTER ID of the identity is associated with the
+    input reference in the Link Output file. Otherwise the references is associated with the identifier
+    "XXXXXXXXXXXXXXXX" in the Link Output file.
+    The Identity Resolution configuration does not change or update the IKB
+-->
+
+<OysterRunScript>
+	<!-- Explanation and Debug should be set to "OFF" when running inputs larger than 50 references -->
+    <Settings RunScriptName="IdentityResolutionRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+
+    <LogFile Num="1" Size="100000000">./IdentityResolution/Output/IdentityResolution_%g.log</LogFile>    
+
+    <RunMode>IdentityResolution</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <AttributePath>./IdentityResolution/Scripts/IdentityResolutionAttributes.xml</AttributePath>
+
+    <!-- Input identities, these are the identities created by the Identity Capture Demo -->
+    <IdentityInput Type="TextFile">./IdentityResolution/Input/IdentityResolutionInputIdentities.idty</IdentityInput>
+    
+    <!-- No identity output in identity resolution, identity resolution does not update identity information  -->
+    <IdentityOutput Type="None" />
+
+    <!-- Link Index  -->
+    <LinkOutput Type="TextFile">./IdentityResolution/Output/IdentityResolution.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./IdentityResolution/Scripts/IdentityResolutionSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

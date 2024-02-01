@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : StrSplitAssertionRunScript.xml
+    Created on : 2019-08-12
+    Author     : John R. Talburt
+    Description: Run Script for Structure Split Assertion Demo Run
+    Structure Split Assertion corrects problems with false positive linkage. When an identity cluster
+    contains references to more than entity (false positive linkage) by over matching, the structure split assertion 
+    allows the user to separate references from the cluster to form new identity clusters so that each cluster 
+    only contains references to a single entity. The user must specify by record ID, the reference or a group of 
+    references to be moved out of the false positive cluster to form a new identity. More than one group of false 
+    positive references can be moved out in a single operation, but at least one reference must remain in 
+    the original false positive cluster.
+-->
+
+<OysterRunScript>
+    <!-- Explanation and Debug should be set to "OFF" when running inputs larger than 50 references -->
+    <Settings  RunScriptName="StrSplitAssertionRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./StrSplitAssertion/Output/StrSplitAssertionLog_%g.log</LogFile>    
+    <RunMode>AssertSplitStr</RunMode>
+
+    <EREngine Type="FSCluster" /> 
+
+    <AttributePath>./StrSplitAssertion/Scripts/StrSplitAssertionAttributes.xml</AttributePath>
+
+    <IdentityInput Type="TextFile">./StrSplitAssertion/Input/StrSplitAssertionInputIdentities.idty</IdentityInput>
+
+    <IdentityOutput Type="TextFile">./StrSplitAssertion/Output/StrSplitAssertionOutputIdentities.idty</IdentityOutput>
+
+    <AssertionInput>./StrSplitAssertion/Scripts/StrSplitAssertionSourceDescriptor.xml</AssertionInput>
+</OysterRunScript>

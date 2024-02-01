@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityCaptureRunScript.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: Sample Identity Capture Run Script for List A
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="ListARunScript" Explanation="Off" Debug="Off" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./ListA/Output/ListALog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./ListA/Scripts/ListAAttributes.xml</AttributePath>
+
+    <!-- IdentityCapture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- IdentityCapture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./ListA/Output/ListAOutput.idty</IdentityOutput>
+
+    <!-- IdentityCapture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./ListA/Output/ListAIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./ListA/Scripts/ListASourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

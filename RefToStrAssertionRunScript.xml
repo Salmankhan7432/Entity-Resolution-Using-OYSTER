@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : RefToStrAssertionRunScript.xml
+    Created on : 8/17/17
+    Author     : Yumeng Ye
+    Description: RefToStr Assertion run script
+-->
+
+<OysterRunScript>
+    <Settings  RunScriptName="RefToStrAssertionRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./RefToStrAssertion/Output/RefToStrAssertionLog_%g.log</LogFile>    
+    <RunMode>AssertRefToStr</RunMode>
+
+    <EREngine Type="FSCluster" /> 
+
+    <AttributePath>./RefToStrAssertion/Scripts/RefToStrAssertionAttributes.xml</AttributePath>
+
+    <IdentityInput Type="TextFile">./RefToStrAssertion/Input/RefToStrAssertionInputIdentities.idty</IdentityInput>
+
+    <IdentityOutput Type="TextFile">./RefToStrAssertion/Output/RefToStrAssertionOutputIdentities.idty</IdentityOutput>
+
+    <!-- Link Index is output but not used -->
+    <LinkOutput Type="TextFile">./RefToStrAssertion/Output/RefToStrAssertionLinks.link</LinkOutput>
+    
+    <AssertionInput>./RefToStrAssertion/Scripts/RefToStrAssertionSourceDescriptor.xml</AssertionInput>
+</OysterRunScript>

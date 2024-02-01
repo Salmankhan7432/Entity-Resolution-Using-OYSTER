@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : IdentityCaptureRunScript.xml
+    Created on : 2019-08-11
+    Author     : John R. Talburt
+    Description: Run Script for the Identity Capture Demo Updated for Version 4.1.0
+    The Identity Capture Configuration is used to create an initial Identity Knowledgebase (IKB) from a
+    set of input references. Identity Capture is the first step of the Identity Management process.
+    The operation of the Identity Management configuration is essentially the same as the Merge Purge
+    configuration except that the Identity Capture configuration save the identity knowledge to be used
+    in later Identity Update operations. This allows the OYSTER system to maintain a persistent identifier for
+    each identity it managements. The identifiers are save in the IKB along with the identity information.
+-->
+
+<OysterRunScript>
+	<!-- Explanation and Debug should be set to "OFF" when running inputs larger than 50 references -->
+    <Settings RunScriptName="IdentityCaptureRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./IdentityCapture/Output/IdentityCapture_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./IdentityCapture/Scripts/IdentityCaptureAttributesB.xml</AttributePath>
+
+    <!-- Identity-Capture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- Identity-Capture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./IdentityCapture/Output/IdentityCaptureOutputB.idty</IdentityOutput>
+
+    <!-- Identity-Capture creates a Link Index as output -->
+    <LinkOutput Type="TextFile">./IdentityCapture/Output/IdentityCaptureIndexB.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./IdentityCapture/Scripts/IdentityCaptureSourceDescriptorB.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

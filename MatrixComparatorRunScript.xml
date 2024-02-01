@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : MatrixComparatorTest.xml
+    Created on : 2018-03-07
+    Author     : J Talburt
+    Description: Test of ListOverlap Comparator
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="MatrixComparatorRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./MatrixComparator/Output/MatrixComparatorLog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./MatrixComparator/Scripts/MatrixComparatorAttributes.xml</AttributePath>
+
+    <!-- IdentityCapture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- IdentityCapture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./MatrixComparator/Output/MatrixComparatorOutput.idty</IdentityOutput>
+
+    <!-- IdentityCapture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./MatrixComparator/Output/MatrixComparatorIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./MatrixComparator/Scripts/MatrixComparatorSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

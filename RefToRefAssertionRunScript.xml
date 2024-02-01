@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : RefToRefAssertionRunScript.xml
+    Created on : 2017-08-17
+    Author     : Yumeng Ye
+    Description: Identity Build From RefToRef Assertions run script
+-->
+
+<OysterRunScript>
+    <Settings  RunScriptName="RefToRefAssertionRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./RefToRefAssertion/Output/RefToRefAssertionLog_%g.log</LogFile>    
+    <RunMode>AssertRefToRef</RunMode>
+
+    <EREngine Type="FSCluster" /> 
+
+    <AttributePath>./RefToRefAssertion/Scripts/RefToRefAssertionAttributes.xml</AttributePath>
+    <!-- No input identities -->
+    <IdentityInput Type="None" />
+    <!-- Identity Build for Later Resolution -->
+    <IdentityOutput Type="TextFile">./RefToRefAssertion/Output/RefToRefAssertionOutputIdentities.idty</IdentityOutput>
+
+    <!-- Link Index is output but not used -->
+    <LinkOutput Type="TextFile">./RefToRefAssertion/Output/RefToRefAssertionLinks.link</LinkOutput>
+    
+    <AssertionInput>./RefToRefAssertion/Scripts/RefToRefAssertionSourceDescriptor.xml</AssertionInput>
+</OysterRunScript>

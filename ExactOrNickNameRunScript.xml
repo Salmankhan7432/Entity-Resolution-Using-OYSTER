@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ExactOrNickNameRunScript.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Example Run using ExactOrNickName comparator
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="ExactOrNickNameRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./ExactOrNickName/Output/ExactOrNickNameLog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./ExactOrNickName/Scripts/ExactOrNickNameAttributes.xml</AttributePath>
+
+    <!-- IdentityCapture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- IdentityCapture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./ExactOrNickName/Output/ExactOrNickNameOutput.idty</IdentityOutput>
+
+    <!-- IdentityCapture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./ExactOrNickName/Output/ExactOrNickNameLinkIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./ExactOrNickName/Scripts/ExactOrNickNameSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

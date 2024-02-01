@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ListOverlapPVTest.xml
+    Created on : 2018-02-26
+    Author     : J Talburt
+    Description: Test of ListOverlapPV Comparator
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="ListOverlapPVRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./ListOverlapPV/Output/ListOverlapPVLog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./ListOverlapPV/Scripts/ListOverlapPVAttributes.xml</AttributePath>
+
+    <!-- IdentityCapture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- IdentityCapture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./ListOverlapPV/Output/ListOverlapOutputPV.idty</IdentityOutput>
+
+    <!-- IdentityCapture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./ListOverlapPV/Output/ListOverlapPVIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./ListOverlapPV/Scripts/ListOverlapPVSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

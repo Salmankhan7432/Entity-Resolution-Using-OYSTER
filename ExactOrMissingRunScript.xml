@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : ExactOrMissingRunScript.xml
+    Created on : 2018-07-09
+    Author     : John Talburt
+    Description: Demo of Exact or Missing Comparator
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="ExactOrMissingRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./ExactOrMissing/Output/ExactOrMissingLog_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./ExactOrMissing/Scripts/ExactOrMissingAttributes.xml</AttributePath>
+
+    <IdentityInput Type="None"/>
+    
+    <IdentityOutput Type="TextFile">./ExactOrMissing/Output/ExactOrMissingOutput.idty</IdentityOutput>
+
+    <!-- Identity-Capture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./ExactOrMissing/Output/ExactOrMissingIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./ExactOrMissing/Scripts/ExactOrMissingSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

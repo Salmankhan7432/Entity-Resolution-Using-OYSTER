@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : PriceListCaptureRunScript.xml
+    Created on : 2018-08-04
+    Author     : John Talburt
+    Description: Capture of Price list for Identity Resolution Example
+-->
+
+<OysterRunScript>
+    <Settings RunScriptName="PriceListCaptureRunScript" Explanation="On" Debug="Off" ChangeReportDetail="Yes"  Trace="Off" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./PriceListCapture/Output/PriceListCapture_%g.log</LogFile>  
+
+    <RunMode>IdentityCapture</RunMode>
+
+    <EREngine Type="FSCluster" />
+
+    <!-- Attributes read from file only -->
+    <AttributePath>./PriceListCapture/Scripts/PriceListCaptureAttributes.xml</AttributePath>
+
+    <!-- Identity-Capture does not start with any managed identities -->
+    <IdentityInput Type="None"/>
+    
+    <!-- Identity-Capture produces a new identity file as output -->
+    <IdentityOutput Type="TextFile">./PriceListCapture/Output/PriceListCaptureOutput.idty</IdentityOutput>
+
+    <!-- Identity-Capture creates the Link Index as output -->
+    <LinkOutput Type="TextFile">./PriceListCapture/Output/PriceListCaptureIndex.link</LinkOutput>
+    
+    <!-- Sources to Run -->
+    <ReferenceSources>
+        <Source>./PriceListCapture/Scripts/PriceListCaptureSourceDescriptor.xml</Source>
+    </ReferenceSources>
+</OysterRunScript>

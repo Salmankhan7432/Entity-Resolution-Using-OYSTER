@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : StrToStrAssertionRunScript.xml
+    Created on : 2019-08-12
+    Author     : John R. Talburt
+    Description: Run Script for Structure-to-Structure Assertion Demo Run
+-->
+
+<OysterRunScript>
+    <Settings  RunScriptName="StrToStrAssertionRunScript" Explanation="On" Debug="On" ChangeReportDetail="Yes"  Trace="On" SS="Off" />
+    
+    <LogFile Num="5" Size="100000000">./StrToStrAssertion/Output/StrToStrAssertionLog_%g.log</LogFile>    
+    <RunMode>AssertStrToStr</RunMode>
+
+    <EREngine Type="FSCluster" /> 
+
+    <AttributePath>./StrToStrAssertion/Scripts/StrToStrAssertionAttributes.xml</AttributePath>
+
+    <IdentityInput Type="TextFile">./StrToStrAssertion/Input/StrToStrAssertionInputIdentities.idty</IdentityInput>
+
+    <IdentityOutput Type="TextFile">./StrToStrAssertion/Output/StrToStrAssertionOutputIdentities.idty</IdentityOutput>
+
+    <AssertionInput>./StrToStrAssertion/Scripts/StrToStrAssertionSourceDescriptor.xml</AssertionInput>
+</OysterRunScript>
